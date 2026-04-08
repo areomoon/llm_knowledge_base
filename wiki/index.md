@@ -8,8 +8,8 @@
 
 | 項目 | 數量 |
 |------|------|
-| 概念文章 | 3 |
-| 論文/文章摘要 | 1 |
+| 概念文章 | 5 |
+| 論文/文章摘要 | 2 |
 | 查詢記錄 | 0 |
 | 最後更新 | 2026-04-08 |
 
@@ -24,6 +24,8 @@
 | [Superapp Paradigm](concepts/superapp-paradigm.md) | `agentic-ai`, `superapp`, `openai`, `platform` | 2026-04-08 |
 | [API to SuperAgent Paradigm Shift](concepts/api-to-superagent.md) | `agentic-ai`, `api-design`, `paradigm-shift`, `mcp` | 2026-04-08 |
 | [Agent-Friendly Design](concepts/agent-friendly-design.md) | `agentic-ai`, `software-design`, `mcp`, `tool-use` | 2026-04-08 |
+| [Skill Modes Pattern](concepts/skill-modes-pattern.md) | `agent-design`, `skill-modes`, `claude-code`, `prompt-engineering` | 2026-04-08 |
+| [Evolving Context Accumulation](concepts/evolving-context-accumulation.md) | `agent-design`, `context-management`, `memory`, `agentic-ai` | 2026-04-08 |
 
 ---
 
@@ -34,6 +36,7 @@
 | 標題 | 類型 | 來源 | 編譯日期 |
 |------|------|------|----------|
 | [OpenAI's Desktop Superapp and the Rise of the SuperAgent Paradigm](derived/openai-superapp-superagent.md) | 文章 | The Verge | 2026-04-08 |
+| [Career-Ops: AI Job Search Pipeline Architecture](derived/career-ops-architecture.md) | repo | GitHub/santifer | 2026-04-08 |
 
 ---
 
