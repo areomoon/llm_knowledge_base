@@ -142,6 +142,45 @@ python scripts/search.py --query "transformer attention"
 
 ---
 
+## MCP Server
+
+The knowledge base exposes an MCP server (`mcp_server.py`) that lets Claude Desktop or Claude Code query the wiki directly.
+
+**Tools:**
+- `search_wiki(query)` — full-text search across `wiki/concepts/` and `wiki/derived/`
+- `read_article(filename)` — read a specific wiki article by filename (e.g. `context-engineering.md`)
+
+**Resources:**
+- `wiki://index` — returns `wiki/index.md`
+
+**Run the server:**
+
+```bash
+pip install -r requirements.txt
+python mcp_server.py
+```
+
+**Connect to Claude Desktop** — add to `~/Library/Application Support/Claude/claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "llm-knowledge-base": {
+      "command": "python",
+      "args": ["/path/to/llm_knowledge_base/mcp_server.py"]
+    }
+  }
+}
+```
+
+**Connect to Claude Code** — run once in your terminal:
+
+```bash
+claude mcp add llm-knowledge-base python /path/to/llm_knowledge_base/mcp_server.py
+```
+
+---
+
 ## 參考來源
 
 - [Andrej Karpathy — LLM Knowledge Base Gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)

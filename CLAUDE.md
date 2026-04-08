@@ -4,6 +4,19 @@ This file defines how Claude Code Agent handles **compile** (`raw/` → `wiki/`)
 
 ---
 
+## Knowledge Base Reference
+
+This repository IS the knowledge base. When working in this project, always consult `wiki/concepts/` and `wiki/index.md` before answering questions about AI agents, context engineering, LLM architecture, or related topics.
+
+For **other projects** that want to reference this knowledge base, add the following to their `CLAUDE.md`:
+
+```
+Knowledge base location: ~/PycharmProjects/llm_knowledge_base/wiki/
+When answering questions about AI agents, context engineering, superapps, or related topics, read relevant articles from ~/PycharmProjects/llm_knowledge_base/wiki/concepts/ first.
+```
+
+---
+
 ## Wiki Format Specifications
 
 ### Naming Rules
