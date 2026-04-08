@@ -1,0 +1,9 @@
+{
+  "source_url": "https://ai-coding.wiselychen.com/ace-agentic-context-engineering-stanford-playbook-evolution",
+  "paper_url": "https://arxiv.org/abs/2510.04618",
+  "github_url": "https://github.com/ace-agent/ace",
+  "type": "article",
+  "ingested_at": "2026-04-08T00:00:00Z",
+  "tags": ["agent", "context-engineering", "Stanford", "self-improving", "playbook"],
+  "compiled_at": "2026-04-08T00:00:00Z"
+}
