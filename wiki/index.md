@@ -11,8 +11,8 @@
 
 | Metric | Count |
 |--------|-------|
-| Concept articles | 4 |
-| Derived notes | 1 |
+| Concept articles | 7 |
+| Derived notes | 2 |
 | Query records | 0 |
 | Last compiled | 2026-04-08 |
 
@@ -28,6 +28,9 @@
 | [Context Engineering](concepts/context-engineering.md) | Systematic design and evolution of LLM context to improve behavior | `context-engineering`, `prompt-engineering`, `llm` |
 | [Evolving Playbooks](concepts/evolving-playbooks.md) | Grow-and-Refine mechanism for accumulating strategies via delta updates | `playbook`, `delta-update`, `self-improving` |
 | [Agentic Self-Improvement](concepts/agentic-self-improvement.md) | LLM agents improving task performance from experience without retraining | `agent`, `self-improving`, `meta-learning` |
+| [Superapp Paradigm](concepts/superapp-paradigm.md) | Unified AI application consolidating chatbot, coding agent, and browser into one agentic surface | `superapp`, `ai-products`, `agentic-ai` |
+| [API to SuperAgent Transition](concepts/api-to-superagent.md) | Shift from human-facing API integrations to agent-callable tool interfaces | `agentic-ai`, `mcp`, `superagent` |
+| [Agent-Friendly Design](concepts/agent-friendly-design.md) | Design principles for software interfaces optimized for autonomous AI agent consumption | `mcp`, `tool-design`, `agent-friendly` |
 
 ---
 
@@ -38,6 +41,7 @@
 | Date | [Title](derived/YYYY-MM-DD-slug.md) | Type | Key Concepts |
 |------|--------------------------------------|------|--------------|
 | 2026-04-08 | [ACE: Agentic Context Engineering](derived/ace-agentic-context-engineering.md) | paper | ACE Framework, Evolving Playbooks |
+| 2026-04-08 | [OpenAI Plans Desktop Superapp](derived/openai-superapp-superagent.md) | article | Superapp Paradigm, API to SuperAgent Transition, Agent-Friendly Design |
 
 ---
 
