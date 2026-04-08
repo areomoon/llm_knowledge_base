@@ -8,10 +8,10 @@
 
 | 項目 | 數量 |
 |------|------|
-| 概念文章 | 0 |
-| 論文/文章摘要 | 0 |
+| 概念文章 | 3 |
+| 論文/文章摘要 | 1 |
 | 查詢記錄 | 0 |
-| 最後更新 | 尚未編譯 |
+| 最後更新 | 2026-04-08 |
 
 ---
 
@@ -19,14 +19,11 @@
 
 > 核心 AI/LLM 概念的結構化百科條目，存放於 [`wiki/concepts/`](concepts/)。
 
-*尚無概念文章。在 Claude Code 中執行 `compile` 開始編譯。*
-
-<!-- 編譯後格式範例：
 | 文章 | 標籤 | 更新日期 |
 |------|------|----------|
-| [Transformer Attention](concepts/transformer-attention.md) | `attention`, `transformer` | 2026-04-08 |
-| [RLHF](concepts/rlhf.md) | `alignment`, `fine-tuning` | 2026-04-08 |
--->
+| [Superapp Paradigm](concepts/superapp-paradigm.md) | `agentic-ai`, `superapp`, `openai`, `platform` | 2026-04-08 |
+| [API to SuperAgent Paradigm Shift](concepts/api-to-superagent.md) | `agentic-ai`, `api-design`, `paradigm-shift`, `mcp` | 2026-04-08 |
+| [Agent-Friendly Design](concepts/agent-friendly-design.md) | `agentic-ai`, `software-design`, `mcp`, `tool-use` | 2026-04-08 |
 
 ---
 
@@ -34,13 +31,9 @@
 
 > 原始文章和論文的摘要筆記，存放於 [`wiki/derived/`](derived/)。
 
-*尚無摘要。執行 `ingest` 後再執行 `compile` 以生成。*
-
-<!-- 編譯後格式範例：
 | 標題 | 類型 | 來源 | 編譯日期 |
 |------|------|------|----------|
-| [Attention Is All You Need](derived/attention-is-all-you-need.md) | 論文 | arXiv | 2026-04-08 |
--->
+| [OpenAI's Desktop Superapp and the Rise of the SuperAgent Paradigm](derived/openai-superapp-superagent.md) | 文章 | The Verge | 2026-04-08 |
 
 ---
 
