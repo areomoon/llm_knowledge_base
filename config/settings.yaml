@@ -1,0 +1,36 @@
+# LLM Knowledge Base — 設定檔
+# 複製此檔並以 .env 管理敏感金鑰，不要直接在此填入 API key
+
+# LLM API 設定
+llm:
+  provider: anthropic          # anthropic | openai
+  model: claude-opus-4-6       # claude-opus-4-6 | gpt-4o
+  max_tokens: 4096
+  temperature: 0.3             # 較低溫度確保內容一致性
+  # api_key: 請設定環境變數 ANTHROPIC_API_KEY 或 OPENAI_API_KEY
+
+# 路徑設定（相對於專案根目錄）
+paths:
+  raw: raw/
+  wiki: wiki/
+  concepts: wiki/concepts/
+  derived: wiki/derived/
+  queries: wiki/queries/
+  compiled_index: .compiled_index.json
+
+# 編譯設定
+compile:
+  batch_size: 5               # 每批次處理的文件數
+  min_concept_length: 100     # 概念文章最少字元數（低於此值視為空殼）
+  max_concepts_per_file: 15   # 每個原始文件最多抽取的概念數
+
+# 搜尋設定
+search:
+  default_mode: keyword       # keyword | semantic | rag
+  top_k: 10
+  # embedding_model: text-embedding-3-small  # 若使用語意搜尋需設定
+
+# Lint 設定
+lint:
+  suggest_missing_topics: false   # 設為 true 時每次 lint 都呼叫 LLM 建議新主題
+  fuzzy_match_threshold: 0.85     # 自動修復斷裂連結時的相似度門檻
