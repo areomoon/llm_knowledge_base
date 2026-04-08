@@ -27,6 +27,10 @@ tags: [career, ai-engineering, portfolio, technical-writing, staff-engineer]
 - [ACE Framework](../concepts/ace-framework.md)
 - [Tiered Memory](../concepts/tiered-memory.md)
 
+## Related
+
+- [Gemini 諮詢：Patsnap 職涯決策全紀錄](gemini-career-decision-patsnap.md) — 決策過程與 Offer 細節
+
 ## Raw Source
 
 `raw/areomoon_career_llm/Career_Development_Roadmap.md`

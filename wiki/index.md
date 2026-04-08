@@ -12,7 +12,7 @@
 | Metric | Count |
 |--------|-------|
 | Concept articles | 11 |
-| Derived notes | 8 |
+| Derived notes | 10 |
 | Query records | 0 |
 | Last compiled | 2026-04-08 |
 
@@ -52,6 +52,8 @@
 | 2026-04-08 | [Career Development Roadmap](derived/career-development-roadmap.md) | article | Agentic Harness, Material Science Agents, ACE Framework |
 | 2026-04-08 | [Lint Report 2026-04-08](derived/lint-report-2026-04-08.md) | lint-report | — |
 | 2026-04-08 | [Material Science Agent 入職行動計劃](derived/onboarding-action-plan.md) | article | ACE Framework, ACE for Materials, Material Science Agents |
+| 2026-04-08 | [Gemini 諮詢：Patsnap 職涯決策全紀錄](derived/gemini-career-decision-patsnap.md) | session | Material Science Agents, Context Engineering |
+| 2026-04-08 | [ChatGPT 諮詢：Patsnap 面試準備與職涯策略](derived/chatgpt-patsnap-interview-strategy.md) | session | Material Science Agents, Context Engineering |
 
 ---
 

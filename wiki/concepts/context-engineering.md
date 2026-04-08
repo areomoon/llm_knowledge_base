@@ -49,6 +49,8 @@ The discipline gained prominence as LLM systems moved from single-shot queries t
 - [Agentic Harness](agentic-harness.md) — harness implements context management at scale
 - [derived: ACE Agentic Context Engineering](../derived/ace-agentic-context-engineering.md)
 - [derived: Claude Code Leak Architecture Insights](../derived/claude-code-leak-architecture-insights.md)
+- [derived: Gemini 諮詢：Patsnap 職涯決策全紀錄](../derived/gemini-career-decision-patsnap.md)
+- [derived: ChatGPT 諮詢：Patsnap 面試準備與職涯策略](../derived/chatgpt-patsnap-interview-strategy.md)
 
 ## Related Concepts
 

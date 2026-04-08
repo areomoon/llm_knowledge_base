@@ -61,6 +61,7 @@ AppWorld performance matches the public leaderboard leader (IBM GPT-4.1 agent) w
 - [Agentic Harness](agentic-harness.md) — harness infrastructure that ACE runs within
 - [derived: ACE Agentic Context Engineering](../derived/ace-agentic-context-engineering.md)
 - [derived: ACE × Material Science Application](../derived/ace-material-science-application.md)
+- [derived: Gemini 諮詢：Patsnap 職涯決策全紀錄](../derived/gemini-career-decision-patsnap.md)
 
 ## Related Concepts
 

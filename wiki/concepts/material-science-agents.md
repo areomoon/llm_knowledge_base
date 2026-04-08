@@ -123,6 +123,8 @@ Ground truth for extraction tasks is expensive (requires expert annotation). Pra
 - [derived: ACE × Material Science Application](../derived/ace-material-science-application.md)
 - [derived: Agentic Service Warmup Plan](../derived/agentic-service-warmup-plan.md)
 - [derived: Career Development Roadmap](../derived/career-development-roadmap.md)
+- [derived: Gemini 諮詢：Patsnap 職涯決策全紀錄](../derived/gemini-career-decision-patsnap.md)
+- [derived: ChatGPT 諮詢：Patsnap 面試準備與職涯策略](../derived/chatgpt-patsnap-interview-strategy.md)
 
 ## Related Concepts
 
