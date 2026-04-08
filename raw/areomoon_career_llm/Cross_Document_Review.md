@@ -39,21 +39,33 @@ tags: [career, review, synthesis, action-items]
 
 Career Roadmap 建議建 3 個公開 repo（`scientific-paper-agent`, `ml-system-design`, `rag-experiments`）。但你實際上已有 `areomoon_agent_warmup` 裡完整的 GRC code，和 `areomoon_agent_plan` 裡的架構分析文件。
 
-**修正：** 不要再開新 repo。現有 repo 結構應該是：
+**各 repo 實際定位澄清：**
+- `areomoon_agent_warmup` — **私有練習 repo**，入職前實作練習用，不適合直接公開當 portfolio
+- `llm_knowledge_base` — **私有知識庫**，餵給 Claude agent 做個人諮詢的 assistant，非公開作品
+- `areomoon_agent_plan` — 學習文件 + 架構分析（目前公開）
+
+**修正：** Portfolio 需要另建專門的展示用 repo，從練習 code 中萃取精華、加上架構文件和 eval 數據後才公開。結構建議：
 
 ```
-公開：
-  areomoon_agent_warmup   → 旗艦 portfolio（已有 GRC code + MARS 筆記）
-  areomoon_agent_plan     → 架構分析 + 學習文件
-  llm_knowledge_base      → 知識庫（已有）
+公開（展示用）：
+  areomoon_agent_plan         → 架構分析 + 學習歷程（已公開）
+  scientific-paper-agent      → 旗艦 portfolio（新建，從 warmup 萃取精華 + 加 README/架構圖/eval）
+  ml-system-design            → 用自己的話重寫 5-7 個 case（從 ML_sysyemdesign clone 改寫）
 
-整理後公開：
-  ml-system-design        → 用自己的話重寫 5-7 個 case（從 ML_sysyemdesign clone 改寫）
+私有（不公開）：
+  areomoon_agent_warmup       → 練習 repo，持續迭代
+  llm_knowledge_base          → Claude agent 個人知識庫
+  local-rag-llama-demo        → 遷移精華到旗艦 repo 後 archive
+  leetcode101/coding_practice → 合併，面試刷題用
 
-設為 private/archive：
+設為 archive：
   DL_tensorflow_learning, tensorflow_offline_prac, tryout_chatgpt
-  local-rag-llama-demo（精華遷移到 areomoon_agent_warmup 後 archive）
 ```
+
+> **關鍵區分：** 練習 repo 的 code 可以亂、可以有 TODO、可以有半成品。
+> Portfolio repo 的每個檔案都要有意義：README 有架構圖和數字、code 可跑、有 eval 結果。
+> 從 warmup 練習中挑出最成熟的部分（例如跑通的 extraction_agent + eval 數據），
+> 重構到 portfolio repo 裡。
 
 ### 矛盾 3：文章主題重複
 
@@ -151,9 +163,9 @@ Title: GRC Extraction Pipeline for [Material Class]
 - [ ] 跑 GRC loop（`generator_reflector.py`），記錄改善幅度
 
 **Portfolio：**
-- [ ] 把 `areomoon_agent_warmup` 設為 public
-- [ ] 把 TF tutorial repos archive
+- [ ] 把 TF tutorial repos（`DL_tensorflow_learning`, `tensorflow_offline_prac`, `tryout_chatgpt`）archive
 - [ ] 改 LinkedIn headline
+- [ ] 規劃 `scientific-paper-agent` portfolio repo 的 README 結構（入職後有 eval 數據再正式建立）
 
 **人脈：**
 - [ ] 約 1 位拿 300-400K 的同儕聊 30 分鐘
