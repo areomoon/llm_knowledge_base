@@ -1,0 +1,43 @@
+name: Wiki Lint
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'wiki/**'
+      - 'scripts/lint.py'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'wiki/**'
+      - 'scripts/lint.py'
+
+jobs:
+  lint:
+    name: Wiki Health Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run lint
+        run: python scripts/lint.py --report
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Upload lint report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lint-report
+          path: wiki/queries/lint-report.md
+          if-no-files-found: ignore

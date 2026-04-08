@@ -1,5 +1,8 @@
 # LLM Knowledge Base
 
+[![Wiki Lint](https://github.com/areomoon/llm_knowledge_base/actions/workflows/lint.yml/badge.svg)](https://github.com/areomoon/llm_knowledge_base/actions/workflows/lint.yml)
+[![Wiki Compile](https://github.com/areomoon/llm_knowledge_base/actions/workflows/compile.yml/badge.svg)](https://github.com/areomoon/llm_knowledge_base/actions/workflows/compile.yml)
+
 基於 [Andrej Karpathy LLM Knowledge Base](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) 概念建立的個人 AI/Agent 研究知識庫系統。
 
 ---
@@ -55,7 +58,7 @@ Phase 1: Ingest  →  Phase 2: Compile  →  Phase 3: Query  →  Phase 4: Lint
 ```
 llm_knowledge_base/
 ├── raw/                    # Phase 1: 原始資料輸入區
-│   ├── articles/           # 網頁文章 (.md)，由 Obsidian Web Clipper 剪裁或 ingest.py 抓取
+│   ├── articles/           # 網頁文章 (.md)，由 ingest.py 抓取或手動貼入
 │   ├── papers/             # 論文 (.pdf, .md)，主要來自 arXiv
 │   ├── repos/              # GitHub repo 學習筆記
 │   └── datasets/           # 資料集描述與筆記
@@ -108,7 +111,7 @@ llm_knowledge_base/
 |------|------|
 | 程式語言 | Python 3.11+ |
 | LLM API | Claude API（Anthropic）/ OpenAI API |
-| 知識庫瀏覽 | Obsidian（支援 backlinks 視覺化） |
+| 知識庫瀏覽 | GitHub（原生 Markdown 渲染，Actions 自動 compile/lint） |
 | 文件格式 | Markdown（含 YAML frontmatter） |
 | 設定管理 | YAML |
 | 投影片 | Marp（Markdown → 簡報） |
@@ -138,6 +141,22 @@ python scripts/search.py --query "transformer attention"
 # 6. 健康檢查
 python scripts/lint.py
 ```
+
+---
+
+## GitHub 作為知識庫介面
+
+本專案以 **GitHub** 取代 Obsidian 作為主要瀏覽與協作介面：
+
+| 功能 | 說明 |
+|------|------|
+| **Markdown 瀏覽** | GitHub 原生渲染 `wiki/` 所有文章 |
+| **自動 Compile** | `compile.yml` 每日排程或手動觸發，自動將 `raw/` 編譯為 wiki |
+| **自動 Lint** | `lint.yml` 在每次 push/PR 時執行 wiki 健康檢查 |
+| **版本歷史** | git log 追蹤每篇文章的演化 |
+| **Issues** | 用 GitHub Issues 記錄待研究的主題 |
+
+> 若需要 backlinks 圖形視覺化，可自行選擇用 Obsidian 開啟 `wiki/` 目錄。
 
 ---
 
