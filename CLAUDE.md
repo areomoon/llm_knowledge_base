@@ -1,208 +1,222 @@
 # CLAUDE.md — LLM Knowledge Base Agent Instructions
 
-This file defines how the Claude Code Agent manages this knowledge base.
-The agent drives **compilation** (`raw/` → `wiki/`) and **lint** (quality checks).
+This file defines how Claude Code Agent handles **compile** (`raw/` → `wiki/`) and **lint** tasks for this knowledge base. Run these tasks directly via Claude Code instead of calling scripts.
 
 ---
 
-## Role
+## Wiki Format Specifications
 
-You are the compiler and quality-control agent for this LLM knowledge base.
+### Naming Rules
 
-Core responsibilities:
-1. **Compile** — transform raw documents in `raw/` into structured wiki articles in `wiki/`
-2. **Lint** — maintain wiki quality: fix broken links, flag orphan pages, suggest missing topics
-3. **Index** — keep `wiki/index.md` accurate and navigable
+- **Concept files**: `wiki/concepts/<slug>.md` — lowercase, hyphens, English only
+  - e.g. `attention-mechanism.md`, `rlhf.md`, `chain-of-thought.md`
+- **Derived files**: `wiki/derived/<YYYY-MM-DD>-<slug>.md`
+  - e.g. `2026-04-08-attention-is-all-you-need.md`
+- **Query files**: `wiki/queries/<YYYY-MM-DD>-<slug>.md`
 
-Helper scripts you may call:
-- `python scripts/ingest.py --type article --url <URL>` — fetch a URL into `raw/`
-- `python scripts/compile.py --status` — list unprocessed raw files
-- `python scripts/lint.py` — automated broken-link scan
-- `python scripts/search.py --query "<terms>"` — full-text search across `wiki/`
+### Link Format
 
----
-
-## Wiki Format Specs
-
-### Article Template (wiki/concepts/*.md)
+Use standard GitHub Markdown links — **not** `[[wikilinks]]`:
 
 ```markdown
----
-title: Concept Name
-tags: [tag1, tag2]
-created: YYYY-MM-DD
-updated: YYYY-MM-DD
-sources:
-  - title: Source Title
-    url: https://example.com
----
-
-# Concept Name
-
-One-sentence definition.
-
-## Overview
-
-2–4 paragraphs. Clear, dense, no filler.
-
-## Key Ideas
-
-- **Idea A**: explanation
-- **Idea B**: explanation
-
-## Related Concepts
-
-- [Related Concept A](related-concept-a.md)
-- [Related Concept B](related-concept-b.md)
-
-## References
-
-- [Source Title](https://example.com) — one-line annotation
+[Attention Mechanism](concepts/attention-mechanism.md)
+[RLHF](concepts/rlhf.md)
 ```
 
-### Summary Template (wiki/derived/*.md)
+All internal links are relative to `wiki/`. Cross-linking between concept articles is strongly encouraged.
+
+### Concept Article Template
 
 ```markdown
 ---
-title: "Article or Paper Title"
-source_type: article | paper | repo | dataset
-source_url: https://example.com
-ingested: YYYY-MM-DD
-compiled: YYYY-MM-DD
-tags: [tag1, tag2]
+title: <Concept Name>
+tags: [<tag1>, <tag2>]
+sources: [<raw file paths or URLs>]
+created: <YYYY-MM-DD>
+updated: <YYYY-MM-DD>
 ---
 
-# Title
+# <Concept Name>
 
-> **TL;DR**: One-sentence summary.
+> **TL;DR**: One sentence that captures the core idea.
+
+## Definition
+
+Clear, precise definition in 2–4 sentences. Avoid jargon where possible; define acronyms on first use.
+
+## How It Works
+
+Explain the mechanism, algorithm, or intuition. Use numbered steps or diagrams (Mermaid) when helpful.
+
+## Key Properties
+
+- Property 1
+- Property 2
+- Property 3
+
+## Variants & Related Work
+
+| Variant | Description | Paper |
+|---------|-------------|-------|
+| ...     | ...         | ...   |
+
+## When to Use
+
+Practical guidance on applicability, trade-offs, and failure modes.
+
+## Backlinks
+
+Pages that reference this concept (maintain manually or via lint task):
+- [Page Title](path/to/page.md)
+
+## Sources
+
+- [Source Title](URL or raw/path)
+```
+
+### Derived Note Template
+
+```markdown
+---
+title: <Source Title>
+type: <article|paper|repo|dataset>
+source_url: <URL>
+raw_path: <raw/articles/abc123.md>
+created: <YYYY-MM-DD>
+---
+
+# <Source Title>
+
+> **TL;DR**: One sentence summary.
 
 ## Key Points
 
 - Point 1
 - Point 2
-- Point 3
 
-## Extracted Concepts
+## Concepts Referenced
 
-- [Concept Name](../concepts/concept-name.md)
+- [Concept Name](../concepts/slug.md)
 
-## Raw Source
+## Notes
 
-`raw/articles/abc123.md`
-```
-
-### Naming Conventions
-
-| Item | Convention | Example |
-|------|-----------|---------|
-| Filenames | `kebab-case.md` | `transformer-attention.md` |
-| H1 title | Title Case | `# Transformer Attention` |
-| YAML `title` | Title Case | `title: Transformer Attention` |
-| Tags | lowercase, hyphenated | `reinforcement-learning` |
-
-Never use spaces or underscores in filenames. Abbreviations stay uppercase in titles (`RLHF`, `LoRA`) but lowercase in filenames (`rlhf.md`, `lora.md`).
-
-### Link Format
-
-Use standard GFM relative links. **No Obsidian `[[double bracket]]` syntax.**
-
-```markdown
-# Within wiki/concepts/ → link to sibling:
-[RLHF](rlhf.md)
-
-# Within wiki/concepts/ → link to derived/:
-[Attention Is All You Need (summary)](../derived/attention-is-all-you-need.md)
-
-# From wiki/index.md → link to concepts/:
-[Transformer Attention](concepts/transformer-attention.md)
+Free-form observations, questions, connections to other work.
 ```
 
 ---
 
-## Compile Workflow: raw/ → wiki/
+## Compile Task (`raw/` → `wiki/`)
 
-### Step 1 — Discover Unprocessed Files
+**Trigger**: "compile", "process raw files", "update wiki"
 
-```bash
-python scripts/compile.py --status
+### Steps
+
+1. **Scan `raw/`** for unprocessed files:
+   - Check each file's corresponding `.meta.json` for `compiled_at` field
+   - Files without `compiled_at` or with `hash` mismatch are unprocessed
+
+2. **For each unprocessed file**:
+   a. Read the file content and its `.meta.json` (contains `type`, `source`, `hash`)
+   b. Generate a **derived note** in `wiki/derived/` using the Derived Note Template above
+   c. Extract **concepts** mentioned in the file:
+      - Identify AI/LLM terms, model names, techniques, acronyms
+      - For each concept, check if `wiki/concepts/<slug>.md` already exists
+      - If exists: merge new information into the existing article (add sources, expand sections)
+      - If new: create the article using the Concept Article Template above
+   d. Update the `.meta.json` with `compiled_at: <ISO datetime>`
+
+3. **Update `wiki/index.md`**:
+   - Recount all articles in `wiki/concepts/`, `wiki/derived/`, `wiki/queries/`
+   - Update the stats block and article lists (see index format in `wiki/index.md`)
+   - Sort concepts alphabetically, derived notes by date descending
+
+4. **Verify cross-links**:
+   - Ensure each new concept article links to related concepts
+   - Ensure the derived note links to all concepts it mentions
+
+### LLM Guidance for Concept Extraction
+
+When processing a raw file, use this reasoning:
+- What are the **named techniques or methods**? (e.g., "LoRA", "Flash Attention")
+- What are the **key ideas or claims**? Distill into concept definitions
+- What **existing concepts** does this source expand or contradict?
+- Aim for **atomic concept articles**: one clear idea per file, ~200–800 words
+
+---
+
+## Lint Task
+
+**Trigger**: "lint", "check wiki", "find broken links", "health check"
+
+### Steps
+
+1. **Collect all pages**: build a map of `slug → path` for every `.md` file in `wiki/`
+
+2. **Check broken links**:
+   - Scan all `.md` files for `[text](path.md)` links
+   - Verify each relative link target exists on disk
+   - Report: `source_file:line_number → broken target`
+
+3. **Find orphan pages**:
+   - Build a reverse-link graph: for each page, which pages link to it?
+   - Pages with zero incoming links (excluding `index.md`) are orphans
+   - Report orphans; suggest adding links from related concept articles
+
+4. **Check missing backlinks**:
+   - For each link `A → B`, verify `B`'s `## Backlinks` section lists `A`
+   - Report missing entries; offer to auto-add them
+
+5. **Suggest missing topics** (optional, requires LLM):
+   - Collect all concept titles
+   - Ask: "Given these AI/LLM concepts, what important topics are missing?"
+   - Output suggestions as a list
+
+6. **Produce health report**:
+   ```
+   === Wiki Health Report ===
+   Total pages: N
+   Broken links: N  [list]
+   Orphan pages: N  [list]
+   Missing backlinks: N  [list]
+   Suggested topics: [list]  (if requested)
+   ```
+
+### Auto-fix Policy
+
+- **Backlinks**: safe to auto-add missing entries to `## Backlinks` sections
+- **Broken links**: only auto-fix if fuzzy match confidence > 0.90; otherwise flag for human review
+- **Orphans**: never auto-delete; only suggest linking
+
+---
+
+## Directory Reference
+
+```
+raw/
+├── articles/        # Web articles (.md + .meta.json)
+├── papers/          # PDFs and paper notes (.pdf, .md + .meta.json)
+├── repos/           # GitHub repo summaries
+└── datasets/        # Dataset descriptions
+
+wiki/
+├── index.md         # Auto-maintained master index
+├── concepts/        # Concept articles (one idea per file)
+├── derived/         # Source summaries (one per raw file)
+└── queries/         # Q&A session logs
+
+scripts/
+├── ingest.py        # Fetch URLs → raw/ (run directly)
+└── search.py        # Search wiki content (run directly)
 ```
 
-Lists all files in `raw/` without a `compiled_at` timestamp in their `.meta.json`.
-
-### Step 2 — Read the Raw File
-
-Read the raw `.md` file and its `.meta.json` (source URL, ingested date, type).
-
-### Step 3 — Generate a Summary → wiki/derived/
-
-Derive a filename slug from the title (kebab-case). Create `wiki/derived/<slug>.md` using the Summary Template.
-
-### Step 4 — Extract and Update Concepts → wiki/concepts/
-
-For each AI/LLM concept in the raw file:
-
-1. Check if `wiki/concepts/<slug>.md` exists
-   - **Exists** → read it, merge new information and sources, update `updated` date
-   - **New** → create using the Article Template
-2. Ensure cross-links between related concepts are bidirectional
-
-### Step 5 — Update wiki/index.md
-
-- Increment stats (total concepts, derived notes, last updated)
-- Add a new row to the relevant table
-- Do not remove existing entries
-
-### Step 6 — Mark as Compiled
-
-Append `"compiled_at": "<ISO-8601 timestamp>"` to the raw file's `.meta.json`.
-
 ---
 
-## Lint Workflow
+## Quick Reference
 
-Run `python scripts/lint.py` first for a quick automated scan, then manually address what it reports.
-
-### Checks to Perform
-
-| Check | Action |
-|-------|--------|
-| **Broken links** | Scan all `wiki/**/*.md` for `[text](path)` where the target file doesn't exist |
-| **Orphan pages** | Find `wiki/concepts/*.md` with no incoming links from other wiki pages |
-| **Missing index entries** | Every `wiki/concepts/*.md` and `wiki/derived/*.md` must appear in `wiki/index.md` |
-| **Duplicate concepts** | Detect near-duplicate article titles; merge if warranted |
-| **Missing sources** | Flag concept articles without at least one reference |
-
-### When `--fix` Is Requested
-
-- Repair broken links using fuzzy matching against existing filenames
-- Add missing index entries
-- Do not delete files without explicit confirmation
-
-### Suggest Missing Topics
-
-Review existing concept titles, then suggest 5–10 important AI/LLM topics absent from the knowledge base. Output them as a checklist.
-
----
-
-## Agent Commands
-
-| Command | Action |
-|---------|--------|
-| `compile` | Compile all unprocessed `raw/` files |
-| `compile <file>` | Compile a specific file |
-| `lint` | Run all lint checks and report |
-| `lint --fix` | Auto-fix broken links and missing index entries |
-| `search <query>` | `python scripts/search.py --query "..."` |
-| `ingest <url>` | `python scripts/ingest.py --type article --url "..."` |
-| `status` | Show wiki stats and list unprocessed raw files |
-
----
-
-## Quality Standards
-
-- Every concept article must have at least one source in `## References`
-- All relative links must resolve to existing files
-- No duplicate concept articles — merge instead
-- `wiki/index.md` must reflect the actual state of `wiki/concepts/` and `wiki/derived/`
-- Writing style: concise, dense, encyclopedic — not blog-like
-- Every article in `wiki/concepts/` must link to at least one other concept
+| Task | How to run |
+|------|-----------|
+| Ingest a URL | `python scripts/ingest.py --type article --url <URL>` |
+| Compile all new raw files | Ask Claude Code: "compile all new raw files" |
+| Compile a single file | Ask Claude Code: "compile raw/articles/abc123.md" |
+| Lint the wiki | Ask Claude Code: "lint the wiki" |
+| Search | `python scripts/search.py --query "<terms>"` |
