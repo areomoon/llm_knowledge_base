@@ -12,7 +12,7 @@
 | Metric | Count |
 |--------|-------|
 | Concept articles | 11 |
-| Derived notes | 7 |
+| Derived notes | 8 |
 | Query records | 0 |
 | Last compiled | 2026-04-08 |
 
@@ -51,6 +51,7 @@
 | 2026-04-08 | [Agentic Service Warmup Plan](derived/agentic-service-warmup-plan.md) | article | Material Science Agents, ACE for Materials, Tiered Memory |
 | 2026-04-08 | [Career Development Roadmap](derived/career-development-roadmap.md) | article | Agentic Harness, Material Science Agents, ACE Framework |
 | 2026-04-08 | [Lint Report 2026-04-08](derived/lint-report-2026-04-08.md) | lint-report | — |
+| 2026-04-08 | [Material Science Agent 入職行動計劃](derived/onboarding-action-plan.md) | article | ACE Framework, ACE for Materials, Material Science Agents |
 
 ---
 
