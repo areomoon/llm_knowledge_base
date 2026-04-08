@@ -11,10 +11,10 @@
 
 | Metric | Count |
 |--------|-------|
-| Concept articles | 11 |
-| Derived notes | 11 |
+| Concept articles | 13 |
+| Derived notes | 13 |
 | Query records | 1 |
-| Last compiled | 2026-04-08 |
+| Last compiled | 2026-04-09 |
 
 ---
 
@@ -33,6 +33,8 @@
 | [Agent-Friendly Design](concepts/agent-friendly-design.md) | Design principles for software interfaces optimized for autonomous AI agent consumption | `mcp`, `tool-design`, `agent-friendly` |
 | [Material Science Agents](concepts/material-science-agents.md) | LLM-based autonomous systems closing the hypothesis–experiment–analysis loop in materials research | `material-science`, `agent`, `closed-loop`, `multi-agent` |
 | [ACE for Materials](concepts/ace-for-materials.md) | Application of ACE Generator/Reflector/Curator to materials discovery and scientific paper extraction | `material-science`, `ace-framework`, `closed-loop` |
+| [Agent Evaluation](concepts/agent-evaluation.md) | Methods and benchmarks for evaluating multi-step autonomous agent performance | `agent`, `evaluation`, `benchmark`, `swe-bench`, `made` |
+| [Agent Product Design](concepts/agent-product-design.md) | Design principles for building trustworthy agent products: autonomy spectrum, human-in-the-loop placement, trust building | `agent`, `product-design`, `human-in-the-loop`, `trust` |
 | [Agentic Harness](concepts/agentic-harness.md) | Infrastructure surrounding an LLM loop (memory, compression, permissions, orchestration) that makes agents production-grade | `agent`, `harness`, `context-compression`, `permission-gating` |
 | [Tiered Memory](concepts/tiered-memory.md) | Three-layer agent memory: always-loaded index (L1), on-demand topic files (L2), searchable transcripts (L3) | `agent`, `memory`, `context-engineering` |
 
@@ -55,6 +57,8 @@
 | 2026-04-08 | [Gemini 諮詢：Patsnap 職涯決策全紀錄](derived/gemini-career-decision-patsnap.md) | session | Material Science Agents, Context Engineering |
 | 2026-04-08 | [ChatGPT 諮詢：Patsnap 面試準備與職涯策略](derived/chatgpt-patsnap-interview-strategy.md) | session | Material Science Agents, Context Engineering |
 | 2026-04-09 | [OpenAI 目標職位分析與轉職策略](derived/openai-target-role-strategy.md) | session | Material Science Agents, Context Engineering, Agentic Harness |
+| 2026-04-09 | [AI Agent 產品案例研究](derived/2026-04-09-agent-product-case-studies.md) | article | Agentic Harness, Agent Product Design, Agent Evaluation |
+| 2026-04-09 | [Warmup × KB 缺口分析](derived/2026-04-09-warmup-agent-knowledge-gap-analysis.md) | article | Agent Product Design, Agent Evaluation, Material Science Agents |
 
 ---
 
