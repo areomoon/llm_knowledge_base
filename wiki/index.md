@@ -12,8 +12,8 @@
 | Metric | Count |
 |--------|-------|
 | Concept articles | 11 |
-| Derived notes | 10 |
-| Query records | 0 |
+| Derived notes | 11 |
+| Query records | 1 |
 | Last compiled | 2026-04-08 |
 
 ---
@@ -54,6 +54,7 @@
 | 2026-04-08 | [Material Science Agent 入職行動計劃](derived/onboarding-action-plan.md) | article | ACE Framework, ACE for Materials, Material Science Agents |
 | 2026-04-08 | [Gemini 諮詢：Patsnap 職涯決策全紀錄](derived/gemini-career-decision-patsnap.md) | session | Material Science Agents, Context Engineering |
 | 2026-04-08 | [ChatGPT 諮詢：Patsnap 面試準備與職涯策略](derived/chatgpt-patsnap-interview-strategy.md) | session | Material Science Agents, Context Engineering |
+| 2026-04-09 | [OpenAI 目標職位分析與轉職策略](derived/openai-target-role-strategy.md) | session | Material Science Agents, Context Engineering, Agentic Harness |
 
 ---
 
@@ -61,11 +62,9 @@
 
 > Logged Q&A sessions and search results.
 
-*No queries logged yet.*
-
-<!-- query list goes here, format:
-| Date | [Query](queries/YYYY-MM-DD-slug.md) | Summary |
--->
+| Date | Query | Summary |
+|------|-------|---------|
+| 2026-04-09 | [職涯執行計畫](queries/2026-04-09-career-execution-plan.md) | Patsnap → 300k+ Applied AI 的完整時間線（入職前/初期/中期/跳槽） |
 
 <!-- END AUTO-GENERATED -->
 
