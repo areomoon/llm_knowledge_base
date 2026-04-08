@@ -45,6 +45,21 @@ tags: [career, openai, applied-ai, networking, portfolio, singapore]
 
 OpenAI、Anthropic（SG 擴編）、Google DeepMind、AI Startups (SG)
 
+## 技術準備對齊
+
+OpenAI JD 要求的能力與 [areomoon_agent_warmup](https://github.com/areomoon/areomoon_agent_warmup) 模組對應：
+
+| JD 要求 | Warmup 模組 | 備註 |
+|---------|------------|------|
+| Prompt prototyping | `01_prompt_engineering/` | CoT、ReAct、Self-consistency |
+| AI agents / workflows | `03_agent_patterns/` + `04_ace_framework/` | Generator-Reflector、LangGraph |
+| Evaluation systems | 需在 Patsnap 實戰建立 | warmup repo 目前無對應模組，可考慮新增 `08_evaluation/` |
+| Model training / RL | `06_finetuning/` | LoRA/QLoRA 基礎 |
+| Domain knowledge | `05_material_science_agents/` | MARS、LLMatDesign 架構 |
+| Multimodal (scientific docs) | `07_multimodal/` | 圖表理解、PDF parsing |
+
+> **Gap**：warmup repo 缺少 evaluation/benchmark 模組和 portfolio/networking 策略。Knowledge base 的 [Career Execution Plan](../queries/2026-04-09-career-execution-plan.md) 補齊了後者。
+
 ## Concepts Referenced
 
 - [Material Science Agents](../concepts/material-science-agents.md) — Patsnap 實戰場景

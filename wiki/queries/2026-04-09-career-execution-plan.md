@@ -13,11 +13,46 @@ tags: [career, patsnap, execution-plan, openai, networking]
 ## Phase 0：入職前（現在 ~ 5 月中，約 4-6 週）
 
 ### 技術預熱（每天 1-2 小時，低壓）
-- [ ] 掃一遍 LangGraph 文件（Agent multi-turn / tool orchestration）
-- [ ] 掃一遍 LlamaIndex Advanced Retrieval（Parent-Child / Hierarchical Indexing）
-- [ ] 讀 2-3 篇 "LLM for Scientific Literature" / "Knowledge Graph RAG" 論文
+
+> 對應 [areomoon_agent_warmup](https://github.com/areomoon/areomoon_agent_warmup) repo 的 6 週 warmup 計畫。
+> 以下按 warmup repo 模組排列，標注優先級。
+
+**Week 1 — Prompt Engineering（必做）** → `01_prompt_engineering/`
+- [ ] 跑 `chain_of_thought.py`：比較 Zero-shot CoT vs Manual CoT 在科學文本的差異
+- [ ] 跑 `react_pattern.py`：理解 ReAct（Reasoning + Acting）基礎
+- [ ] 完成 `notebook/prompt_engineering_lab.ipynb`
+- [ ] 讀論文：CoT (Wei 2022)、ReAct (Yao 2022)
+
+**Week 2 — RAG Fundamentals（核心）** → `02_rag_fundamentals/`
+- [ ] 跑 `basic_rag.py`：LlamaIndex 基礎 pipeline（PDF → chunk → embed → retrieve → generate）
+- [ ] 跑 `embedding_search.py`：比較 BGE-M3 vs text-embedding-3-small
+- [ ] 完成 `notebook/rag_lab.ipynb`（用真實論文做問答）
+- [ ] 額外：掃 LlamaIndex Advanced Retrieval 文件（Parent-Child / Hierarchical Indexing）
+
+**Week 3 — Agent Patterns（關鍵）** → `03_agent_patterns/` + `04_ace_framework/`
+- [ ] 跑 `generator_reflector.py`：ACE Generator-Reflector pattern
+- [ ] 跑 `reflection_agent.py`：LangGraph reflection agent（自我修正循環）
+- [ ] 跑 `multi_agent_basic.py`：Orchestrator + Specialist agents
+- [ ] ACE：跑 `playbook_evolution.py` + `curator_pattern.py`
+- [ ] 讀論文：Reflexion (Shinn 2023)、ACE (arXiv 2510.04618)
+
+**Week 4 — Multimodal（材料科學需要）** → `07_multimodal/`
+- [ ] 跑 `image_analysis.py`：圖表理解（GPT-4.1-mini vision / Claude API）
+- [ ] 理解 ColPali / DocLLM 在文件檢索的應用
+
+**Week 5 — Fine-tuning（了解即可）** → `06_finetuning/`
+- [ ] 跑 `lora_basics.py`：LoRA 原理
+- [ ] 理解 QLoRA 訓練流程（Colab 上跑一次）
+- [ ] 理解 SFT vs RAG+prompt 的取捨（Patsnap 團隊已選後者）
+
+**持續 — Material Science Agents** → `05_material_science_agents/`
+- [ ] 讀 `mars_architecture_study.md` + `llmatdesign_study.md`
+- [ ] 跑 `extraction_agent.py`：材料論文 extraction agent 原型
+- [ ] 對照知識庫 [Material Science Agents](../concepts/material-science-agents.md) 概念文章
+
+**其他預熱**
 - [ ] 熟悉向量資料庫差異（Milvus vs Qdrant vs Pinecone — 至少知道取捨）
-- [ ] 複習 PyTorch embedding model fine-tuning 基本流程
+- [ ] 瀏覽 warmup repo 的 `resources/papers.md` 和 `resources/tools.md`
 
 ### 人脈啟動
 - [ ] 跟 Huwei（hiring manager）聊：前 1-3 月期待、目前最大 bottleneck、建議先看什麼

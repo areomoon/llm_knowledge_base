@@ -135,7 +135,22 @@ Offer
 
 ---
 
-## 五、每週時間分配
+## 五、技術準備與 Warmup Repo 對應
+
+[areomoon_agent_warmup](https://github.com/areomoon/areomoon_agent_warmup) 提供入職前的技術練習：
+
+| JD 要求 | Warmup 模組 |
+|---------|------------|
+| Prompt prototyping | `01_prompt_engineering/` — CoT、ReAct、Self-consistency |
+| AI agents / workflows | `03_agent_patterns/` + `04_ace_framework/` — Generator-Reflector、LangGraph |
+| Evaluation systems | **Gap** — 需在 Patsnap 實戰建立，可新增 `08_evaluation/` |
+| Model training / RL | `06_finetuning/` — LoRA/QLoRA |
+| Domain knowledge | `05_material_science_agents/` — MARS、LLMatDesign |
+| Multimodal (scientific docs) | `07_multimodal/` — 圖表理解、PDF parsing |
+
+---
+
+## 六、每週時間分配
 
 | 活動 | 頻率 | 時間 |
 |------|------|------|
