@@ -11,8 +11,8 @@
 
 | Metric | Count |
 |--------|-------|
-| Concept articles | 7 |
-| Derived notes | 2 |
+| Concept articles | 9 |
+| Derived notes | 3 |
 | Query records | 0 |
 | Last compiled | 2026-04-08 |
 
@@ -31,6 +31,8 @@
 | [Superapp Paradigm](concepts/superapp-paradigm.md) | Unified AI application consolidating chatbot, coding agent, and browser into one agentic surface | `superapp`, `ai-products`, `agentic-ai` |
 | [API to SuperAgent Transition](concepts/api-to-superagent.md) | Shift from human-facing API integrations to agent-callable tool interfaces | `agentic-ai`, `mcp`, `superagent` |
 | [Agent-Friendly Design](concepts/agent-friendly-design.md) | Design principles for software interfaces optimized for autonomous AI agent consumption | `mcp`, `tool-design`, `agent-friendly` |
+| [Material Science Agents](concepts/material-science-agents.md) | LLM-based autonomous systems closing the hypothesis–experiment–analysis loop in materials research | `material-science`, `agent`, `closed-loop`, `multi-agent` |
+| [ACE for Materials](concepts/ace-for-materials.md) | Application of ACE Generator/Reflector/Curator to materials discovery and scientific paper extraction | `material-science`, `ace-framework`, `closed-loop` |
 
 ---
 
@@ -42,6 +44,7 @@
 |------|--------------------------------------|------|--------------|
 | 2026-04-08 | [ACE: Agentic Context Engineering](derived/ace-agentic-context-engineering.md) | paper | ACE Framework, Evolving Playbooks |
 | 2026-04-08 | [OpenAI Plans Desktop Superapp](derived/openai-superapp-superagent.md) | article | Superapp Paradigm, API to SuperAgent Transition, Agent-Friendly Design |
+| 2026-04-08 | [ACE × Material Science Application](derived/ace-material-science-application.md) | synthesis | Material Science Agents, ACE for Materials, ACE Framework |
 
 ---
 

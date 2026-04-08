@@ -1,0 +1,12 @@
+{
+  "title": "ACE × Material Science Agents: Applying Generator/Reflector/Curator to Scientific Discovery",
+  "type": "synthesis",
+  "source_url": "https://arxiv.org/abs/2602.00169",
+  "secondary_sources": [
+    "https://arxiv.org/abs/2406.13163",
+    "https://arxiv.org/abs/2510.04618"
+  ],
+  "ingested_at": "2026-04-08T00:00:00Z",
+  "tags": ["material-science", "agent", "ace-framework", "scientific-discovery", "closed-loop"],
+  "compiled_at": "2026-04-08T00:00:00Z"
+}
