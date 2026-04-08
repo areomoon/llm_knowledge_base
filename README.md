@@ -2,6 +2,8 @@
 
 基於 [Andrej Karpathy LLM Knowledge Base](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) 概念建立的個人 AI/Agent 研究知識庫系統。
 
+> **Browse the wiki**: [`wiki/index.md`](wiki/index.md)
+
 ---
 
 ## 專案概覽
@@ -55,22 +57,21 @@ Phase 1: Ingest  →  Phase 2: Compile  →  Phase 3: Query  →  Phase 4: Lint
 ```
 llm_knowledge_base/
 ├── raw/                    # Phase 1: 原始資料輸入區
-│   ├── articles/           # 網頁文章 (.md)，由 Obsidian Web Clipper 剪裁或 ingest.py 抓取
-│   ├── papers/             # 論文 (.pdf, .md)，主要來自 arXiv
+│   ├── articles/           # 網頁文章 (.md + .meta.json)
+│   ├── papers/             # 論文 (.pdf, .md + .meta.json)
 │   ├── repos/              # GitHub repo 學習筆記
 │   └── datasets/           # 資料集描述與筆記
 ├── wiki/                   # Phase 2: LLM 編譯輸出的結構化 wiki
 │   ├── index.md            # 總索引（所有概念文章的入口摘要）
 │   ├── concepts/           # 概念文章（主力內容，含 backlinks）
-│   ├── derived/            # 衍生產出（Marp 投影片、matplotlib 圖表）
+│   ├── derived/            # 衍生產出（原始資料摘要）
 │   └── queries/            # 查詢結果與 Q&A 記錄存檔
 ├── scripts/                # 工具腳本
-│   ├── ingest.py           # 輸入處理：URL → Markdown
-│   ├── compile.py          # LLM 編譯：raw/ → wiki/
-│   ├── search.py           # 全文搜尋引擎（CLI + Web UI）
-│   └── lint.py             # Wiki 健康檢查
+│   ├── ingest.py           # 輸入處理：URL → raw/
+│   └── search.py           # 全文搜尋引擎（CLI + Web UI）
 ├── config/
 │   └── settings.yaml       # LLM API 設定、路徑設定
+├── CLAUDE.md               # Claude Code Agent 操作指引（compile / lint）
 ├── requirements.txt
 ├── .gitignore
 └── README.md
@@ -81,24 +82,25 @@ llm_knowledge_base/
 ## 模組說明
 
 ### `scripts/ingest.py`
+
 - **功能**：從 URL 抓取網頁內容，轉換為 Markdown 格式存入 `raw/articles/`；支援 arXiv PDF 下載、GitHub repo 摘要
 - **依賴**：`requests`, `beautifulsoup4`, `markdownify`, `arxiv`, `PyMuPDF`
 
-### `scripts/compile.py`
-- **功能**：增量讀取 `raw/` 新增文件，呼叫 LLM API 產出 wiki 文章
-  - 更新 `wiki/index.md` 總索引
-  - 建立或更新 `wiki/concepts/` 概念文章（含 backlinks）
-  - 維護概念間的連結圖，自動追蹤哪些原始檔案已處理
-- **依賴**：`anthropic`, `pyyaml`, `pathlib`
-
 ### `scripts/search.py`
+
 - **功能**：對 `wiki/` 做全文搜尋，支援 CLI 和簡易 Web UI
 - **設計**：naive keyword search（仿 Karpathy 的 vibe-coded 風格），不需向量資料庫
 - **依賴**：`flask`（Web UI）, `click`（CLI）
 
-### `scripts/lint.py`
-- **功能**：掃描 wiki，檢查斷裂的 `[[internal links]]`、概念文章間的不一致描述、缺失 backlinks、孤立文章（無任何連結指向）；產出健康報告與 LLM 建議的新文章主題
-- **依賴**：`re`, `pathlib`, `anthropic`
+### Claude Code Agent（compile / lint）
+
+Compile 和 Lint 任務由 Claude Code Agent 直接執行，操作規範定義於 [`CLAUDE.md`](CLAUDE.md)。
+
+| 任務 | 執行方式 |
+|------|---------|
+| 編譯所有新的 raw 檔案 | 告訴 Claude Code："compile all new raw files" |
+| 編譯單一檔案 | 告訴 Claude Code："compile raw/articles/abc123.md" |
+| Wiki 健康檢查 | 告訴 Claude Code："lint the wiki" |
 
 ---
 
@@ -108,11 +110,10 @@ llm_knowledge_base/
 |------|------|
 | 程式語言 | Python 3.11+ |
 | LLM API | Claude API（Anthropic）/ OpenAI API |
-| 知識庫瀏覽 | Obsidian（支援 backlinks 視覺化） |
-| 文件格式 | Markdown（含 YAML frontmatter） |
+| 知識庫瀏覽 | GitHub（原生 Markdown 渲染） |
+| Agent 操作指引 | CLAUDE.md（Claude Code） |
+| 文件格式 | GitHub Flavored Markdown（含 YAML frontmatter） |
 | 設定管理 | YAML |
-| 投影片 | Marp（Markdown → 簡報） |
-| 圖表 | matplotlib |
 
 ---
 
@@ -129,14 +130,14 @@ cp .env.example .env
 # 3. 輸入第一篇文章
 python scripts/ingest.py --type article --url "https://example.com/article"
 
-# 4. 編譯 wiki
-python scripts/compile.py
+# 4. 編譯 wiki（透過 Claude Code）
+# 在 Claude Code 中執行：compile all new raw files
 
 # 5. 搜尋
 python scripts/search.py --query "transformer attention"
 
-# 6. 健康檢查
-python scripts/lint.py
+# 6. 健康檢查（透過 Claude Code）
+# 在 Claude Code 中執行：lint the wiki
 ```
 
 ---

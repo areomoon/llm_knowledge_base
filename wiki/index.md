@@ -1,32 +1,63 @@
-# LLM Knowledge Base — 總索引
+# LLM Knowledge Base — Index
 
-> 此索引由 `scripts/compile.py` 自動維護。手動編輯請置於 `<!-- MANUAL -->` 區塊內。
+> This index is maintained by Claude Code Agent. See [CLAUDE.md](../CLAUDE.md) for compile instructions.
+> Manual notes go in the [Notes](#notes) section — they will not be overwritten.
 
 ---
 
 <!-- AUTO-GENERATED -->
-**統計**：概念文章 0 篇 | 衍生筆記 0 篇 | 查詢記錄 0 筆
-**最後更新**：尚未編譯
+
+## Stats
+
+| Metric | Count |
+|--------|-------|
+| Concept articles | 0 |
+| Derived notes | 0 |
+| Query records | 0 |
+| Last compiled | — |
 
 ---
 
-## 概念文章（Concepts）
+## Concepts
 
-*尚無概念文章。執行 `python scripts/compile.py` 開始編譯。*
+> AI/LLM concepts extracted and synthesized from source material.
 
-## 衍生筆記（Derived）
+*No concept articles yet. Ask Claude Code to "compile all new raw files" to get started.*
 
-*尚無衍生筆記。*
+<!-- concept list goes here, format:
+| [Concept Name](concepts/slug.md) | One-line definition | Tags |
+-->
 
-## 查詢記錄（Queries）
+---
 
-*尚無查詢記錄。*
+## Derived Notes
+
+> Summaries of ingested source material (articles, papers, repos).
+
+*No derived notes yet.*
+
+<!-- derived list goes here, format:
+| Date | [Title](derived/YYYY-MM-DD-slug.md) | Type | Key Concepts |
+-->
+
+---
+
+## Queries
+
+> Logged Q&A sessions and search results.
+
+*No queries logged yet.*
+
+<!-- query list goes here, format:
+| Date | [Query](queries/YYYY-MM-DD-slug.md) | Summary |
+-->
+
 <!-- END AUTO-GENERATED -->
 
 ---
 
-<!-- MANUAL -->
-## 手動筆記
+## Notes
 
-（在此區塊內的內容不會被自動覆寫）
-<!-- END MANUAL -->
+> Manual notes — not overwritten by automation.
+
+*(Add free-form notes here.)*
