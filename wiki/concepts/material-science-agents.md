@@ -117,12 +117,20 @@ Ground truth for extraction tasks is expensive (requires expert annotation). Pra
 | **Database validation** | Check against Materials Project / Springer Materials for known compounds | Medium |
 | **Expert annotation** | Domain scientist reviews sampled outputs | High, highest quality |
 
+## Backlinks
+
+- [ACE for Materials](ace-for-materials.md) — maps ACE GRC roles onto the systems described here
+- [derived: ACE × Material Science Application](../derived/ace-material-science-application.md)
+- [derived: Agentic Service Warmup Plan](../derived/agentic-service-warmup-plan.md)
+- [derived: Career Development Roadmap](../derived/career-development-roadmap.md)
+
 ## Related Concepts
 
 - [ACE Framework](ace-framework.md)
 - [ACE for Materials](ace-for-materials.md)
 - [Agentic Self-Improvement](agentic-self-improvement.md)
 - [Evolving Playbooks](evolving-playbooks.md)
+- [Agentic Harness](agentic-harness.md)
 
 ## References
 

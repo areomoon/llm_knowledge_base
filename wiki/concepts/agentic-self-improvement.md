@@ -37,11 +37,23 @@ The [ACE Framework](ace-framework.md) exemplifies the third approach via [Evolvi
 - **Catastrophic unlearning via over-pruning**: aggressive de-duplication can discard rare but important strategies
 - **Distribution shift**: a playbook optimized for one task distribution may degrade on shifted inputs
 
+## Backlinks
+
+- [ACE Framework](ace-framework.md) — ACE is the canonical example
+- [Context Engineering](context-engineering.md) — context evolution enables self-improvement
+- [Evolving Playbooks](evolving-playbooks.md) — playbooks are the persistence mechanism
+- [ACE for Materials](ace-for-materials.md) — materials discovery as a self-improvement loop
+- [Material Science Agents](material-science-agents.md) — MatAgent and LLMatDesign implement iterative refinement
+- [derived: ACE Agentic Context Engineering](../derived/ace-agentic-context-engineering.md)
+- [derived: ACE × Material Science Application](../derived/ace-material-science-application.md)
+
 ## Related Concepts
 
 - [ACE Framework](ace-framework.md)
 - [Context Engineering](context-engineering.md)
 - [Evolving Playbooks](evolving-playbooks.md)
+- [ACE for Materials](ace-for-materials.md)
+- [Material Science Agents](material-science-agents.md)
 
 ## References
 

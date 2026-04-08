@@ -27,6 +27,12 @@ The competitive logic is straightforward: once a user's primary AI interaction p
 - **Competitive moat**: unified UX + shared context creates switching costs that individual tools cannot match
 - **Platform race**: each major AI lab is converging on a superapp strategy, mirroring the WeChat/super-app model from consumer tech
 
+## Backlinks
+
+- [API to SuperAgent Transition](api-to-superagent.md) — transition is driven by superapp rise
+- [Agent-Friendly Design](agent-friendly-design.md) — superapps demand agent-friendly tool interfaces
+- [derived: OpenAI Plans Desktop Superapp](../derived/openai-superapp-superagent.md)
+
 ## Related Concepts
 
 - [API to SuperAgent Transition](api-to-superagent.md)

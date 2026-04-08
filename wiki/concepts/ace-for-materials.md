@@ -164,12 +164,20 @@ The playbook accumulates extraction knowledge that cannot be captured by fine-tu
 - The playbook captures explicit, interpretable rules from specific observed failures
 - Both are complementary: fine-tune the Generator for general extraction ability; use the playbook for domain-specific edge cases and institutional knowledge
 
+## Backlinks
+
+- [Material Science Agents](material-science-agents.md) — the systems this article maps onto GRC
+- [derived: ACE × Material Science Application](../derived/ace-material-science-application.md)
+- [derived: Agentic Service Warmup Plan](../derived/agentic-service-warmup-plan.md)
+- [derived: Career Development Roadmap](../derived/career-development-roadmap.md)
+
 ## Related Concepts
 
 - [ACE Framework](ace-framework.md)
 - [Material Science Agents](material-science-agents.md)
 - [Evolving Playbooks](evolving-playbooks.md)
 - [Agentic Self-Improvement](agentic-self-improvement.md)
+- [Agentic Harness](agentic-harness.md)
 
 ## References
 

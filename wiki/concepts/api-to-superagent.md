@@ -31,6 +31,12 @@ This transition has three practical consequences:
 - **MCP as enabler**: Anthropic's Model Context Protocol standardizes the contract between agents and tools, lowering the cost of exposing agent-callable surfaces
 - **Human oversight preserved**: the transition doesn't eliminate human intent — it moves human control to the superapp orchestration layer
 
+## Backlinks
+
+- [Superapp Paradigm](superapp-paradigm.md) — superapps are the surface where this transition plays out
+- [Agent-Friendly Design](agent-friendly-design.md) — design principles for the agent-callable interfaces
+- [derived: OpenAI Plans Desktop Superapp](../derived/openai-superapp-superagent.md)
+
 ## Related Concepts
 
 - [Superapp Paradigm](superapp-paradigm.md)

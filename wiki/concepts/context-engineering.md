@@ -40,11 +40,23 @@ The discipline gained prominence as LLM systems moved from single-shot queries t
 | Fine-tuning | Fine-tuning bakes knowledge into weights; context engineering keeps knowledge in the context window |
 | [Evolving Playbooks](evolving-playbooks.md) | The specific mechanism ACE uses to implement context evolution |
 
+## Backlinks
+
+- [ACE Framework](ace-framework.md) — implements context engineering via evolving playbooks
+- [Evolving Playbooks](evolving-playbooks.md) — the specific mechanism for context evolution
+- [Agentic Self-Improvement](agentic-self-improvement.md) — self-improvement requires context engineering
+- [Tiered Memory](tiered-memory.md) — tiered memory is a context engineering pattern
+- [Agentic Harness](agentic-harness.md) — harness implements context management at scale
+- [derived: ACE Agentic Context Engineering](../derived/ace-agentic-context-engineering.md)
+- [derived: Claude Code Leak Architecture Insights](../derived/claude-code-leak-architecture-insights.md)
+
 ## Related Concepts
 
 - [ACE Framework](ace-framework.md)
 - [Evolving Playbooks](evolving-playbooks.md)
 - [Agentic Self-Improvement](agentic-self-improvement.md)
+- [Tiered Memory](tiered-memory.md)
+- [Agentic Harness](agentic-harness.md)
 
 ## References
 

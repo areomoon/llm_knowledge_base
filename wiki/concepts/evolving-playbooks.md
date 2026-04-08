@@ -58,11 +58,24 @@ Updated playbook used in next attempt
 | Context Collapse | Rewrite whole prompt | Delta updates only |
 | Stale knowledge | No pruning | Periodic de-duplication |
 
+## Backlinks
+
+- [ACE Framework](ace-framework.md) — playbooks are the central ACE artifact
+- [Context Engineering](context-engineering.md) — playbooks implement context evolution
+- [Agentic Self-Improvement](agentic-self-improvement.md) — playbooks are the persistence layer for self-improvement
+- [ACE for Materials](ace-for-materials.md) — materials-specific four-layer playbook design
+- [Material Science Agents](material-science-agents.md) — LLMatDesign strategy library as playbook
+- [Tiered Memory](tiered-memory.md) — tiered memory complements playbooks in the harness
+- [derived: ACE Agentic Context Engineering](../derived/ace-agentic-context-engineering.md)
+- [derived: ACE × Material Science Application](../derived/ace-material-science-application.md)
+
 ## Related Concepts
 
 - [ACE Framework](ace-framework.md)
 - [Context Engineering](context-engineering.md)
 - [Agentic Self-Improvement](agentic-self-improvement.md)
+- [ACE for Materials](ace-for-materials.md)
+- [Tiered Memory](tiered-memory.md)
 
 ## References
 

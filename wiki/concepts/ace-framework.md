@@ -27,7 +27,7 @@ The framework requires no fine-tuning. Strategy accumulates in the playbook itse
 
 ## Key Ideas
 
-- **Three-role architecture**: [Generator](ace-framework.md), [Reflector](ace-framework.md), and [Curator](ace-framework.md) roles decompose the self-improvement loop into specialized responsibilities
+- **Three-role architecture**: Generator, Reflector, and Curator roles decompose the self-improvement loop into specialized responsibilities
 - **Grow-and-Refine**: new lessons are appended as bullets; existing bullets are updated; periodic de-duplication prunes redundancy
 - **Delta updates**: only changed portions of the playbook are rewritten, preserving prior knowledge
 - **No weight updates**: all adaptation lives in context — deployable without retraining infrastructure
@@ -51,11 +51,24 @@ The Generator–Reflector–Curator loop mirrors the Ingest–Compile–Lint cyc
 
 AppWorld performance matches the public leaderboard leader (IBM GPT-4.1 agent) without any model-specific tuning.
 
+## Backlinks
+
+- [Context Engineering](context-engineering.md) — names ACE as its primary example
+- [Evolving Playbooks](evolving-playbooks.md) — the playbook is ACE's core artifact
+- [Agentic Self-Improvement](agentic-self-improvement.md) — ACE exemplifies context-based self-improvement
+- [ACE for Materials](ace-for-materials.md) — applies GRC roles to materials science
+- [Material Science Agents](material-science-agents.md) — compares ACE-compatible material discovery systems
+- [Agentic Harness](agentic-harness.md) — harness infrastructure that ACE runs within
+- [derived: ACE Agentic Context Engineering](../derived/ace-agentic-context-engineering.md)
+- [derived: ACE × Material Science Application](../derived/ace-material-science-application.md)
+
 ## Related Concepts
 
 - [Context Engineering](context-engineering.md)
 - [Evolving Playbooks](evolving-playbooks.md)
 - [Agentic Self-Improvement](agentic-self-improvement.md)
+- [ACE for Materials](ace-for-materials.md)
+- [Material Science Agents](material-science-agents.md)
 
 ## References
 

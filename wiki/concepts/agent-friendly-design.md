@@ -32,10 +32,17 @@ Key properties of agent-friendly interfaces:
 - **Discoverability matters**: agents can only use tools they know about; tool descriptions must be precise enough for an LLM to select them correctly
 - **Human fallback**: well-designed agent interfaces include a human-review step for irreversible or high-stakes actions
 
+## Backlinks
+
+- [Superapp Paradigm](superapp-paradigm.md) — superapps require agent-friendly tool surfaces
+- [API to SuperAgent Transition](api-to-superagent.md) — describes the same shift from the API side
+- [derived: OpenAI Plans Desktop Superapp](../derived/openai-superapp-superagent.md)
+
 ## Related Concepts
 
 - [Superapp Paradigm](superapp-paradigm.md)
 - [API to SuperAgent Transition](api-to-superagent.md)
+- [Agentic Harness](agentic-harness.md)
 
 ## References
 
