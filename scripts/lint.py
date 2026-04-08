@@ -1,18 +1,14 @@
 """
-lint.py — Wiki 品質檢查模組
+lint.py — Wiki 連結掃描工具
 
-掃描 wiki/ 目錄，偵測知識庫中的常見問題並產出健康報告：
-- 斷裂的 [[internal links]]
-- 孤立文章（無任何其他頁面連結至此）
-- 概念文章間矛盾或不一致的描述
-- 缺失 backlinks
-- 建議應新建的概念文章主題
+掃描 wiki/ 目錄，偵測斷裂的 Markdown 連結與孤立頁面。
+輸出問題報告供 Claude Code Agent 參考修復。
+
+LLM 驅動的品質建議（缺失主題、概念合併）由 Agent 執行（見 CLAUDE.md）。
 
 使用方式：
-    python scripts/lint.py                    # 執行完整品質檢查
-    python scripts/lint.py --fix links        # 嘗試自動修復斷裂連結
-    python scripts/lint.py --report           # 僅輸出報告（不修復）
-    python scripts/lint.py --suggest          # 用 LLM 建議缺失的概念主題
+    python scripts/lint.py              # 執行完整連結掃描
+    python scripts/lint.py --verbose    # 顯示所有已驗證的連結
 """
 
 import argparse
@@ -25,183 +21,172 @@ logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
 
 WIKI_DIR = Path(__file__).parent.parent / "wiki"
-INTERNAL_LINK_PATTERN = re.compile(r"\[\[([^\]]+)\]\]")
+MARKDOWN_LINK_RE = re.compile(r"\[([^\]]+)\]\(([^)]+)\)")
+HEADING_RE = re.compile(r"^#{1,6}\s+(.+)$", re.MULTILINE)
 
 
 @dataclass
 class LintReport:
-    """品質檢查報告的資料結構。"""
     broken_links: list[dict] = field(default_factory=list)
     orphan_pages: list[Path] = field(default_factory=list)
-    missing_backlinks: list[dict] = field(default_factory=list)
-    suggested_topics: list[str] = field(default_factory=list)
+    missing_index_entries: list[Path] = field(default_factory=list)
     total_pages: int = 0
     total_links: int = 0
+    checked_links: int = 0
 
     def summary(self) -> str:
-        """生成報告摘要字串。"""
         lines = [
             "=== Wiki 健康報告 ===",
-            f"總頁數：{self.total_pages}",
-            f"總連結數：{self.total_links}",
+            f"掃描頁面：{self.total_pages}",
+            f"掃描連結：{self.total_links}（相對連結 {self.checked_links} 個）",
             f"斷裂連結：{len(self.broken_links)}",
             f"孤立頁面：{len(self.orphan_pages)}",
-            f"缺失 backlinks：{len(self.missing_backlinks)}",
-            f"建議新增主題：{len(self.suggested_topics)}",
+            f"索引缺漏：{len(self.missing_index_entries)}",
         ]
         return "\n".join(lines)
 
 
-def collect_all_pages() -> dict[str, Path]:
+def collect_wiki_pages() -> dict[Path, str]:
+    """回傳 wiki/ 中所有 .md 檔案的路徑 → 內容映射。"""
+    if not WIKI_DIR.exists():
+        return {}
+    return {
+        p: p.read_text(encoding="utf-8")
+        for p in sorted(WIKI_DIR.rglob("*.md"))
+    }
+
+
+def check_broken_links(pages: dict[Path, str], verbose: bool = False) -> tuple[list[dict], int, int]:
     """
-    掃描 wiki/ 目錄，建立頁面名稱到路徑的映射。
+    掃描所有頁面的 Markdown 連結，回傳斷裂連結列表。
 
-    Returns:
-        dict，key 為頁面標題（不含副檔名），value 為完整路徑。
-
-    TODO:
-        - 遞迴掃描 wiki/concepts/ 與 wiki/derived/
-        - 正規化頁面名稱（大小寫、空格與底線互換）
-        - 處理同名頁面的衝突警告
+    只檢查相對路徑連結（跳過 http:// 和錨點 #）。
     """
-    # TODO: implement
-    raise NotImplementedError
+    broken: list[dict] = []
+    total_links = 0
+    checked_links = 0
+
+    for page_path, content in pages.items():
+        for match in MARKDOWN_LINK_RE.finditer(content):
+            link_text, link_target = match.group(1), match.group(2)
+            total_links += 1
+
+            # 跳過外部 URL 和純錨點
+            if link_target.startswith(("http://", "https://", "mailto:", "#")):
+                continue
+
+            # 處理錨點部分（如 file.md#section）
+            target_path_str = link_target.split("#")[0]
+            if not target_path_str:
+                continue
+
+            checked_links += 1
+            target_path = (page_path.parent / target_path_str).resolve()
+
+            if not target_path.exists():
+                broken.append({
+                    "source": str(page_path.relative_to(WIKI_DIR.parent)),
+                    "link_text": link_text,
+                    "link_target": link_target,
+                })
+                if not verbose:
+                    logger.warning("斷裂連結：%s → %s (在 %s)",
+                                   link_text, link_target,
+                                   page_path.relative_to(WIKI_DIR.parent))
+            elif verbose:
+                logger.info("  OK  %s → %s", link_text, link_target)
+
+    return broken, total_links, checked_links
 
 
-def check_broken_links(pages: dict[str, Path]) -> list[dict]:
+def find_orphan_pages(pages: dict[Path, str]) -> list[Path]:
     """
-    檢查所有 [[internal links]] 是否指向存在的頁面。
-
-    Args:
-        pages: collect_all_pages() 的回傳值。
-
-    Returns:
-        斷裂連結列表，每項包含：source_page、link_target、line_number。
-
-    TODO:
-        - 讀取每個 .md 檔案
-        - 用 INTERNAL_LINK_PATTERN 提取所有 [[連結]]
-        - 查詢 pages dict 確認目標存在
-        - 記錄所有不存在的連結目標
+    找出沒有任何其他頁面連結指向的孤立頁面（排除 index.md）。
     """
-    # TODO: implement
-    raise NotImplementedError
+    index_md = WIKI_DIR / "index.md"
+    candidate_pages = {p for p in pages if p != index_md}
+    referenced: set[Path] = set()
+
+    for page_path, content in pages.items():
+        for match in MARKDOWN_LINK_RE.finditer(content):
+            link_target = match.group(2).split("#")[0]
+            if not link_target or link_target.startswith(("http://", "https://")):
+                continue
+            resolved = (page_path.parent / link_target).resolve()
+            referenced.add(resolved)
+
+    return sorted(p for p in candidate_pages if p.resolve() not in referenced)
 
 
-def find_orphan_pages(pages: dict[str, Path]) -> list[Path]:
+def find_missing_index_entries(pages: dict[Path, str]) -> list[Path]:
     """
-    找出沒有任何其他頁面連結指向的孤立頁面。
-
-    Args:
-        pages: collect_all_pages() 的回傳值。
-
-    Returns:
-        孤立頁面的路徑列表。
-
-    TODO:
-        - 建立反向連結圖（每個頁面被哪些頁面引用）
-        - 找出入度為 0 的頁面（wiki/index.md 除外）
-        - 孤立頁面可能需要被刪除或補充連結
+    找出 wiki/concepts/ 和 wiki/derived/ 中未出現在 index.md 的檔案。
     """
-    # TODO: implement
-    raise NotImplementedError
+    index_path = WIKI_DIR / "index.md"
+    if not index_path.exists():
+        return []
+
+    index_content = index_path.read_text(encoding="utf-8")
+    missing: list[Path] = []
+
+    for subdir in ("concepts", "derived"):
+        subdir_path = WIKI_DIR / subdir
+        if not subdir_path.exists():
+            continue
+        for md_file in sorted(subdir_path.glob("*.md")):
+            # 確認檔案相對路徑或名稱有出現在 index.md 中
+            rel_path = md_file.relative_to(WIKI_DIR)
+            if str(rel_path) not in index_content and md_file.stem not in index_content:
+                missing.append(md_file)
+
+    return missing
 
 
-def check_missing_backlinks(pages: dict[str, Path]) -> list[dict]:
-    """
-    檢查若 A 連結 B，但 B 的 backlinks 區塊未列出 A，則標記缺失。
+def run_lint(verbose: bool = False) -> LintReport:
+    """執行完整的連結掃描並回傳報告。"""
+    logger.info("掃描 %s ...", WIKI_DIR)
+    pages = collect_wiki_pages()
 
-    Args:
-        pages: collect_all_pages() 的回傳值。
-
-    Returns:
-        缺失 backlink 的列表，每項包含：page、missing_backlink_from。
-
-    TODO:
-        - 建立完整的雙向連結圖
-        - 比對每個頁面的 ## Backlinks 區塊與實際引用關係
-        - 回傳需補充 backlink 的頁面清單
-    """
-    # TODO: implement
-    raise NotImplementedError
-
-
-def suggest_missing_topics(pages: dict[str, Path]) -> list[str]:
-    """
-    呼叫 LLM 分析現有概念頁，建議應補充的缺失主題。
-
-    Args:
-        pages: collect_all_pages() 的回傳值。
-
-    Returns:
-        建議主題的字串列表。
-
-    TODO:
-        - 提取現有概念頁的標題列表
-        - 建構 prompt：「以下是現有概念頁，根據 AI/LLM 領域知識，建議 10 個重要但缺失的主題」
-        - 呼叫 LLM API 取得建議
-        - 回傳格式化的建議主題列表
-    """
-    # TODO: implement
-    raise NotImplementedError
-
-
-def fix_broken_links(broken: list[dict]) -> None:
-    """
-    嘗試自動修復斷裂連結（重新命名或移除）。
-
-    Args:
-        broken: check_broken_links() 的回傳值。
-
-    TODO:
-        - 模糊比對：找到最相近的現有頁面名稱
-        - 若有高信心的匹配，自動替換連結目標
-        - 若無匹配，標記為待人工處理
-        - 修改前備份原始檔案
-    """
-    logger.info("嘗試修復 %d 個斷裂連結", len(broken))
-    # TODO: implement
-    raise NotImplementedError
-
-
-def run_lint(fix_mode: str | None = None, suggest: bool = False) -> LintReport:
-    """
-    執行完整的品質檢查流程。
-
-    Args:
-        fix_mode: 若非 None，指定自動修復的類型（'links'）。
-        suggest: 若為 True，呼叫 LLM 建議缺失主題。
-
-    Returns:
-        完整的 LintReport 物件。
-    """
-    logger.info("開始掃描 wiki/...")
-    pages = collect_all_pages()
     report = LintReport(total_pages=len(pages))
 
-    report.broken_links = check_broken_links(pages)
+    broken, total_links, checked = check_broken_links(pages, verbose=verbose)
+    report.broken_links = broken
+    report.total_links = total_links
+    report.checked_links = checked
+
     report.orphan_pages = find_orphan_pages(pages)
-    report.missing_backlinks = check_missing_backlinks(pages)
-
-    if suggest:
-        report.suggested_topics = suggest_missing_topics(pages)
-
-    if fix_mode == "links" and report.broken_links:
-        fix_broken_links(report.broken_links)
+    report.missing_index_entries = find_missing_index_entries(pages)
 
     return report
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="LLM Knowledge Base — Wiki 品質檢查工具")
-    parser.add_argument("--fix", metavar="TARGET", help="自動修復特定問題（目前支援：links）")
-    parser.add_argument("--report", action="store_true", help="僅輸出報告，不執行修復")
-    parser.add_argument("--suggest", action="store_true", help="用 LLM 建議缺失的概念主題")
+    parser = argparse.ArgumentParser(description="LLM Knowledge Base — Wiki 連結掃描工具")
+    parser.add_argument("--verbose", "-v", action="store_true", help="顯示所有已驗證的連結")
     args = parser.parse_args()
 
-    fix_mode = None if args.report else args.fix
-    report = run_lint(fix_mode=fix_mode, suggest=args.suggest)
+    report = run_lint(verbose=args.verbose)
     print(report.summary())
+
+    if report.broken_links:
+        print("\n--- 斷裂連結 ---")
+        for item in report.broken_links:
+            print(f"  {item['source']}: [{item['link_text']}]({item['link_target']})")
+
+    if report.orphan_pages:
+        print("\n--- 孤立頁面 ---")
+        for p in report.orphan_pages:
+            print(f"  {p.relative_to(WIKI_DIR.parent)}")
+
+    if report.missing_index_entries:
+        print("\n--- 索引缺漏 ---")
+        for p in report.missing_index_entries:
+            print(f"  {p.relative_to(WIKI_DIR.parent)}")
+
+    if not any([report.broken_links, report.orphan_pages, report.missing_index_entries]):
+        print("\n✓ 所有檢查通過。")
+    else:
+        print("\n提示：在 Claude Code 中執行 `lint --fix` 讓 Agent 修復上述問題。")
 
 
 if __name__ == "__main__":

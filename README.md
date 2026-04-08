@@ -1,118 +1,56 @@
 # LLM Knowledge Base
 
-基於 [Andrej Karpathy LLM Knowledge Base](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) 概念建立的個人 AI/Agent 研究知識庫系統。
+個人 AI/Agent 研究知識庫，基於 [Andrej Karpathy 的 LLM Knowledge Base 概念](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)建立。
+
+> **核心理念**：LLM 扮演「編譯器」而非傳統 RAG 的角色 — 讀取原始文件 → 產出結構化 Markdown Wiki → Wiki 本身即知識庫
 
 ---
 
-## 專案概覽
-
-本專案不採用傳統的 RAG（Retrieval-Augmented Generation）或向量資料庫方案，而是讓 LLM 扮演「編譯器」的角色：
-
-> **核心理念**：LLM 讀取原始文件 → 產出結構化 Markdown Wiki → Wiki 本身即知識庫
-
-原始資料（論文、文章、GitHub notes）進入 `raw/` 暫存區，LLM 增量讀取並編譯成約 100 篇、40 萬字的概念文章，自動維護 backlinks 與交叉引用。每一次查詢都會回存 wiki，讓知識庫持續累積。
-
----
-
-## 四大階段架構
+## 工作流程
 
 ```
-Phase 1: Ingest  →  Phase 2: Compile  →  Phase 3: Query  →  Phase 4: Lint
-   ↑                                                               |
-   └───────────────────────────────────────────────────────────────┘
+raw/          →    Claude Code Agent    →    wiki/
+(原始文件)          (compile + lint)         (結構化知識庫)
+     ↑                                            |
+     └──── ingest.py (抓 URL) ──── search.py ─────┘
 ```
 
-| 階段 | 說明 |
-|------|------|
-| **Phase 1 Ingest** | 收集網頁文章、arXiv 論文、GitHub repos、資料集，存入 `raw/` |
-| **Phase 2 Compile** | LLM 讀取 `raw/`，產出結構化 wiki（index + 概念文章 + 衍生內容） |
-| **Phase 3 Query** | 透過搜尋引擎、Q&A Agent 探索 wiki，結果回存累積 |
-| **Phase 4 Lint** | LLM 健康檢查：找出不一致、缺失資訊、斷裂連結，觸發下一輪編譯 |
+| 階段 | 工具 | 說明 |
+|------|------|------|
+| **Ingest** | `scripts/ingest.py` | 從 URL 抓取文章/論文，存入 `raw/` |
+| **Compile** | Claude Code Agent | 讀取 `raw/`，產出 `wiki/concepts/` 和 `wiki/derived/` |
+| **Search** | `scripts/search.py` | 對 `wiki/` 進行全文關鍵字搜尋 |
+| **Lint** | Claude Code Agent | 健康檢查：斷裂連結、孤立頁面、缺失主題建議 |
+
+Compile 和 Lint 由 Claude Code Agent 直接執行，規則定義在 [`CLAUDE.md`](CLAUDE.md)。
 
 ---
 
-## 用途
-
-- **個人 AI/Agent 研究**：整理 LLM、Agent、強化學習、多模態等領域最新進展
-- **論文閱讀管理**：arXiv 論文自動摘要、關鍵概念抽取、與既有知識的關聯建立
-- **知識長期累積**：每次閱讀都讓 wiki 更完整，無需手動撰寫
-
----
-
-## 預期效果
-
-仿照 Karpathy 的規模目標：
-
-- **~100 篇** 結構化概念文章（`wiki/concepts/`）
-- **~40 萬字** 的知識庫總量
-- 所有文章自動維護 backlinks 和交叉引用
-- 無需手動撰寫，LLM 全程輔助生成與維護
-
----
-
-## 資料夾結構
+## 目錄結構
 
 ```
 llm_knowledge_base/
-├── raw/                    # Phase 1: 原始資料輸入區
-│   ├── articles/           # 網頁文章 (.md)，由 Obsidian Web Clipper 剪裁或 ingest.py 抓取
-│   ├── papers/             # 論文 (.pdf, .md)，主要來自 arXiv
-│   ├── repos/              # GitHub repo 學習筆記
-│   └── datasets/           # 資料集描述與筆記
-├── wiki/                   # Phase 2: LLM 編譯輸出的結構化 wiki
-│   ├── index.md            # 總索引（所有概念文章的入口摘要）
-│   ├── concepts/           # 概念文章（主力內容，含 backlinks）
-│   ├── derived/            # 衍生產出（Marp 投影片、matplotlib 圖表）
-│   └── queries/            # 查詢結果與 Q&A 記錄存檔
-├── scripts/                # 工具腳本
-│   ├── ingest.py           # 輸入處理：URL → Markdown
-│   ├── compile.py          # LLM 編譯：raw/ → wiki/
-│   ├── search.py           # 全文搜尋引擎（CLI + Web UI）
-│   └── lint.py             # Wiki 健康檢查
+├── CLAUDE.md               # Agent 系統指令（wiki 格式規範、compile/lint 步驟）
+├── README.md
+├── requirements.txt
 ├── config/
 │   └── settings.yaml       # LLM API 設定、路徑設定
-├── requirements.txt
-├── .gitignore
-└── README.md
+├── raw/                    # 原始資料輸入區（不進 git）
+│   ├── articles/           # 網頁文章 (.md)
+│   ├── papers/             # 論文 (.pdf, .md)
+│   ├── repos/              # GitHub repo 學習筆記
+│   └── datasets/           # 資料集描述
+├── wiki/                   # 結構化知識庫（GitHub 上可直接瀏覽）
+│   ├── index.md            # 知識庫導航頁
+│   ├── concepts/           # 概念文章（主力內容）
+│   ├── derived/            # 文章與論文摘要
+│   └── queries/            # Q&A 查詢記錄
+└── scripts/
+    ├── ingest.py           # 從 URL 抓取原始資料
+    ├── compile.py          # 輔助工具：列出待編譯檔案
+    ├── search.py           # 全文關鍵字搜尋
+    └── lint.py             # 輔助工具：掃描斷裂連結
 ```
-
----
-
-## 模組說明
-
-### `scripts/ingest.py`
-- **功能**：從 URL 抓取網頁內容，轉換為 Markdown 格式存入 `raw/articles/`；支援 arXiv PDF 下載、GitHub repo 摘要
-- **依賴**：`requests`, `beautifulsoup4`, `markdownify`, `arxiv`, `PyMuPDF`
-
-### `scripts/compile.py`
-- **功能**：增量讀取 `raw/` 新增文件，呼叫 LLM API 產出 wiki 文章
-  - 更新 `wiki/index.md` 總索引
-  - 建立或更新 `wiki/concepts/` 概念文章（含 backlinks）
-  - 維護概念間的連結圖，自動追蹤哪些原始檔案已處理
-- **依賴**：`anthropic`, `pyyaml`, `pathlib`
-
-### `scripts/search.py`
-- **功能**：對 `wiki/` 做全文搜尋，支援 CLI 和簡易 Web UI
-- **設計**：naive keyword search（仿 Karpathy 的 vibe-coded 風格），不需向量資料庫
-- **依賴**：`flask`（Web UI）, `click`（CLI）
-
-### `scripts/lint.py`
-- **功能**：掃描 wiki，檢查斷裂的 `[[internal links]]`、概念文章間的不一致描述、缺失 backlinks、孤立文章（無任何連結指向）；產出健康報告與 LLM 建議的新文章主題
-- **依賴**：`re`, `pathlib`, `anthropic`
-
----
-
-## 技術棧
-
-| 類別 | 工具 |
-|------|------|
-| 程式語言 | Python 3.11+ |
-| LLM API | Claude API（Anthropic）/ OpenAI API |
-| 知識庫瀏覽 | Obsidian（支援 backlinks 視覺化） |
-| 文件格式 | Markdown（含 YAML frontmatter） |
-| 設定管理 | YAML |
-| 投影片 | Marp（Markdown → 簡報） |
-| 圖表 | matplotlib |
 
 ---
 
@@ -123,29 +61,52 @@ llm_knowledge_base/
 pip install -r requirements.txt
 
 # 2. 設定 API 金鑰
-cp .env.example .env
-# 編輯 .env，填入 ANTHROPIC_API_KEY
+export ANTHROPIC_API_KEY=your_key_here
 
-# 3. 輸入第一篇文章
+# 3. 抓取一篇文章
 python scripts/ingest.py --type article --url "https://example.com/article"
 
-# 4. 編譯 wiki
-python scripts/compile.py
+# 4. 讓 Agent 編譯（在 Claude Code 中執行）
+# > compile
 
 # 5. 搜尋
 python scripts/search.py --query "transformer attention"
 
-# 6. 健康檢查
-python scripts/lint.py
+# 6. 健康檢查（在 Claude Code 中執行）
+# > lint
 ```
+
+---
+
+## 瀏覽知識庫
+
+知識庫 Markdown 針對 **GitHub Flavored Markdown** 優化，可直接在 GitHub 上瀏覽：
+
+- **導航頁**：[`wiki/index.md`](wiki/index.md)
+- **概念文章**：[`wiki/concepts/`](wiki/concepts/)
+- **論文與文章摘要**：[`wiki/derived/`](wiki/derived/)
+- **查詢記錄**：[`wiki/queries/`](wiki/queries/)
+
+---
+
+## 技術棧
+
+| 類別 | 工具 |
+|------|------|
+| 語言 | Python 3.11+ |
+| LLM API | Claude API (Anthropic) |
+| 知識庫格式 | Markdown (GFM + YAML frontmatter) |
+| 主要介面 | GitHub |
+| 搜尋 | BM25 (`rank-bm25`) |
+| 文件解析 | `beautifulsoup4`, `markdownify`, `PyMuPDF` |
 
 ---
 
 ## 參考來源
 
 - [Andrej Karpathy — LLM Knowledge Base Gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)
-- [DAIR.AI Academy — LLM Knowledge Bases (Karpathy)](https://academy.dair.ai/blog/llm-knowledge-bases-karpathy)
+- [DAIR.AI Academy — LLM Knowledge Bases](https://academy.dair.ai/blog/llm-knowledge-bases-karpathy)
 
 ---
 
-*由 Claude Code 輔助建立 | 2026-04*
+*由 Claude Code 輔助建立與維護 | 2026-04*
