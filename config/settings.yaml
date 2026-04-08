@@ -1,10 +1,10 @@
 # LLM Knowledge Base — 設定檔
 # 複製此檔並以 .env 管理敏感金鑰，不要直接在此填入 API key
 
-# LLM API 設定
+# LLM API 設定（ingest.py 使用，compile/lint/query 由 Claude Code Agent 處理）
 llm:
   provider: anthropic          # anthropic | openai
-  model: claude-opus-4-6       # claude-opus-4-6 | gpt-4o
+  model: claude-sonnet-4-6     # claude-sonnet-4-6 | gpt-4o
   max_tokens: 4096
   temperature: 0.3             # 較低溫度確保內容一致性
   # api_key: 請設定環境變數 ANTHROPIC_API_KEY 或 OPENAI_API_KEY
@@ -18,19 +18,23 @@ paths:
   queries: wiki/queries/
   compiled_index: .compiled_index.json
 
-# 編譯設定
-compile:
-  batch_size: 5               # 每批次處理的文件數
-  min_concept_length: 100     # 概念文章最少字元數（低於此值視為空殼）
-  max_concepts_per_file: 15   # 每個原始文件最多抽取的概念數
-
-# 搜尋設定
+# 搜尋設定（scripts/search.py 使用）
 search:
-  default_mode: keyword       # keyword | semantic | rag
+  default_mode: keyword        # keyword（本地 BM25，不需 LLM）
   top_k: 10
-  # embedding_model: text-embedding-3-small  # 若使用語意搜尋需設定
 
-# Lint 設定
+# Ingest 設定（scripts/ingest.py 使用）
+ingest:
+  default_type: article        # article | paper | repo | dataset
+  dedup: true                  # 依 SHA-256 hash 去重
+
+# Lint 設定（scripts/lint.py 結構檢查使用）
 lint:
-  suggest_missing_topics: false   # 設為 true 時每次 lint 都呼叫 LLM 建議新主題
-  fuzzy_match_threshold: 0.85     # 自動修復斷裂連結時的相似度門檻
+  fuzzy_match_threshold: 0.85  # 模糊比對相似度門檻（用於連結修復建議）
+
+# GitHub 設定（wiki 輸出格式）
+github:
+  repo: ""                     # 填入 GitHub repo 路徑，如 "username/llm-knowledge-base"
+  branch: main                 # wiki/ 所在的分支
+  wiki_base_path: wiki/        # wiki 根目錄（相對於 repo 根目錄）
+  link_format: relative        # relative（相對路徑，GitHub 可直接渲染）
