@@ -59,9 +59,12 @@ AppWorld performance matches the public leaderboard leader (IBM GPT-4.1 agent) w
 - [ACE for Materials](ace-for-materials.md) — applies GRC roles to materials science
 - [Material Science Agents](material-science-agents.md) — compares ACE-compatible material discovery systems
 - [Agentic Harness](agentic-harness.md) — harness infrastructure that ACE runs within
+- [Hermes Agent Architecture](hermes-agent-architecture.md) — most complete open-source implementation of ACE concepts (Generator → AIAgent Loop, Reflector → self-evaluation, Curator → skill refinement)
+- [Three-Tier Memory Systems](three-tier-memory-systems.md) — Tier 3 skill docs operationalize the ACE evolving-playbook concept
 - [derived: ACE Agentic Context Engineering](../derived/ace-agentic-context-engineering.md)
 - [derived: ACE × Material Science Application](../derived/ace-material-science-application.md)
 - [derived: Gemini 諮詢：Patsnap 職涯決策全紀錄](../derived/gemini-career-decision-patsnap.md)
+- [derived: Hermes Agent Summary](../derived/2026-04-10-hermes-agent-summary.md)
 
 ## Related Concepts
 

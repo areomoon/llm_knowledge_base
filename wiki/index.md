@@ -11,10 +11,10 @@
 
 | Metric | Count |
 |--------|-------|
-| Concept articles | 13 |
-| Derived notes | 13 |
+| Concept articles | 15 |
+| Derived notes | 14 |
 | Query records | 1 |
-| Last compiled | 2026-04-09 |
+| Last compiled | 2026-04-10 |
 
 ---
 
@@ -25,6 +25,7 @@
 | Concept | One-line definition | Tags |
 |---------|---------------------|------|
 | [ACE Framework](concepts/ace-framework.md) | Three-role framework for LLM self-improvement via evolving playbooks | `agent`, `context-engineering`, `stanford`, `playbook` |
+| [Hermes Agent Architecture](concepts/hermes-agent-architecture.md) | Nous Research's open-source closed-learning-loop agent with three-tier memory and self-extracting skills | `agent`, `self-improving`, `open-source`, `nous-research`, `FTS5` |
 | [Context Engineering](concepts/context-engineering.md) | Systematic design and evolution of LLM context to improve behavior | `context-engineering`, `prompt-engineering`, `llm` |
 | [Evolving Playbooks](concepts/evolving-playbooks.md) | Grow-and-Refine mechanism for accumulating strategies via delta updates | `playbook`, `delta-update`, `self-improving` |
 | [Agentic Self-Improvement](concepts/agentic-self-improvement.md) | LLM agents improving task performance from experience without retraining | `agent`, `self-improving`, `meta-learning` |
@@ -37,6 +38,7 @@
 | [Agent Product Design](concepts/agent-product-design.md) | Design principles for building trustworthy agent products: autonomy spectrum, human-in-the-loop placement, trust building | `agent`, `product-design`, `human-in-the-loop`, `trust` |
 | [Agentic Harness](concepts/agentic-harness.md) | Infrastructure surrounding an LLM loop (memory, compression, permissions, orchestration) that makes agents production-grade | `agent`, `harness`, `context-compression`, `permission-gating` |
 | [Tiered Memory](concepts/tiered-memory.md) | Three-layer agent memory: always-loaded index (L1), on-demand topic files (L2), searchable transcripts (L3) | `agent`, `memory`, `context-engineering` |
+| [Three-Tier Memory Systems](concepts/three-tier-memory-systems.md) | Comparative analysis of in-session compression (T1), FTS5 cross-session search (T2), and persistent MEMORY.md + skills (T3) | `agent`, `memory`, `FTS5`, `SQLite`, `hermes` |
 
 ---
 
@@ -59,6 +61,7 @@
 | 2026-04-09 | [OpenAI 目標職位分析與轉職策略](derived/openai-target-role-strategy.md) | session | Material Science Agents, Context Engineering, Agentic Harness |
 | 2026-04-09 | [AI Agent 產品案例研究](derived/2026-04-09-agent-product-case-studies.md) | article | Agentic Harness, Agent Product Design, Agent Evaluation |
 | 2026-04-09 | [Warmup × KB 缺口分析](derived/2026-04-09-warmup-agent-knowledge-gap-analysis.md) | article | Agent Product Design, Agent Evaluation, Material Science Agents |
+| 2026-04-10 | [Hermes Agent: Self-Improving Open-Source AI Agent Framework](derived/2026-04-10-hermes-agent-summary.md) | repo | Hermes Agent Architecture, Three-Tier Memory Systems, ACE Framework, Agentic Self-Improvement |
 
 ---
 
