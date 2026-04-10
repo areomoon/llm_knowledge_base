@@ -170,6 +170,7 @@ The playbook accumulates extraction knowledge that cannot be captured by fine-tu
 - [derived: ACE × Material Science Application](../derived/ace-material-science-application.md)
 - [derived: Agentic Service Warmup Plan](../derived/agentic-service-warmup-plan.md)
 - [derived: Career Development Roadmap](../derived/career-development-roadmap.md)
+- [derived: Managed Agents × Material Science 架構設計](../derived/managed-agents-material-science-architecture.md)
 
 ## Related Concepts
 

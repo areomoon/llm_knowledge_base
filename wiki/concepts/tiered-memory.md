@@ -61,6 +61,7 @@ The L1 index lets the orchestrator agent instantly know which papers are process
 
 - [Agentic Harness](agentic-harness.md) — tiered memory is Pattern 1 of the harness
 - [derived: Claude Code Leak Architecture Insights](../derived/claude-code-leak-architecture-insights.md)
+- [derived: Managed Agents × Material Science 架構設計](../derived/managed-agents-material-science-architecture.md)
 
 ## Related Concepts
 

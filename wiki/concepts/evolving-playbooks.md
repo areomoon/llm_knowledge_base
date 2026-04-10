@@ -68,6 +68,7 @@ Updated playbook used in next attempt
 - [Tiered Memory](tiered-memory.md) — tiered memory complements playbooks in the harness
 - [derived: ACE Agentic Context Engineering](../derived/ace-agentic-context-engineering.md)
 - [derived: ACE × Material Science Application](../derived/ace-material-science-application.md)
+- [derived: Managed Agents × Material Science 架構設計](../derived/managed-agents-material-science-architecture.md)
 
 ## Related Concepts
 

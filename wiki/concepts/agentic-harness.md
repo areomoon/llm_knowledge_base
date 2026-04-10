@@ -99,6 +99,7 @@ Building an agent is not the bottleneck. The harness that makes the agent produc
 
 - [Tiered Memory](tiered-memory.md) — detailed treatment of Pattern 1
 - [derived: Claude Code Leak Architecture Insights](../derived/claude-code-leak-architecture-insights.md)
+- [derived: Managed Agents × Material Science 架構設計](../derived/managed-agents-material-science-architecture.md)
 
 ## Related Concepts
 

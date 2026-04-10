@@ -12,9 +12,9 @@
 | Metric | Count |
 |--------|-------|
 | Concept articles | 13 |
-| Derived notes | 13 |
+| Derived notes | 14 |
 | Query records | 1 |
-| Last compiled | 2026-04-09 |
+| Last compiled | 2026-04-10 |
 
 ---
 
@@ -59,6 +59,7 @@
 | 2026-04-09 | [OpenAI 目標職位分析與轉職策略](derived/openai-target-role-strategy.md) | session | Material Science Agents, Context Engineering, Agentic Harness |
 | 2026-04-09 | [AI Agent 產品案例研究](derived/2026-04-09-agent-product-case-studies.md) | article | Agentic Harness, Agent Product Design, Agent Evaluation |
 | 2026-04-09 | [Warmup × KB 缺口分析](derived/2026-04-09-warmup-agent-knowledge-gap-analysis.md) | article | Agent Product Design, Agent Evaluation, Material Science Agents |
+| 2026-04-10 | [Managed Agents × Material Science 架構設計](derived/managed-agents-material-science-architecture.md) | design-doc | ACE Framework, ACE for Materials, Material Science Agents, Evolving Playbooks, Tiered Memory, Agentic Harness |
 
 ---
 
