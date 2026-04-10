@@ -66,6 +66,8 @@ Updated playbook used in next attempt
 - [ACE for Materials](ace-for-materials.md) — materials-specific four-layer playbook design
 - [Material Science Agents](material-science-agents.md) — LLMatDesign strategy library as playbook
 - [Tiered Memory](tiered-memory.md) — tiered memory complements playbooks in the harness
+- [Claude Managed Agents](claude-managed-agents.md) — Memory Store is the managed cloud implementation of evolving playbooks
+- [Memory Stores vs RAG](memory-stores-vs-rag.md) — evolving playbooks vs. RAG vs. fine-tuning comparison
 - [derived: ACE Agentic Context Engineering](../derived/ace-agentic-context-engineering.md)
 - [derived: ACE × Material Science Application](../derived/ace-material-science-application.md)
 

@@ -51,6 +51,8 @@ The discipline gained prominence as LLM systems moved from single-shot queries t
 - [derived: Claude Code Leak Architecture Insights](../derived/claude-code-leak-architecture-insights.md)
 - [derived: Gemini 諮詢：Patsnap 職涯決策全紀錄](../derived/gemini-career-decision-patsnap.md)
 - [derived: ChatGPT 諮詢：Patsnap 面試準備與職涯策略](../derived/chatgpt-patsnap-interview-strategy.md)
+- [Claude Managed Agents](claude-managed-agents.md) — Memory Store is a managed context engineering primitive
+- [Memory Stores vs RAG](memory-stores-vs-rag.md) — comparative analysis of context engineering knowledge strategies
 
 ## Related Concepts
 

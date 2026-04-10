@@ -125,6 +125,10 @@ Ground truth for extraction tasks is expensive (requires expert annotation). Pra
 - [derived: Career Development Roadmap](../derived/career-development-roadmap.md)
 - [derived: Gemini 諮詢：Patsnap 職涯決策全紀錄](../derived/gemini-career-decision-patsnap.md)
 - [derived: ChatGPT 諮詢：Patsnap 面試準備與職涯策略](../derived/chatgpt-patsnap-interview-strategy.md)
+- [Claude Managed Agents](claude-managed-agents.md) — Managed Agents as extraction service infrastructure
+- [RLPR (Reference Probability Reward)](rlpr-reference-probability-reward.md) — RL post-training for extraction agents in verifier-free domain
+- [Memory Stores vs RAG](memory-stores-vs-rag.md) — memory architecture comparison for extraction service design
+- [derived: Managed Agents Career Impact](../derived/managed-agents-career-impact.md)
 
 ## Related Concepts
 

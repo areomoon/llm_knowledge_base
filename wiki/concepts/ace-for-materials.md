@@ -167,9 +167,13 @@ The playbook accumulates extraction knowledge that cannot be captured by fine-tu
 ## Backlinks
 
 - [Material Science Agents](material-science-agents.md) — the systems this article maps onto GRC
+- [Claude Managed Agents](claude-managed-agents.md) — Memory Store implements ACE Curator + Evolving Playbook as managed service
+- [RLPR (Reference Probability Reward)](rlpr-reference-probability-reward.md) — RLPR probability signal integrates with ACE Reflector for confidence calibration
+- [Memory Stores vs RAG](memory-stores-vs-rag.md) — four-layer materials playbook maps to multi-file Memory Store
 - [derived: ACE × Material Science Application](../derived/ace-material-science-application.md)
 - [derived: Agentic Service Warmup Plan](../derived/agentic-service-warmup-plan.md)
 - [derived: Career Development Roadmap](../derived/career-development-roadmap.md)
+- [derived: Managed Agents Career Impact](../derived/managed-agents-career-impact.md)
 
 ## Related Concepts
 

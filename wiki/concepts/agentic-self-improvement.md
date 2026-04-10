@@ -44,6 +44,9 @@ The [ACE Framework](ace-framework.md) exemplifies the third approach via [Evolvi
 - [Evolving Playbooks](evolving-playbooks.md) — playbooks are the persistence mechanism
 - [ACE for Materials](ace-for-materials.md) — materials discovery as a self-improvement loop
 - [Material Science Agents](material-science-agents.md) — MatAgent and LLMatDesign implement iterative refinement
+- [Claude Managed Agents](claude-managed-agents.md) — Memory Store enables cross-session context-based self-improvement
+- [RLPR (Reference Probability Reward)](rlpr-reference-probability-reward.md) — RLPR is a weight-update self-improvement mechanism for verifier-free domains
+- [Memory Stores vs RAG](memory-stores-vs-rag.md) — Memory Store as the context-based self-improvement persistence layer
 - [derived: ACE Agentic Context Engineering](../derived/ace-agentic-context-engineering.md)
 - [derived: ACE × Material Science Application](../derived/ace-material-science-application.md)
 
