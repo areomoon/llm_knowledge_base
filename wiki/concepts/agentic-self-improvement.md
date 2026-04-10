@@ -2,7 +2,7 @@
 title: Agentic Self-Improvement
 tags: [agent, self-improving, meta-learning, context-engineering]
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - title: "ACE: Agentic Context Engineering (arXiv)"
     url: https://arxiv.org/abs/2510.04618
@@ -31,6 +31,18 @@ The [ACE Framework](ace-framework.md) exemplifies the third approach via [Evolvi
 - **Generator / Reflector / Curator decomposition**: separating task execution, lesson extraction, and knowledge curation reduces interference between roles and improves quality of each
 - **Compounding gains**: each improved playbook raises the baseline for the next iteration; gains are not merely additive
 
+## Cross-User Variant: Collective Skill Evolution
+
+All three mechanisms above operate at the **single-agent** level. SkillClaw (arxiv: 2604.08377) introduces a fourth variant specifically for **multi-user platforms**:
+
+4. **Collective skill updates** — execution trajectories from all users are aggregated and processed by an [Agentic Evolver](agentic-evolver-pattern.md) that mutates a shared skill library.
+
+This [Collective Skill Evolution](collective-skill-evolution.md) pattern differs from the others along two axes:
+- **Scope**: improvements propagate to all users simultaneously, not just the originating session
+- **Trigger**: continuous background aggregation, not end-of-session reflection
+
+The compounding-gains property becomes multiplicative: more users → more trajectory diversity → faster capability growth. The failure risks (feedback corruption, drift) also scale with user count.
+
 ## Risks and Limitations
 
 - **Feedback loop corruption**: if the evaluation signal is noisy or adversarial, bad strategies accumulate in the playbook
@@ -44,6 +56,8 @@ The [ACE Framework](ace-framework.md) exemplifies the third approach via [Evolvi
 - [Evolving Playbooks](evolving-playbooks.md) — playbooks are the persistence mechanism
 - [ACE for Materials](ace-for-materials.md) — materials discovery as a self-improvement loop
 - [Material Science Agents](material-science-agents.md) — MatAgent and LLMatDesign implement iterative refinement
+- [Collective Skill Evolution](collective-skill-evolution.md) — cross-user variant of context-based self-improvement
+- [Agentic Evolver Pattern](agentic-evolver-pattern.md) — the evolver agent that drives collective improvement
 - [derived: ACE Agentic Context Engineering](../derived/ace-agentic-context-engineering.md)
 - [derived: ACE × Material Science Application](../derived/ace-material-science-application.md)
 

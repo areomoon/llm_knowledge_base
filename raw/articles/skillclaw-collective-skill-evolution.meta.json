@@ -1,0 +1,9 @@
+{
+  "source_url": "https://arxiv.org/abs/2604.08377",
+  "github_url": "https://github.com/openclaw/skills",
+  "benchmark_url": "https://github.com/InternLM/WildClawBench",
+  "type": "paper",
+  "ingested_at": "2026-04-10T00:00:00Z",
+  "tags": ["agent", "skill-evolution", "agentic-evolver", "multi-user", "collective-intelligence", "openclaw", "wildclawbench"],
+  "compiled_at": "2026-04-10T00:00:00Z"
+}

@@ -2,7 +2,7 @@
 title: ACE Framework
 tags: [agent, context-engineering, self-improving, stanford, playbook]
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - title: "ACE: Agentic Context Engineering (arXiv)"
     url: https://arxiv.org/abs/2510.04618
@@ -42,6 +42,20 @@ The framework requires no fine-tuning. Strategy accumulates in the playbook itse
 
 The Generator–Reflector–Curator loop mirrors the Ingest–Compile–Lint cycle in knowledge-base systems: raw experience → structured insight → curated artifact.
 
+## Comparison with SkillClaw's Agentic Evolver
+
+SkillClaw (arxiv: 2604.08377) introduces the [Agentic Evolver Pattern](agentic-evolver-pattern.md) as a distributed extension of the ACE Curator role. Key differences:
+
+| Dimension | ACE Curator | SkillClaw Evolver |
+|-----------|-------------|-------------------|
+| Scope | Single user, single session | All users, all sessions |
+| Update target | Per-user playbook (markdown) | Shared skill library |
+| Trigger | End-of-session reflection call | Continuous trajectory aggregation |
+| Propagation | Session-local only | System-wide sync |
+| Cost to user | Part of session overhead | Zero (background process) |
+
+ACE is optimal for **single-user, domain-specific tasks** where the playbook encodes proprietary knowledge. SkillClaw is optimal for **multi-tenant ecosystems** where best practices should be shared. The two approaches are complementary: a production system could run an ACE-style playbook per user *and* feed anonymized trajectories into a SkillClaw-style evolver for shared skills.
+
 ## Experimental Results
 
 | Benchmark | Metric | Result |
@@ -59,6 +73,8 @@ AppWorld performance matches the public leaderboard leader (IBM GPT-4.1 agent) w
 - [ACE for Materials](ace-for-materials.md) — applies GRC roles to materials science
 - [Material Science Agents](material-science-agents.md) — compares ACE-compatible material discovery systems
 - [Agentic Harness](agentic-harness.md) — harness infrastructure that ACE runs within
+- [Agentic Evolver Pattern](agentic-evolver-pattern.md) — distributed extension of the ACE Curator role
+- [Collective Skill Evolution](collective-skill-evolution.md) — multi-user analogue of ACE's evolving playbooks
 - [derived: ACE Agentic Context Engineering](../derived/ace-agentic-context-engineering.md)
 - [derived: ACE × Material Science Application](../derived/ace-material-science-application.md)
 - [derived: Gemini 諮詢：Patsnap 職涯決策全紀錄](../derived/gemini-career-decision-patsnap.md)

@@ -2,7 +2,7 @@
 title: Evolving Playbooks
 tags: [context-engineering, playbook, delta-update, agent, self-improving]
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - title: "ACE: Agentic Context Engineering (arXiv)"
     url: https://arxiv.org/abs/2510.04618
@@ -50,6 +50,16 @@ Curator appends / merges bullets into playbook
 Updated playbook used in next attempt
 ```
 
+## Multi-User Extension: Collective Skill Evolution
+
+Evolving playbooks as described above are **session-local**: one user, one playbook, one agent instance. SkillClaw (arxiv: 2604.08377) extends this pattern to a **multi-user** setting via [Collective Skill Evolution](collective-skill-evolution.md):
+
+- Instead of a per-user playbook, the shared artifact is a **skill library** (reusable sub-routines)
+- Instead of session-end Curator reflection, an **[Agentic Evolver](agentic-evolver-pattern.md)** continuously processes trajectories from all users
+- Improvements are propagated **system-wide**, not kept per-session
+
+This makes SkillClaw the distributed analogue of ACE's evolving playbooks. The Grow-and-Refine principle is preserved — skills are refined and extended rather than rewritten — but the scope changes from personal to collective.
+
 ## Failure Modes Addressed
 
 | Problem | Naive Approach | Playbook Solution |
@@ -66,6 +76,8 @@ Updated playbook used in next attempt
 - [ACE for Materials](ace-for-materials.md) — materials-specific four-layer playbook design
 - [Material Science Agents](material-science-agents.md) — LLMatDesign strategy library as playbook
 - [Tiered Memory](tiered-memory.md) — tiered memory complements playbooks in the harness
+- [Collective Skill Evolution](collective-skill-evolution.md) — multi-user extension of the evolving playbook concept
+- [Agentic Evolver Pattern](agentic-evolver-pattern.md) — autonomous agent that performs the Curator role at system-wide scale
 - [derived: ACE Agentic Context Engineering](../derived/ace-agentic-context-engineering.md)
 - [derived: ACE × Material Science Application](../derived/ace-material-science-application.md)
 
