@@ -164,12 +164,27 @@ The playbook accumulates extraction knowledge that cannot be captured by fine-tu
 - The playbook captures explicit, interpretable rules from specific observed failures
 - Both are complementary: fine-tune the Generator for general extraction ability; use the playbook for domain-specific edge cases and institutional knowledge
 
+## Why Specialization in Materials AI (Not Generic SWE)
+
+The 35-age crisis analysis (跑哥, 2026) provides structural confirmation for specialization in materials AI over generic software engineering:
+
+- Generic SWE skills are abundant at every age bracket and competitively priced; they do not compound uniquely
+- Big-tech螺絲釘化 deliberately prevents engineers from building transferable depth in general domains
+- Materials AI is narrow enough that domain knowledge compounds into genuine differentiation; scarce enough that supply-demand favors the specialist; and cross-employer enough (academic, pharma, energy, mining, materials startup) to survive company transitions
+
+The ACE for Materials expertise is thus simultaneously a technical framework and a career resilience instrument: each project that builds extraction quality also builds the specialist's track record in a domain where few competitors exist.
+
+**The compounding thesis**: a materials AI engineer who publishes extraction work publicly at age 28–32 will have a domain-specific portfolio that becomes increasingly hard to replicate by the time ageism headwinds begin at 35+. Generic SWE does not have this property.
+
+See [Cross-Age Career Resilience](cross-age-career-resilience.md) for the full strategic framework.
+
 ## Backlinks
 
 - [Material Science Agents](material-science-agents.md) — the systems this article maps onto GRC
 - [Claude Managed Agents](claude-managed-agents.md) — Memory Store implements ACE Curator + Evolving Playbook as managed service
 - [RLPR (Reference Probability Reward)](rlpr-reference-probability-reward.md) — RLPR probability signal integrates with ACE Reflector for confidence calibration
 - [Memory Stores vs RAG](memory-stores-vs-rag.md) — four-layer materials playbook maps to multi-file Memory Store
+- [Cross-Age Career Resilience](cross-age-career-resilience.md) — why materials AI specialization is structurally anti-fragile past age 35
 - [derived: ACE × Material Science Application](../derived/ace-material-science-application.md)
 - [derived: Agentic Service Warmup Plan](../derived/agentic-service-warmup-plan.md)
 - [derived: Career Development Roadmap](../derived/career-development-roadmap.md)

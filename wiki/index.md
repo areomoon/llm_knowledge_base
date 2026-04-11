@@ -11,10 +11,10 @@
 
 | Metric | Count |
 |--------|-------|
-| Concept articles | 15 |
-| Derived notes | 14 |
+| Concept articles | 17 |
+| Derived notes | 15 |
 | Query records | 1 |
-| Last compiled | 2026-04-10 |
+| Last compiled | 2026-04-11 |
 
 ---
 
@@ -39,6 +39,8 @@
 | [Agentic Harness](concepts/agentic-harness.md) | Infrastructure surrounding an LLM loop (memory, compression, permissions, orchestration) that makes agents production-grade | `agent`, `harness`, `context-compression`, `permission-gating` |
 | [Tiered Memory](concepts/tiered-memory.md) | Three-layer agent memory: always-loaded index (L1), on-demand topic files (L2), searchable transcripts (L3) | `agent`, `memory`, `context-engineering` |
 | [Three-Tier Memory Systems](concepts/three-tier-memory-systems.md) | Comparative analysis of in-session compression (T1), FTS5 cross-session search (T2), and persistent MEMORY.md + skills (T3) | `agent`, `memory`, `FTS5`, `SQLite`, `hermes` |
+| [China Tech 35-Age Crisis](concepts/china-tech-35-age-crisis.md) | Structural analysis of how big-tech deliberately engineers attrition at age 35 via螺絲釘化 and soft-layoff mechanisms | `career`, `ageism`, `china-tech`, `structural-risk` |
+| [Cross-Age Career Resilience](concepts/cross-age-career-resilience.md) | Multi-track strategy combining deep specialization, network presence, health infrastructure, and income diversification to survive the 35-age risk | `career`, `resilience`, `wealth-strategy`, `health` |
 
 ---
 
@@ -62,6 +64,7 @@
 | 2026-04-09 | [AI Agent 產品案例研究](derived/2026-04-09-agent-product-case-studies.md) | article | Agentic Harness, Agent Product Design, Agent Evaluation |
 | 2026-04-09 | [Warmup × KB 缺口分析](derived/2026-04-09-warmup-agent-knowledge-gap-analysis.md) | article | Agent Product Design, Agent Evaluation, Material Science Agents |
 | 2026-04-10 | [Hermes Agent: Self-Improving Open-Source AI Agent Framework](derived/2026-04-10-hermes-agent-summary.md) | repo | Hermes Agent Architecture, Three-Tier Memory Systems, ACE Framework, Agentic Self-Improvement |
+| 2026-04-11 | [35-Age Crisis: Six Insights for areomoon's Career Strategy](derived/2026-04-11-35-age-crisis-summary.md) | article | China Tech 35-Age Crisis, Cross-Age Career Resilience, ACE for Materials |
 
 ---
 
