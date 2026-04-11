@@ -11,10 +11,10 @@
 
 | Metric | Count |
 |--------|-------|
-| Concept articles | 15 |
+| Concept articles | 16 |
 | Derived notes | 14 |
 | Query records | 1 |
-| Last compiled | 2026-04-10 |
+| Last compiled | 2026-04-11 |
 
 ---
 
@@ -39,6 +39,7 @@
 | [Agentic Harness](concepts/agentic-harness.md) | Infrastructure surrounding an LLM loop (memory, compression, permissions, orchestration) that makes agents production-grade | `agent`, `harness`, `context-compression`, `permission-gating` |
 | [Tiered Memory](concepts/tiered-memory.md) | Three-layer agent memory: always-loaded index (L1), on-demand topic files (L2), searchable transcripts (L3) | `agent`, `memory`, `context-engineering` |
 | [Three-Tier Memory Systems](concepts/three-tier-memory-systems.md) | Comparative analysis of in-session compression (T1), FTS5 cross-session search (T2), and persistent MEMORY.md + skills (T3) | `agent`, `memory`, `FTS5`, `SQLite`, `hermes` |
+| [Singapore Tech Career Strategy](concepts/singapore-tech-career-strategy.md) | Career and life-planning framework for SG PR holders in niche tech: HDB/CPF leverage, dual-base Taiwan–SG strategy, citizenship trade-offs | `career`, `singapore`, `PR`, `HDB`, `CPF`, `dual-base`, `career-resilience` |
 
 ---
 

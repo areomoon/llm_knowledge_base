@@ -150,3 +150,76 @@ tags: [career, onboarding, material-science, agent, ACE]
 - [RLPR (Reference Probability Reward)](../../wiki/concepts/rlpr-reference-probability-reward.md)
 - [Memory Stores vs RAG](../../wiki/concepts/memory-stores-vs-rag.md)
 - [Managed Agents Career Impact (Derived Note)](../../wiki/derived/managed-agents-career-impact.md)
+
+---
+
+## 追加：SG 生存策略 (2026-04-11 更新)
+
+> **前提**：areomoon 已持有 SG PR。以下策略基於 PR 持有者身分，移除 EP 簽證焦慮，聚焦生活品質和長期財務優化。
+
+### PR 帶來的根本性改變
+
+| 過去的焦慮（EP 時代） | 現在的狀態（PR 時代） |
+|----------------------|----------------------|
+| 換工作 EP 失效 → 必須離境 | 可自由換工作，失業不觸發離境 |
+| 雇主議價能力弱 | 完整勞工法保障，談判平等 |
+| PR 申請是最高優先級 | 已解決，轉向優化 |
+| 不能買 HDB | 3 年後可買 HDB Resale |
+
+### HDB / 房產決策框架
+
+**PR 3 年資格（計算起點是拿到 PR 的日期）到了之後**，開始認真執行：
+
+- 月供 < 家庭稅後 35%
+- 頭期款不掏空緊急備用金（維持 S$100-150k 流動）
+- 5 年以上不打算搬走
+- Location > Size（靠 MRT、好學區優先）
+
+**選項**：
+- **HDB Resale**：主力選項。CPF OA 可付頭期，社區成熟，選擇多
+- **Resale Condo (OCR)**：如果家庭收入 S$25k+/month，可考慮
+- BTO：PR 不符合資格
+
+### SG 公民身分：暫不申請的決定
+
+**決定**：維持 PR 身分，暫不申請 SG 公民。
+
+原因：
+- SG PR 只需每 5 年 renew REP，不需要主動「維持 PR」
+- 申請公民必須放棄 ROC 國籍（SG 不允許雙重國籍）
+- 放棄代價：台灣 NHI、退休返台選項、不動產繼承優惠、父母照顧彈性
+
+**雙基地策略**：SG 是工作和財富累積基地；台灣是身份根基和退休選項。
+
+維持台灣連結的具體行動：
+- [ ] 保留台灣戶籍（不遷出）
+- [ ] 每年至少回台一次（NHI 維持連結的最低條件）
+- [ ] 台灣銀行帳戶保持活躍
+- [ ] 父母養老：財務預安排（不需要人在台，但錢和計劃要到位）
+
+**重新評估時機**：2036 年（第 10 年），或父母健康狀況、子女教育路線出現根本改變後。
+
+### CPF 優化 Checklist
+
+- [ ] 入職第 3 年：確認 CPF 已達 20%/17% 公民級貢獻率
+- [ ] 每年 SA voluntary top-up S$8,000（稅務減免 + 4% 利率）
+- [ ] IBKR DCA（CPF 以外的投資，避免 CPFIS 高費用陷阱）
+- [ ] 每年計算 Total Debt Servicing Ratio (TDSR) 空間
+
+### International Network Building
+
+- [ ] LinkedIn 每週發技術文章（Material Science × LLM Agent 交集）
+- [ ] 年內建立 3 個以上 US/UK/EU 的 weak ties
+- [ ] 2027 年：發第一篇 technical blog 系列
+- [ ] 2028 年：在 international workshop（NeurIPS/MatML）演講或 poster
+
+### 體力管理基準
+
+- 每天 10k 步
+- 每週 3 次有氧運動
+- 每年完整 health screening（公司 corporate package）
+- 不加入「Always On」WhatsApp 工作群組的不必要訊息循環
+
+### 參考連結
+- [Singapore Tech Career Strategy](../../wiki/concepts/singapore-tech-career-strategy.md)
+- [SG 策略 raw article](../articles/singapore-tech-career-strategy.md)
