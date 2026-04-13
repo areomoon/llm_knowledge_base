@@ -130,6 +130,15 @@ Adam Ondra's #1 rule (*The Nugget* interview): **Rest more than you think you ne
 - **Advanced (V7–V10)**: Individualized periodization, limit bouldering on training boards, assess specific weaknesses with Lattice-style benchmarks.
 - **Not applicable**: Climbers with active finger injuries — rehab protocol first.
 
+## Areomoon 個人訓練計劃 (2026/04-05)
+
+基於上述知識體系，針對個人 profile 制定的 5 週衝刺計劃：
+
+- **目標**：V4-V5 → V6-V7（穩定 V6 + touch V7）
+- **核心策略**：指力優先 + 減脂 2-3kg + 睡眠提升至 7.5hr
+- **分期**：恢復（2 週）→ 強度（2 週）→ Peak（1 週）
+- **完整計劃**：[5 週訓練計劃](../../raw/climbing/climbing-training-plan-summary.md)
+
 ## Backlinks
 
 - [wiki/index.md](../index.md)

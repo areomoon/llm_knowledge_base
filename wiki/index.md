@@ -84,6 +84,7 @@
 | Topic | Articles | Source |
 |-------|----------|--------|
 | [Climbing Training System](concepts/climbing-training-system.md) | 1 concept article | YouTube playlist — 78 videos by yang yu tseng |
+| [5 週個人訓練計劃 (V4-V5 → V6-V7)](../raw/climbing/climbing-training-plan-summary.md) | training plan | Generated 2026-04-13, full docx at raw/climbing/ |
 
 <!-- END AUTO-GENERATED -->
 
