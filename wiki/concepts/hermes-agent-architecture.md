@@ -114,6 +114,7 @@ Hermes is the self-hosted alternative for teams requiring data sovereignty or mu
 - [Three-Tier Memory Systems](three-tier-memory-systems.md) — Hermes implements the three-tier pattern with FTS5 at Tier 2
 - [Evolving Playbooks](evolving-playbooks.md) — Hermes MEMORY.md + skill library operationalizes the evolving-playbook concept
 - [Tiered Memory](tiered-memory.md) — Hermes extends the L1/L2/L3 pattern with SQLite FTS5 at L2
+- [Harness Engineering](harness-engineering.md) — Hermes's closed learning loop is a concrete implementation of Harness Engineering
 - [derived: Hermes Agent Summary](../derived/2026-04-10-hermes-agent-summary.md)
 
 ## Sources

@@ -46,6 +46,7 @@ The [ACE Framework](ace-framework.md) exemplifies the third approach via [Evolvi
 - [Material Science Agents](material-science-agents.md) — MatAgent and LLMatDesign implement iterative refinement
 - [Hermes Agent Architecture](hermes-agent-architecture.md) — production reference architecture: closed learning loop with skill extraction, FTS5 cross-session recall, and agent-curated MEMORY.md
 - [Three-Tier Memory Systems](three-tier-memory-systems.md) — three-tier memory is the persistence infrastructure that makes cross-session self-improvement possible
+- [Harness Engineering](harness-engineering.md) — agentic self-improvement is the longitudinal axis of harness engineering
 - [derived: ACE Agentic Context Engineering](../derived/ace-agentic-context-engineering.md)
 - [derived: ACE × Material Science Application](../derived/ace-material-science-application.md)
 - [derived: Hermes Agent Summary](../derived/2026-04-10-hermes-agent-summary.md)

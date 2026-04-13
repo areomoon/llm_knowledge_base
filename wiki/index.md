@@ -11,10 +11,10 @@
 
 | Metric | Count |
 |--------|-------|
-| Concept articles | 16 |
+| Concept articles | 17 |
 | Derived notes | 14 |
 | Query records | 1 |
-| Last compiled | 2026-04-11 |
+| Last compiled | 2026-04-13 |
 
 ---
 
@@ -40,6 +40,7 @@
 | [Tiered Memory](concepts/tiered-memory.md) | Three-layer agent memory: always-loaded index (L1), on-demand topic files (L2), searchable transcripts (L3) | `agent`, `memory`, `context-engineering` |
 | [Three-Tier Memory Systems](concepts/three-tier-memory-systems.md) | Comparative analysis of in-session compression (T1), FTS5 cross-session search (T2), and persistent MEMORY.md + skills (T3) | `agent`, `memory`, `FTS5`, `SQLite`, `hermes` |
 | [Singapore Tech Career Strategy](concepts/singapore-tech-career-strategy.md) | Career and life-planning framework for SG PR holders in niche tech: HDB/CPF leverage, dual-base Taiwan–SG strategy, citizenship trade-offs | `career`, `singapore`, `PR`, `HDB`, `CPF`, `dual-base`, `career-resilience` |
+| [Harness Engineering](concepts/harness-engineering.md) | Systematic discipline of guiding LLMs to their full potential via context, workflow, and feedback loop design — the broader framework containing Context Engineering and ACE | `harness-engineering`, `LLM`, `context-engineering`, `workflow`, `NTU`, `hung-yi-lee` |
 
 ---
 

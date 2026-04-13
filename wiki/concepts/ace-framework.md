@@ -58,6 +58,7 @@ AppWorld performance matches the public leaderboard leader (IBM GPT-4.1 agent) w
 - [Agentic Self-Improvement](agentic-self-improvement.md) — ACE exemplifies context-based self-improvement
 - [ACE for Materials](ace-for-materials.md) — applies GRC roles to materials science
 - [Material Science Agents](material-science-agents.md) — compares ACE-compatible material discovery systems
+- [Harness Engineering](harness-engineering.md) — ACE is a concrete instantiation of Harness Engineering for self-improving agents
 - [Agentic Harness](agentic-harness.md) — harness infrastructure that ACE runs within
 - [Hermes Agent Architecture](hermes-agent-architecture.md) — most complete open-source implementation of ACE concepts (Generator → AIAgent Loop, Reflector → self-evaluation, Curator → skill refinement)
 - [Three-Tier Memory Systems](three-tier-memory-systems.md) — Tier 3 skill docs operationalize the ACE evolving-playbook concept

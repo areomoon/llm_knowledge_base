@@ -46,6 +46,7 @@ The discipline gained prominence as LLM systems moved from single-shot queries t
 - [Evolving Playbooks](evolving-playbooks.md) — the specific mechanism for context evolution
 - [Agentic Self-Improvement](agentic-self-improvement.md) — self-improvement requires context engineering
 - [Tiered Memory](tiered-memory.md) — tiered memory is a context engineering pattern
+- [Harness Engineering](harness-engineering.md) — context engineering is a sub-discipline of the broader harness engineering framework
 - [Agentic Harness](agentic-harness.md) — harness implements context management at scale
 - [derived: ACE Agentic Context Engineering](../derived/ace-agentic-context-engineering.md)
 - [derived: Claude Code Leak Architecture Insights](../derived/claude-code-leak-architecture-insights.md)
