@@ -223,3 +223,65 @@ tags: [career, onboarding, material-science, agent, ACE]
 ### 參考連結
 - [Singapore Tech Career Strategy](../../wiki/concepts/singapore-tech-career-strategy.md)
 - [SG 策略 raw article](../articles/singapore-tech-career-strategy.md)
+
+---
+
+## 追加：技術到商業轉型準備 (2026-04-14 更新)
+
+> **前提**：這不是「離開技術」，而是用技術 credibility 作為槓桿，漸進擴展到商業側。現在開始播種，讓路徑在 2-4 年後自然匯合。
+
+### 入職第一個月：開始建立商業側可見度
+
+- [ ] 寫第一篇 LinkedIn 文章（商業角度，非純技術）
+  - 建議主題：「為什麼 IP Intelligence 是 AI 時代最被低估的商業護城河」
+  - 或：「從 Patsnap 的角度看 AI × 專利分析的市場機會」
+  - 目標讀者：VC、BD、strategy consultant，而非工程師
+- [ ] 更新 LinkedIn headline：從「Algorithm Engineer」→「AI Engineer | Material Science × IP Intelligence」
+- [ ] 訂閱 VC/商業來源：a16z Blog, Sequoia Capital Blog, DealStreetAsia, CB Insights
+- [ ] 在 Patsnap 找到 BD 或 Sales 同事，約第一個 coffee chat
+
+### 入職 3 個月：加入 SG VC/Startup 社群
+
+- [ ] 參加第一個 SGInnovate AI meetup（官網報名，免費）
+- [ ] 參加 NUS Enterprise / BLOCK71 開放活動
+- [ ] LinkedIn connect 目標：每個活動認識 3 個 VC/founder/BD 背景的人
+- [ ] 統一自我介紹話術：「我在 Patsnap 用 AI 做專利情報分析，同時研究 Material Science Agent 的商業化路徑」
+- [ ] 開始追蹤 SG deep tech VC：SGInnovate, Wavemaker Partners, Monk's Hill Ventures
+
+### 入職 6 個月：第一份 Deal Memo
+
+- [ ] 挑選一個 AI startup（從 DealStreetAsia 或 Crunchbase 找東南亞 AI 公司）
+- [ ] 寫第一份 2 頁 deal memo，包含：
+  - 公司做什麼（1 段，無術語）
+  - 市場規模（TAM/SAM/SOM 估算）
+  - 技術護城河（能否被複製？）
+  - 競爭對手分析
+  - 明確的投資決定：投 / 不投 + 理由
+- [ ] 發在 LinkedIn 上，tag 相關 VC 或 founder
+- [ ] 目標：12 個月 = 12 份 deal memo
+
+### 在 Patsnap 內部主動接觸商業側
+
+- [ ] 入職第 2 週：跟直屬 manager 說明你對商業側的興趣，問是否可以偶爾參加 customer meeting
+- [ ] 入職第 1 個月：與 BD/Sales 至少 2 人建立關係（coffee chat 或 lunch）
+- [ ] 入職第 2 個月：參加至少一次 customer demo 或 pitch session（旁聽即可）
+- [ ] 入職第 3 個月：理解 Patsnap 的 revenue model、主要客戶類型、競爭對手
+- [ ] 記錄觀察：客戶 pain points 可能是未來 deal memo 或創業想法的來源
+
+### 轉型時間線與現有路徑的關係
+
+```
+現在（入職前）：讀技術論文 + 寫第一篇商業文章
+↓
+入職 0-6 個月：技術 IC + 開始商業側可見度建設
+↓
+入職 6-24 個月：技術 IC + 每月 deal memo + SG VC network
+↓
+入職 2-4 年：Technical Lead/PM + 考慮 BD/Solutions 跳槽機會
+↓
+入職 4-6 年：Technical Strategy / VC Technical DD / 創業
+```
+
+### 參考連結
+- [Technical-to-Business Transition](../../wiki/concepts/technical-to-business-transition.md)
+- [Technical to Business Transition Strategy (raw)](Technical_to_Business_Transition_Strategy.md)
