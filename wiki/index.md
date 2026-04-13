@@ -11,7 +11,7 @@
 
 | Metric | Count |
 |--------|-------|
-| Concept articles | 17 |
+| Concept articles | 18 |
 | Derived notes | 14 |
 | Query records | 1 |
 | Last compiled | 2026-04-13 |
@@ -74,6 +74,16 @@
 | Date | Query | Summary |
 |------|-------|---------|
 | 2026-04-09 | [職涯執行計畫](queries/2026-04-09-career-execution-plan.md) | Patsnap → 300k+ Applied AI 的完整時間線（入職前/初期/中期/跳槽） |
+
+---
+
+## 個人訓練 (Personal Training)
+
+> Personal knowledge bases compiled from curated training resources.
+
+| Topic | Articles | Source |
+|-------|----------|--------|
+| [Climbing Training System](concepts/climbing-training-system.md) | 1 concept article | YouTube playlist — 78 videos by yang yu tseng |
 
 <!-- END AUTO-GENERATED -->
 
