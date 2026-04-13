@@ -11,7 +11,7 @@
 
 | Metric | Count |
 |--------|-------|
-| Concept articles | 18 |
+| Concept articles | 19 |
 | Derived notes | 14 |
 | Query records | 1 |
 | Last compiled | 2026-04-13 |
@@ -41,6 +41,7 @@
 | [Three-Tier Memory Systems](concepts/three-tier-memory-systems.md) | Comparative analysis of in-session compression (T1), FTS5 cross-session search (T2), and persistent MEMORY.md + skills (T3) | `agent`, `memory`, `FTS5`, `SQLite`, `hermes` |
 | [Singapore Tech Career Strategy](concepts/singapore-tech-career-strategy.md) | Career and life-planning framework for SG PR holders in niche tech: HDB/CPF leverage, dual-base Taiwan–SG strategy, citizenship trade-offs | `career`, `singapore`, `PR`, `HDB`, `CPF`, `dual-base`, `career-resilience` |
 | [Harness Engineering](concepts/harness-engineering.md) | Systematic discipline of guiding LLMs to their full potential via context, workflow, and feedback loop design — the broader framework containing Context Engineering and ACE | `harness-engineering`, `LLM`, `context-engineering`, `workflow`, `NTU`, `hung-yi-lee` |
+| [Scaling Law Limitations](concepts/scaling-law-limitations.md) | Why Scaling Law is a "pessimistic future": diminishing returns on compute demand a paradigm shift toward RL, context engineering, and better guidance | `scaling-law`, `LLM`, `RL`, `efficiency`, `AGI`, `compute`, `FAIR` |
 
 ---
 
