@@ -11,10 +11,10 @@
 
 | Metric | Count |
 |--------|-------|
-| Concept articles | 20 |
-| Derived notes | 14 |
-| Query records | 1 |
-| Last compiled | 2026-04-13 |
+| Concept articles | 28 |
+| Derived notes | 16 |
+| Query records | 2 |
+| Last compiled | 2026-04-17 |
 
 ---
 
@@ -43,6 +43,15 @@
 | [Harness Engineering](concepts/harness-engineering.md) | Systematic discipline of guiding LLMs to their full potential via context, workflow, and feedback loop design — the broader framework containing Context Engineering and ACE | `harness-engineering`, `LLM`, `context-engineering`, `workflow`, `NTU`, `hung-yi-lee` |
 | [Scaling Law Limitations](concepts/scaling-law-limitations.md) | Why Scaling Law is a "pessimistic future": diminishing returns on compute demand a paradigm shift toward RL, context engineering, and better guidance | `scaling-law`, `LLM`, `RL`, `efficiency`, `AGI`, `compute`, `FAIR` |
 | [Technical-to-Business Transition](concepts/technical-to-business-transition.md) | Career framework for deep-tech ICs transitioning to VC/Strategy: 4-stage model, deal memo skill-building, 3-layer networking | `career`, `VC`, `strategy`, `transition`, `networking`, `deep-tech` |
+| [Climbing Lock-Off Strength](concepts/climbing-lock-off-strength.md) | Static bent-arm strength — the biggest determinant of controlled reaches, near-universally asymmetric L/R | `climbing`, `lock-off`, `unilateral`, `training` |
+| [Climbing Power Endurance](concepts/climbing-power-endurance.md) | Sustaining near-max contractions under pump — why link-ups fail even when single moves work | `climbing`, `power-endurance`, `pump`, `training` |
+| [Climbing Compression Pulling](concepts/climbing-compression-pulling.md) | Bicep/pec-dominant inward pull — the Moonboard compression pattern pull-ups don't train | `climbing`, `compression`, `bicep`, `moonboard` |
+| [RTK Token Killer](concepts/rtk-token-killer.md) | Rust CLI proxy that compresses shell output via PreToolUse hook, cutting 60–90% of tokens for Claude Code and 11 other agents | `agentic-harness`, `context-compression`, `claude-code`, `rust`, `cli-proxy` |
+| [CLI Output Compression](concepts/cli-output-compression.md) | Per-command filter/group/truncate/dedup of shell output before it enters LLM context; regex vs. structural-parsing approaches | `context-compression`, `agentic-harness`, `tooling`, `parsing` |
+| [Information Theory for LLM Context](concepts/information-theory-for-llm-context.md) | Shannon entropy framing of why LLM-facing text is 80–95% redundant and where the practical compression ceiling sits | `information-theory`, `shannon`, `context-compression`, `entropy`, `economics` |
+| [Claude Code Token Efficiency Playbook](concepts/claude-code-token-efficiency-playbook.md) | Boris Cherny's tips synthesised: effort levels, auto-compact window, worktrees, hooks, /simplify /batch, CLAUDE.md discipline | `claude-code`, `token-efficiency`, `bcherny`, `worktree`, `hooks`, `skills` |
+| [Subagent Dispatch Economics](concepts/subagent-dispatch-economics.md) | Cost model for Claude Code's Agent/Task dispatch — when to inline, when to parallelise, when to bound thoroughness | `claude-code`, `subagent`, `dispatch`, `token-efficiency`, `bcherny` |
+| [Mobile Dispatch Workflow](concepts/mobile-dispatch-workflow.md) | iPhone / remote Claude Code operating regime — no worktrees, no local hooks; Mac-launched long tasks + mobile check-in via /loop, /schedule, /btw | `claude-code`, `mobile`, `iphone`, `remote-development`, `dispatch`, `bcherny` |
 
 ---
 
@@ -66,6 +75,9 @@
 | 2026-04-09 | [AI Agent 產品案例研究](derived/2026-04-09-agent-product-case-studies.md) | article | Agentic Harness, Agent Product Design, Agent Evaluation |
 | 2026-04-09 | [Warmup × KB 缺口分析](derived/2026-04-09-warmup-agent-knowledge-gap-analysis.md) | article | Agent Product Design, Agent Evaluation, Material Science Agents |
 | 2026-04-10 | [Hermes Agent: Self-Improving Open-Source AI Agent Framework](derived/2026-04-10-hermes-agent-summary.md) | repo | Hermes Agent Architecture, Three-Tier Memory Systems, ACE Framework, Agentic Self-Improvement |
+| 2026-04-15 | [Bouldering Session Weakness Diagnosis](derived/2026-04-15-bouldering-session-diagnosis.md) | session | Climbing Power Endurance, Climbing Lock-Off Strength, Climbing Compression Pulling |
+| 2026-04-17 | [RTK (Rust Token Killer)](derived/2026-04-17-rtk-token-killer.md) | repo | RTK Token Killer, CLI Output Compression, Information Theory for LLM Context |
+| 2026-04-17 | [Boris Cherny's Claude Code Tips](derived/2026-04-17-bcherny-claude-code-tips.md) | article | Claude Code Token Efficiency Playbook, Agentic Harness |
 
 ---
 
@@ -76,6 +88,7 @@
 | Date | Query | Summary |
 |------|-------|---------|
 | 2026-04-09 | [職涯執行計畫](queries/2026-04-09-career-execution-plan.md) | Patsnap → 300k+ Applied AI 的完整時間線（入職前/初期/中期/跳槽） |
+| 2026-04-17 | [RTK + 本 repo 優化路線](queries/2026-04-17-rtk-repo-optimization.md) | RTK 套用評估 + P0/P1/P2 優化清單（基於 Boris Cherny tips） |
 
 ---
 
@@ -85,8 +98,13 @@
 
 | Topic | Articles | Source |
 |-------|----------|--------|
-| [Climbing Training System](concepts/climbing-training-system.md) | 1 concept article | YouTube playlist — 78 videos by yang yu tseng |
+| [Climbing Training System](concepts/climbing-training-system.md) | 1 concept article (parent) | YouTube playlist — 78 videos by yang yu tseng |
+| [Climbing Lock-Off Strength](concepts/climbing-lock-off-strength.md) | 1 concept article | EpicTV, Lattice Training, Adam Ondra |
+| [Climbing Power Endurance](concepts/climbing-power-endurance.md) | 1 concept article | Lattice Training, Hooper's Beta |
+| [Climbing Compression Pulling](concepts/climbing-compression-pulling.md) | 1 concept article | Lattice Training, Hooper's Beta |
 | [5 週個人訓練計劃 (V4-V5 → V6-V7)](../raw/climbing/climbing-training-plan-summary.md) | training plan | Generated 2026-04-13, full docx at raw/climbing/ |
+| [Session Diagnosis 2026-04-15](derived/2026-04-15-bouldering-session-diagnosis.md) | session log | Week 1 — 2 × V7 Moonboard attempts |
+| [Training Plan 2026-04-17 (Fri)](../raw/climbing/training-plan-2026-04-17-fri.md) | daily plan | Gym pull + weakness-targeted session |
 
 <!-- END AUTO-GENERATED -->
 

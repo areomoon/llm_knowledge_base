@@ -1,6 +1,11 @@
 # CLAUDE.md — LLM Knowledge Base Agent Instructions
 
-This file defines how Claude Code Agent handles **compile** (`raw/` → `wiki/`) and **lint** tasks for this knowledge base. Run these tasks directly via Claude Code instead of calling scripts.
+This file defines the wiki format and always-on context for this knowledge base. The two operational workflows — **compile** (`raw/` → `wiki/`) and **lint** — live as skills under `.claude/skills/` and are loaded on demand:
+
+- `.claude/skills/compile/SKILL.md` — triggered by "compile", "process raw files", "update wiki"
+- `.claude/skills/lint/SKILL.md` — triggered by "lint", "check wiki", "find broken links"
+
+Both skills reference the templates and gotchas in this file as their source of truth.
 
 ---
 
@@ -118,87 +123,9 @@ Free-form observations, questions, connections to other work.
 
 ---
 
-## Compile Task (`raw/` → `wiki/`)
+## Operational Workflows
 
-**Trigger**: "compile", "process raw files", "update wiki"
-
-### Steps
-
-1. **Scan `raw/`** for unprocessed files:
-   - Check each file's corresponding `.meta.json` for `compiled_at` field
-   - Files without `compiled_at` or with `hash` mismatch are unprocessed
-
-2. **For each unprocessed file**:
-   a. Read the file content and its `.meta.json` (contains `type`, `source`, `hash`)
-   b. Generate a **derived note** in `wiki/derived/` using the Derived Note Template above
-   c. Extract **concepts** mentioned in the file:
-      - Identify AI/LLM terms, model names, techniques, acronyms
-      - For each concept, check if `wiki/concepts/<slug>.md` already exists
-      - If exists: merge new information into the existing article (add sources, expand sections)
-      - If new: create the article using the Concept Article Template above
-   d. Update the `.meta.json` with `compiled_at: <ISO datetime>`
-
-3. **Update `wiki/index.md`**:
-   - Recount all articles in `wiki/concepts/`, `wiki/derived/`, `wiki/queries/`
-   - Update the stats block and article lists (see index format in `wiki/index.md`)
-   - Sort concepts alphabetically, derived notes by date descending
-
-4. **Verify cross-links**:
-   - Ensure each new concept article links to related concepts
-   - Ensure the derived note links to all concepts it mentions
-
-### LLM Guidance for Concept Extraction
-
-When processing a raw file, use this reasoning:
-- What are the **named techniques or methods**? (e.g., "LoRA", "Flash Attention")
-- What are the **key ideas or claims**? Distill into concept definitions
-- What **existing concepts** does this source expand or contradict?
-- Aim for **atomic concept articles**: one clear idea per file, ~200–800 words
-
----
-
-## Lint Task
-
-**Trigger**: "lint", "check wiki", "find broken links", "health check"
-
-### Steps
-
-1. **Collect all pages**: build a map of `slug → path` for every `.md` file in `wiki/`
-
-2. **Check broken links**:
-   - Scan all `.md` files for `[text](path.md)` links
-   - Verify each relative link target exists on disk
-   - Report: `source_file:line_number → broken target`
-
-3. **Find orphan pages**:
-   - Build a reverse-link graph: for each page, which pages link to it?
-   - Pages with zero incoming links (excluding `index.md`) are orphans
-   - Report orphans; suggest adding links from related concept articles
-
-4. **Check missing backlinks**:
-   - For each link `A → B`, verify `B`'s `## Backlinks` section lists `A`
-   - Report missing entries; offer to auto-add them
-
-5. **Suggest missing topics** (optional, requires LLM):
-   - Collect all concept titles
-   - Ask: "Given these AI/LLM concepts, what important topics are missing?"
-   - Output suggestions as a list
-
-6. **Produce health report**:
-   ```
-   === Wiki Health Report ===
-   Total pages: N
-   Broken links: N  [list]
-   Orphan pages: N  [list]
-   Missing backlinks: N  [list]
-   Suggested topics: [list]  (if requested)
-   ```
-
-### Auto-fix Policy
-
-- **Backlinks**: safe to auto-add missing entries to `## Backlinks` sections
-- **Broken links**: only auto-fix if fuzzy match confidence > 0.90; otherwise flag for human review
-- **Orphans**: never auto-delete; only suggest linking
+Compile and lint are implemented as loadable skills; see `.claude/skills/compile/SKILL.md` and `.claude/skills/lint/SKILL.md` for step-by-step procedures. Those skills reference the templates and gotchas in this file rather than duplicating them.
 
 ---
 
@@ -229,7 +156,45 @@ scripts/
 | Task | How to run |
 |------|-----------|
 | Ingest a URL | `python scripts/ingest.py --type article --url <URL>` |
-| Compile all new raw files | Ask Claude Code: "compile all new raw files" |
+| Compile all new raw files | Ask Claude Code: "compile all new raw files" (loads `.claude/skills/compile/`) |
 | Compile a single file | Ask Claude Code: "compile raw/articles/abc123.md" |
-| Lint the wiki | Ask Claude Code: "lint the wiki" |
+| Lint the wiki | Ask Claude Code: "lint the wiki" (loads `.claude/skills/lint/`) |
 | Search | `python scripts/search.py --query "<terms>"` |
+
+---
+
+## Gotchas (things Claude got wrong before — read first)
+
+> Updated every time Claude makes a mistake in this repo. Highest-signal section per Boris Cherny's playbook.
+
+### Wiki format
+
+- **Never use `[[wikilinks]]`.** Use standard `[text](relative/path.md)`. All internal links are relative to the file's own location (e.g. from `wiki/derived/foo.md`, a concept link is `../concepts/bar.md`).
+- **Every concept file MUST have a `## Backlinks` section.** The lint task checks this. Add it even if empty (placeholder: `*(none yet)*`).
+- **`.meta.json` MUST have `compiled_at` after compile.** Missing `compiled_at` → next compile will re-process the file. Format: ISO-8601 string, e.g. `"2026-04-17T00:00:00Z"`.
+- **Concept slug naming**: lowercase, hyphens, English only. No underscores, no CamelCase. Match the `title` field in frontmatter semantically.
+- **Derived note naming**: `<YYYY-MM-DD>-<slug>.md`. Use the current date, not the source article's publish date.
+
+### Index discipline
+
+- **`wiki/index.md` stats must match disk reality.** After adding a concept, increment the count in the Stats block AND add a row to the Concepts table. Both. Forgetting one breaks the `@.claude` audit trail.
+- **Concepts table entries**: one line per concept, tags in backticks, short one-line definition. Don't wrap.
+- **Do not write inside `<!-- AUTO-GENERATED -->` block assuming you can overwrite freely** — the Notes section at the bottom is user-authored; only edit above the `<!-- END AUTO-GENERATED -->` marker.
+
+### Cross-linking
+
+- When creating a new concept, add links to related existing concepts in the body AND ensure the new concept is listed in those related concepts' `## Backlinks`. Bidirectional or it's orphaned.
+- When a concept cites an authority (person, paper, repo), always include a named citation — generic knowledge attribution is not acceptable for this KB.
+
+### Edit / Read race
+
+- `wiki/index.md` is occasionally modified mid-session by an external process (likely an auto-linter). If `Edit` on `index.md` fails with "File has been modified since read", re-read and retry — don't assume your previous content is still valid.
+
+### Authority citation rule
+
+- Per user's standing instruction: any concept claim should cite a **named** authority (researcher, paper, specific tool, dated tweet) rather than generic "it is well known that…" phrasing. If no authority exists, say so and mark the claim as the user's own synthesis.
+
+### Tooling
+
+- `scripts/ingest.py` writes to `raw/`. Don't hand-craft `.meta.json` without running it unless explicitly asked — the hash field must match the ingest pipeline's format.
+- Claude Code's `Read` / `Grep` / `Glob` **bypass** RTK. For structural file reads, that's fine; but don't expect RTK's compression metrics to cover markdown browsing in this repo.

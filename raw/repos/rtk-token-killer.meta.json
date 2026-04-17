@@ -1,0 +1,13 @@
+{
+  "type": "repo",
+  "source": "https://github.com/rtk-ai/rtk",
+  "hash": "gh-2026-04-17",
+  "ingested_at": "2026-04-17",
+  "compiled_at": "2026-04-17T00:00:00Z",
+  "license": "MIT",
+  "additional_sources": [
+    "https://madplay.github.io/en/post/rtk-reduce-ai-coding-agent-token-usage",
+    "https://www.rtk-ai.app/",
+    "https://github.com/Kilo-Org/kilocode/discussions/5848"
+  ]
+}

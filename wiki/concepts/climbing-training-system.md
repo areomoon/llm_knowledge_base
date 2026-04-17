@@ -1,9 +1,9 @@
 ---
 title: Climbing Training System
 tags: [climbing, bouldering, training, finger-strength, hangboard, injury-prevention, periodization, personal]
-sources: [raw/climbing/climbing-training-playlist.md]
+sources: [raw/climbing/climbing-training-playlist.md, raw/climbing/session-2026-04-15/session-notes.md]
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-04-17
 ---
 
 # Climbing Training System
@@ -102,6 +102,12 @@ Adam Ondra's #1 rule (*The Nugget* interview): **Rest more than you think you ne
 
 ## Variants & Related Concepts
 
+Deeper-dive atomic articles (added 2026-04-17 after session diagnosis):
+
+- [Climbing Lock-Off Strength](climbing-lock-off-strength.md) — static-angle strength, unilateral asymmetry
+- [Climbing Power Endurance](climbing-power-endurance.md) — link-up failures, PE protocols
+- [Climbing Compression Pulling](climbing-compression-pulling.md) — bicep-dominant inward pull, Moonboard compression
+
 | Concept | Description |
 |---------|-------------|
 | Moonboard vs Kilterboard | Both are standardized training boards; Moonboard = more crimpy/powerful, Kilterboard = configurable angles. *Moonboard Vs Kilterboard - Which Should You Use?* (ZP Climbs) |
@@ -139,9 +145,22 @@ Adam Ondra's #1 rule (*The Nugget* interview): **Rest more than you think you ne
 - **分期**：恢復（2 週）→ 強度（2 週）→ Peak（1 週）
 - **完整計劃**：[5 週訓練計劃](../../raw/climbing/climbing-training-plan-summary.md)
 
+### Week 1 session diagnosis (2026-04-15)
+
+Moonboard 40° attempt on two V7 problems (`LAST CALL`, `LAPUTA`) surfaced four
+specific limiters: power endurance, left-side lock-off asymmetry, off-axial
+grip weakness, and bicep-dominant compression pulling. Full analysis in the
+[session diagnosis note](../derived/2026-04-15-bouldering-session-diagnosis.md).
+These findings drive the unilateral + compression additions to Friday gym days
+from Week 1 onward.
+
 ## Backlinks
 
 - [wiki/index.md](../index.md)
+- [Climbing Lock-Off Strength](climbing-lock-off-strength.md)
+- [Climbing Power Endurance](climbing-power-endurance.md)
+- [Climbing Compression Pulling](climbing-compression-pulling.md)
+- [Session Diagnosis 2026-04-15](../derived/2026-04-15-bouldering-session-diagnosis.md)
 
 ## Sources
 
