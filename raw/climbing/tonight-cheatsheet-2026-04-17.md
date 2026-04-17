@@ -6,7 +6,10 @@ purpose: print/phone cheatsheet for tonight's gym session
 
 # 🏋️ 今晚訓練表 — 2026-04-17 (Fri)
 
-**地點**：健身房 ｜ **總時長**：75-85 min ｜ **重點**：左 lock-off + compression + core
+**地點**：**家旁邊健身房** ｜ **總時長**：75-85 min ｜ **重點**：左 lock-off + compression + core
+
+> 🚫 **不跑南港岩館** — 今晚 95% 動作家健身房都能做；通勤 3hr 會吃掉週六 peak day
+> 的睡眠 + 恢復預算。省下來的時間明天才是決勝日。
 
 ---
 
@@ -14,7 +17,12 @@ purpose: print/phone cheatsheet for tonight's gym session
 
 - [ ] Collagen 15g + VitC 50mg（泡水，空腹）
 - [ ] 咖啡（可選，若想拼今晚強度）
-- [ ] 裝備：毛巾 / band / 彈力帶 / 啞鈴 / pinch block（若有）
+- [ ] 裝備清單（家健身房全部可取得）：
+  - 毛巾 × 1（offset pull-up、單臂 lock-off 輔助）
+  - 彈力帶（外旋、band pull-apart）
+  - 啞鈴 × 2（pullover、curl）
+  - **兩片啞鈴盤 ~5-10kg**（pinch block 替代）
+  - 可選：厚浴巾（若沒彈力帶，當 offset 輔助）
 
 ---
 
@@ -29,12 +37,16 @@ purpose: print/phone cheatsheet for tonight's gym session
 
 ---
 
-## A+ · 指力喚醒 5 min（可選，無刺痛才做）
+## A+ · 指力喚醒 5 min（可選，家健身房版本）
 
-| # | 動作 | 劑量 | 休息 |
-|---|------|-----|------|
-| 1 | 20mm edge hang @ **50% BW** | 3 × 10s | 90s |
-| 2 | Block pull @ 30-40% BW | 2 × 5s/手 | 60s |
+> 家健身房沒 20mm edge → **直接跳過此段**。今晚仍是 T+2 恢復窗，不做 finger warmup
+> 不影響 B-E；實在想做可用以下替代：
+
+| # | 替代方案 | 劑量 | 備註 |
+|---|---------|-----|------|
+| 替代 1 | 厚浴巾掛引體桿 → 雙手握巾捲死 hang | 3 × 10s, 休 90s | 粗握適合開掌暖身 |
+| 替代 2 | 引體桿 open-hand 直接懸吊（全身重量） | 2 × 15s | 純 hang、0 強度刺激 |
+| 替代 3 | **不做**（安全選項） | — | 今晚指力喚醒非必要 |
 
 ⚠ 任何刺痛 → 立即跳過直接進 Block B
 
@@ -59,8 +71,20 @@ purpose: print/phone cheatsheet for tonight's gym session
 |---|------|--------|------|-----|
 | C1 | 窄距反握引體 | 3×6-8 | 75s | 下放 3s 慢離心 |
 | C2 | Dumbbell pullover | 3×10 | 60s | 手肘微彎固定、下背貼凳 |
-| C3 | **Pinch block 4×20s** ⚡ | 4×20s | 90s | 重量選左右都能完成 |
+| C3 | **Pinch 模擬 4×20s** ⚡（見下） | 4×20s | 90s | 重量選左右都能完成 |
 | C4 | Supinated DB curl | 3×8/臂 | 60s | 慢離心、肌腱養護 |
+
+### C3 家健身房 Pinch 替代（按優先順序）
+
+| 優先 | 工具 | 做法 | 建議重量 |
+|-----|------|------|---------|
+| ⭐ 1 | **兩片啞鈴盤背對背** | 平面朝外夾住，手指捏平面邊緣提起 | 5-10 kg 雙手、2-5 kg 單手 |
+| ⭐ 2 | **六角啞鈴（hex DB）握 head** | 垂直握住頭部，手指捏平面 | 5-10 kg |
+| 3 | 單片厚槓片（~5kg）直接 pinch | 捏住平面邊緣 | 5 kg |
+| 4 | 寬口水桶加重 | 若健身房沒啞鈴盤 | 裝水調節 |
+
+**動作**：選定工具後，雙手同時 pinch 提起 → 維持 20 秒不放 → 休 90 秒 → 4 組。
+效果跟 Lattice Quad Block 差距 <10%。
 
 ---
 
@@ -127,10 +151,11 @@ purpose: print/phone cheatsheet for tonight's gym session
 
 ## ❌ 今晚絕對不做
 
-- Hangboard **max** hang（>70% BW 負重）
-- 岩牆 / Moonboard
-- Campus board / 任何 dyno
-- 酒精（5 週內 0）
+- ❌ 跑去南港岩館（通勤 3hr 吃掉週六 peak 的恢復）
+- ❌ Hangboard **max** hang（>70% BW 負重）
+- ❌ 岩牆 / Moonboard / 任何實際攀岩
+- ❌ Campus board / 任何 dyno
+- ❌ 酒精（5 週內 0）
 
 ---
 
