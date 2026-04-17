@@ -1,11 +1,12 @@
 # CLAUDE.md — LLM Knowledge Base Agent Instructions
 
-This file defines the wiki format and always-on context for this knowledge base. The two operational workflows — **compile** (`raw/` → `wiki/`) and **lint** — live as skills under `.claude/skills/` and are loaded on demand:
+This file defines the wiki format and always-on context for this knowledge base. Operational workflows live as skills under `.claude/skills/` and are loaded on demand:
 
 - `.claude/skills/compile/SKILL.md` — triggered by "compile", "process raw files", "update wiki"
 - `.claude/skills/lint/SKILL.md` — triggered by "lint", "check wiki", "find broken links"
+- `.claude/skills/climbing-schedule/SKILL.md` — triggered by "排訓練表", "排這週訓練", "generate training plan", "plan this weekend" — generates exercise-level climbing training plans anchored to the 5-week periodisation and adjusted by the latest session debrief
 
-Both skills reference the templates and gotchas in this file as their source of truth.
+All skills reference the templates and gotchas in this file as their source of truth.
 
 ---
 

@@ -11,10 +11,10 @@
 
 | Metric | Count |
 |--------|-------|
-| Concept articles | 28 |
-| Derived notes | 16 |
+| Concept articles | 32 |
+| Derived notes | 19 |
 | Query records | 2 |
-| Last compiled | 2026-04-17 |
+| Last compiled | 2026-04-18 |
 
 ---
 
@@ -52,6 +52,10 @@
 | [Claude Code Token Efficiency Playbook](concepts/claude-code-token-efficiency-playbook.md) | Boris Cherny's tips synthesised: effort levels, auto-compact window, worktrees, hooks, /simplify /batch, CLAUDE.md discipline | `claude-code`, `token-efficiency`, `bcherny`, `worktree`, `hooks`, `skills` |
 | [Subagent Dispatch Economics](concepts/subagent-dispatch-economics.md) | Cost model for Claude Code's Agent/Task dispatch — when to inline, when to parallelise, when to bound thoroughness | `claude-code`, `subagent`, `dispatch`, `token-efficiency`, `bcherny` |
 | [Mobile Dispatch Workflow](concepts/mobile-dispatch-workflow.md) | iPhone / remote Claude Code operating regime — no worktrees, no local hooks; Mac-launched long tasks + mobile check-in via /loop, /schedule, /btw | `claude-code`, `mobile`, `iphone`, `remote-development`, `dispatch`, `bcherny` |
+| [Claude Managed Agents](concepts/claude-managed-agents.md) | Anthropic's managed-agent infrastructure — harness, memory store, cloud-hosted agent execution | `agent`, `infrastructure`, `harness`, `memory-store`, `anthropic`, `beta`, `cloud` |
+| [Climbing Training System](concepts/climbing-training-system.md) | Parent framework for V4-V5 → V6-V7 climbing progression: periodisation, finger strength, injury prevention | `climbing`, `bouldering`, `training`, `finger-strength`, `periodization`, `personal` |
+| [Memory Stores vs RAG](concepts/memory-stores-vs-rag.md) | Comparison of persistent memory stores and RAG for agent context — when to write vs. retrieve | `memory`, `rag`, `context-engineering`, `agent`, `comparison` |
+| [RLPR (Reference Probability Reward)](concepts/rlpr-reference-probability-reward.md) | Extrapolating RLVR to general domains without verifiers via reference-model probability as reward | `RL`, `RLVR`, `reinforcement-learning`, `verifier-free`, `post-training` |
 
 ---
 
@@ -78,6 +82,8 @@
 | 2026-04-15 | [Bouldering Session Weakness Diagnosis](derived/2026-04-15-bouldering-session-diagnosis.md) | session | Climbing Power Endurance, Climbing Lock-Off Strength, Climbing Compression Pulling |
 | 2026-04-17 | [RTK (Rust Token Killer)](derived/2026-04-17-rtk-token-killer.md) | repo | RTK Token Killer, CLI Output Compression, Information Theory for LLM Context |
 | 2026-04-17 | [Boris Cherny's Claude Code Tips](derived/2026-04-17-bcherny-claude-code-tips.md) | article | Claude Code Token Efficiency Playbook, Agentic Harness |
+| 2026-04-17 | [Managed Agents + RLPR: Career Impact](derived/managed-agents-career-impact.md) | synthesis | Claude Managed Agents, RLPR, Material Science Agents |
+| 2026-04-18 | [Bouldering Session Debrief 2026-04-17 (Fri Gym)](derived/2026-04-18-bouldering-session-debrief.md) | session | Climbing Lock-Off Strength, Climbing Compression Pulling, Climbing Training System |
 
 ---
 
@@ -105,6 +111,8 @@
 | [5 週個人訓練計劃 (V4-V5 → V6-V7)](../raw/climbing/climbing-training-plan-summary.md) | training plan | Generated 2026-04-13, full docx at raw/climbing/ |
 | [Session Diagnosis 2026-04-15](derived/2026-04-15-bouldering-session-diagnosis.md) | session log | Week 1 — 2 × V7 Moonboard attempts |
 | [Training Plan 2026-04-17 (Fri)](../raw/climbing/training-plan-2026-04-17-fri.md) | daily plan | Gym pull + weakness-targeted session |
+| [Session Debrief 2026-04-17 (Fri Gym)](derived/2026-04-18-bouldering-session-debrief.md) | session log | Plan executed; bicep chain = cross-session rate-limiter; fueling flagged |
+| [Weekend Plan 2026-04-18 (Sat Peak + Sun Rest)](../raw/climbing/training-plan-2026-04-18-weekend.md) | weekend plan | Sat V7 project (LAST CALL / LAPUTA) + Sun full rest |
 
 <!-- END AUTO-GENERATED -->
 

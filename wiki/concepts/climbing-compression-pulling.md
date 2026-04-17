@@ -1,9 +1,9 @@
 ---
 title: Climbing Compression Pulling (Bicep-Dominant Inward Pull)
 tags: [climbing, training, compression, bicep, pinch, moonboard, steep-climbing]
-sources: [raw/climbing/climbing-training-playlist.md, raw/climbing/session-2026-04-15/session-notes.md]
+sources: [raw/climbing/climbing-training-playlist.md, raw/climbing/session-2026-04-15/session-notes.md, raw/climbing/session-2026-04-17/session-notes.md]
 created: 2026-04-17
-updated: 2026-04-17
+updated: 2026-04-18
 ---
 
 # Climbing Compression Pulling
@@ -85,6 +85,7 @@ Compression work aggressively loads those tendons.
 - [Climbing Training System](climbing-training-system.md)
 - [Climbing Lock-Off Strength](climbing-lock-off-strength.md)
 - [Climbing Power Endurance](climbing-power-endurance.md)
+- [Session Debrief 2026-04-17](../derived/2026-04-18-bouldering-session-debrief.md)
 
 ## Sources
 
@@ -93,3 +94,4 @@ Compression work aggressively loads those tendons.
 - *How to Train for Climbing [Full Body]* — Hooper's Beta
 - Adam Ondra Moonboard training clips
 - [Session notes 2026-04-15](../../raw/climbing/session-2026-04-15/session-notes.md)
+- [Session debrief 2026-04-17](../../raw/climbing/session-2026-04-17/session-notes.md)

@@ -1,9 +1,9 @@
 ---
 title: Climbing Lock-Off Strength
 tags: [climbing, training, lock-off, static-strength, unilateral, asymmetry]
-sources: [raw/climbing/climbing-training-playlist.md, raw/climbing/session-2026-04-15/session-notes.md]
+sources: [raw/climbing/climbing-training-playlist.md, raw/climbing/session-2026-04-15/session-notes.md, raw/climbing/session-2026-04-17/session-notes.md]
 created: 2026-04-17
-updated: 2026-04-17
+updated: 2026-04-18
 ---
 
 # Climbing Lock-Off Strength
@@ -83,6 +83,7 @@ climbers whose limiter is finger strength (see
 - [Climbing Training System](climbing-training-system.md)
 - [Climbing Power Endurance](climbing-power-endurance.md)
 - [Climbing Compression Pulling](climbing-compression-pulling.md)
+- [Session Debrief 2026-04-17](../derived/2026-04-18-bouldering-session-debrief.md)
 
 ## Sources
 
@@ -91,3 +92,4 @@ climbers whose limiter is finger strength (see
 - *How To Avoid The 'Intermediate Climber' Plateau* — Lattice Training
 - Emil Abrahamsson offset pull-up progressions (YouTube)
 - [Session notes 2026-04-15](../../raw/climbing/session-2026-04-15/session-notes.md)
+- [Session debrief 2026-04-17](../../raw/climbing/session-2026-04-17/session-notes.md)
