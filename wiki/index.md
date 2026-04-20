@@ -113,6 +113,7 @@
 | [Training Plan 2026-04-17 (Fri)](../raw/climbing/training-plan-2026-04-17-fri.md) | daily plan | Gym pull + weakness-targeted session |
 | [Session Debrief 2026-04-17 (Fri Gym)](derived/2026-04-18-bouldering-session-debrief.md) | session log | Plan executed; bicep chain = cross-session rate-limiter; fueling flagged |
 | [Weekend Plan 2026-04-18 (Sat Peak + Sun Rest)](../raw/climbing/training-plan-2026-04-18-weekend.md) | weekend plan | Sat V7 project (LAST CALL / LAPUTA) + Sun full rest |
+| [Training Plan 2026-04-20 (Mon Active Recovery)](../raw/climbing/training-plan-2026-04-20-mon.md) | daily plan | Deload day — bicep/tricep DOMS 48hr post Laputa; mobility + 血流 |
 
 <!-- END AUTO-GENERATED -->
 
