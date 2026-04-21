@@ -107,6 +107,7 @@ Boris's #1 tip, token-adjacent: a feedback loop (tests, Chrome extension, simula
 
 - [2026-04-17 Boris Cherny Claude Code Tips (derived)](../derived/2026-04-17-bcherny-claude-code-tips.md)
 - [RTK Token Killer](rtk-token-killer.md)
+- [Local vs Cloud Coding Agents](local-vs-cloud-coding-agents.md) — playbook tips apply only to local-agent deployments
 
 ## Sources
 

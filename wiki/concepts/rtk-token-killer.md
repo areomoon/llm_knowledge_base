@@ -3,7 +3,7 @@ title: RTK Token Killer
 tags: [agentic-harness, context-compression, claude-code, rust, cli-proxy]
 sources: [raw/repos/rtk-token-killer.md, https://github.com/rtk-ai/rtk]
 created: 2026-04-17
-updated: 2026-04-17
+updated: 2026-04-20
 ---
 
 # RTK Token Killer
@@ -56,6 +56,7 @@ A Kilo-Org user reported **10M tokens (89%) saved** over extended use.
 ## Limitations
 
 - **Bash-only hook surface.** Claude Code's built-in `Read`/`Grep`/`Glob` bypass RTK unless the user explicitly calls `rtk`.
+- **Local agents only.** RTK needs to install a binary and hook into the execution machine, so it is inapplicable to cloud-hosted agents (Devin, OpenAI Codex, Replit Agent, Codespaces-hosted Copilot) — see [Local vs Cloud Coding Agents](local-vs-cloud-coding-agents.md).
 - **Lossy by design.** Aggressive filtering can drop debug-relevant signal (documented Playwright test case).
 - **Regex-heavy filter code.** Adding/changing filters is labor-intensive and brittle vs. the structural diversity of real-world CLI output — a reason to prefer a lexer/AST approach (see [CLI Output Compression](cli-output-compression.md)).
 - **Restart required** after hook install.
@@ -76,7 +77,9 @@ RTK's 60–90% compression empirically demonstrates that shell output, as emitte
 - [CLI Output Compression](cli-output-compression.md)
 - [Information Theory for LLM Context](information-theory-for-llm-context.md)
 - [Agentic Harness](agentic-harness.md)
+- [Local vs Cloud Coding Agents](local-vs-cloud-coding-agents.md)
 - [2026-04-17 RTK Token Killer (derived)](../derived/2026-04-17-rtk-token-killer.md)
+- [2026-04-20 RTK: local vs cloud agents (query)](../queries/2026-04-20-rtk-local-vs-cloud-agents.md)
 
 ## Sources
 

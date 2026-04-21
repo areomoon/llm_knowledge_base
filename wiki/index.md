@@ -11,10 +11,10 @@
 
 | Metric | Count |
 |--------|-------|
-| Concept articles | 32 |
+| Concept articles | 33 |
 | Derived notes | 19 |
-| Query records | 2 |
-| Last compiled | 2026-04-18 |
+| Query records | 3 |
+| Last compiled | 2026-04-20 |
 
 ---
 
@@ -47,6 +47,7 @@
 | [Climbing Power Endurance](concepts/climbing-power-endurance.md) | Sustaining near-max contractions under pump — why link-ups fail even when single moves work | `climbing`, `power-endurance`, `pump`, `training` |
 | [Climbing Compression Pulling](concepts/climbing-compression-pulling.md) | Bicep/pec-dominant inward pull — the Moonboard compression pattern pull-ups don't train | `climbing`, `compression`, `bicep`, `moonboard` |
 | [RTK Token Killer](concepts/rtk-token-killer.md) | Rust CLI proxy that compresses shell output via PreToolUse hook, cutting 60–90% of tokens for Claude Code and 11 other agents | `agentic-harness`, `context-compression`, `claude-code`, `rust`, `cli-proxy` |
+| [Local vs Cloud Coding Agents](concepts/local-vs-cloud-coding-agents.md) | Deployment-axis classification by shell execution locus — why RTK and other harness hooks apply only to local agents (Claude Code, Cursor) and not cloud ones (Devin, Codex) | `agent`, `deployment-model`, `devin`, `codex`, `hook-surface` |
 | [CLI Output Compression](concepts/cli-output-compression.md) | Per-command filter/group/truncate/dedup of shell output before it enters LLM context; regex vs. structural-parsing approaches | `context-compression`, `agentic-harness`, `tooling`, `parsing` |
 | [Information Theory for LLM Context](concepts/information-theory-for-llm-context.md) | Shannon entropy framing of why LLM-facing text is 80–95% redundant and where the practical compression ceiling sits | `information-theory`, `shannon`, `context-compression`, `entropy`, `economics` |
 | [Claude Code Token Efficiency Playbook](concepts/claude-code-token-efficiency-playbook.md) | Boris Cherny's tips synthesised: effort levels, auto-compact window, worktrees, hooks, /simplify /batch, CLAUDE.md discipline | `claude-code`, `token-efficiency`, `bcherny`, `worktree`, `hooks`, `skills` |
@@ -95,6 +96,7 @@
 |------|-------|---------|
 | 2026-04-09 | [職涯執行計畫](queries/2026-04-09-career-execution-plan.md) | Patsnap → 300k+ Applied AI 的完整時間線（入職前/初期/中期/跳槽） |
 | 2026-04-17 | [RTK + 本 repo 優化路線](queries/2026-04-17-rtk-repo-optimization.md) | RTK 套用評估 + P0/P1/P2 優化清單（基於 Boris Cherny tips） |
+| 2026-04-20 | [RTK 與本地 vs 雲端 agent](queries/2026-04-20-rtk-local-vs-cloud-agents.md) | Codex/Devin 為何裝不了 RTK；IDE 位置 ≠ 執行位置；衍生新 concept |
 
 ---
 
@@ -114,6 +116,7 @@
 | [Session Debrief 2026-04-17 (Fri Gym)](derived/2026-04-18-bouldering-session-debrief.md) | session log | Plan executed; bicep chain = cross-session rate-limiter; fueling flagged |
 | [Weekend Plan 2026-04-18 (Sat Peak + Sun Rest)](../raw/climbing/training-plan-2026-04-18-weekend.md) | weekend plan | Sat V7 project (LAST CALL / LAPUTA) + Sun full rest |
 | [Training Plan 2026-04-20 (Mon Active Recovery)](../raw/climbing/training-plan-2026-04-20-mon.md) | daily plan | Deload day — bicep/tricep DOMS 48hr post Laputa; mobility + 血流 |
+| [Training Plan 2026-04-21 (Tue Volume + 4×4 PE)](../raw/climbing/training-plan-2026-04-21-tue.md) | daily plan | Week 2 Mon 內容順延一天；PE 啟動日，保守 grade 選路，二頭 chain 持續監測 |
 
 <!-- END AUTO-GENERATED -->
 

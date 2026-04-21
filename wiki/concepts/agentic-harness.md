@@ -98,6 +98,7 @@ Building an agent is not the bottleneck. The harness that makes the agent produc
 ## Backlinks
 
 - [Tiered Memory](tiered-memory.md) — detailed treatment of Pattern 1
+- [Local vs Cloud Coding Agents](local-vs-cloud-coding-agents.md) — deployment axis that determines which harness patterns are applicable
 - [derived: Claude Code Leak Architecture Insights](../derived/claude-code-leak-architecture-insights.md)
 
 ## Related Concepts

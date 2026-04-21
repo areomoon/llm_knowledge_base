@@ -81,7 +81,7 @@ If the mobile surface is a terminal app talking to a desktop Claude Code:
 
 ## Backlinks
 
-*(none yet)*
+- [Local vs Cloud Coding Agents](local-vs-cloud-coding-agents.md) — iPhone + Mac-launched Claude Code is still a *local agent* scenario (execution on Mac), not cloud
 
 ## Sources
 

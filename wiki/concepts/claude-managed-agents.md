@@ -136,6 +136,7 @@ See also: [Memory Stores vs RAG](memory-stores-vs-rag.md) for how Memory Store c
 - [ACE for Materials](ace-for-materials.md) — Managed Agents + Memory Store can host the materials extraction service
 - [Memory Stores vs RAG](memory-stores-vs-rag.md) — comparative analysis of memory approaches
 - [RLPR (Reference Probability Reward)](rlpr-reference-probability-reward.md) — fine-tuned models can run within Managed Agent sessions
+- [Local vs Cloud Coding Agents](local-vs-cloud-coding-agents.md) — Managed Agents is Anthropic's cloud-side attempt to recreate the hook surface that local agents natively offer
 - [derived: Managed Agents Career Impact](../derived/managed-agents-career-impact.md)
 
 ## Sources
