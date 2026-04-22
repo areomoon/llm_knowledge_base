@@ -126,7 +126,18 @@ Skip it when:
 
 ## Backlinks
 
-*(none yet — populated by lint)*
+- [LLM-as-Judge](llm-as-judge.md)
+- [Verifier Model](verifier-model.md)
+- [Constrained Decoding](constrained-decoding.md)
+- [Retrieval-Augmented Verification](retrieval-augmented-verification.md)
+- [Self-Refine / Critic Loop](self-refine-critic-loop.md)
+- [Model Ensembling](model-ensembling.md)
+- [Logprob Uncertainty](logprob-uncertainty.md)
+- [Active Learning Loop](active-learning-loop.md)
+- [Cost-Aware Cascade Design](cost-aware-cascade-design.md)
+- [Material Science Agents](material-science-agents.md)
+- [Agent Evaluation](agent-evaluation.md)
+- [derived: Extraction Pipeline Composite Strategies](../derived/2026-04-23-extraction-pipeline-composite-strategies.md)
 
 ## Sources
 

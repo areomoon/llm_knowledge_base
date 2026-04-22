@@ -105,6 +105,9 @@ Reference answers for materials extraction can be sourced from existing structur
 
 - [ACE for Materials](ace-for-materials.md) — RLPR probability signal integrates with ACE Reflector for confidence calibration
 - [Material Science Agents](material-science-agents.md) — RLPR enables RL post-training for extraction agents in verifier-free domains
+- [LLM-as-Judge](llm-as-judge.md) — shares DNA: reward from model probability vs. from judge
+- [Verifier Model](verifier-model.md) — the classic alternative RLPR avoids needing
+- [Logprob Uncertainty](logprob-uncertainty.md) — same logprob primitive used as reward signal
 - [Agentic Self-Improvement](agentic-self-improvement.md) — RLPR is a weight-update self-improvement mechanism (complements context-based ACE)
 - [Claude Managed Agents](claude-managed-agents.md) — fine-tuned extraction models can run within Managed Agent sessions
 - [derived: RLPR Extrapolating RLVR to General Domains](../derived/managed-agents-career-impact.md)

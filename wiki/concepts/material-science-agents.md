@@ -127,6 +127,9 @@ Ground truth for extraction tasks is expensive (requires expert annotation). Pra
 - [derived: ChatGPT 諮詢：Patsnap 面試準備與職涯策略](../derived/chatgpt-patsnap-interview-strategy.md)
 - [Claude Managed Agents](claude-managed-agents.md) — Managed Agents as extraction service infrastructure
 - [RLPR (Reference Probability Reward)](rlpr-reference-probability-reward.md) — RL post-training for extraction agents in verifier-free domain
+- [Retrieval-Augmented Verification](retrieval-augmented-verification.md) — grounding extraction in source spans (essential for this domain)
+- [Active Learning Loop](active-learning-loop.md) — how to bootstrap the annotated extraction corpus
+- [Self-Consistency Implementation](self-consistency-implementation.md) — per-field confidence for materials data extraction
 - [Memory Stores vs RAG](memory-stores-vs-rag.md) — memory architecture comparison for extraction service design
 - [derived: Managed Agents Career Impact](../derived/managed-agents-career-impact.md)
 - [Cost-Aware Cascade Design](cost-aware-cascade-design.md) — self-consistency → expert review as a stage-dependent cascade; uses paper-extraction as the worked example

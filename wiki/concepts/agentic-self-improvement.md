@@ -43,6 +43,7 @@ The [ACE Framework](ace-framework.md) exemplifies the third approach via [Evolvi
 - [Context Engineering](context-engineering.md) — context evolution enables self-improvement
 - [Evolving Playbooks](evolving-playbooks.md) — playbooks are the persistence mechanism
 - [ACE for Materials](ace-for-materials.md) — materials discovery as a self-improvement loop
+- [Self-Refine / Critic Loop](self-refine-critic-loop.md) — critic loops are a primitive in self-improving agent architectures
 - [Material Science Agents](material-science-agents.md) — MatAgent and LLMatDesign implement iterative refinement
 - [Hermes Agent Architecture](hermes-agent-architecture.md) — production reference architecture: closed learning loop with skill extraction, FTS5 cross-session recall, and agent-curated MEMORY.md
 - [Three-Tier Memory Systems](three-tier-memory-systems.md) — three-tier memory is the persistence infrastructure that makes cross-session self-improvement possible

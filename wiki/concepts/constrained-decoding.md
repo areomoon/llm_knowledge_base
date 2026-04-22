@@ -98,7 +98,12 @@ At the token level, the decoder maintains a state in the schema's FSM. When gene
 
 ## Backlinks
 
-*(none yet — populated by lint)*
+- [Self-Consistency Implementation](self-consistency-implementation.md)
+- [Retrieval-Augmented Verification](retrieval-augmented-verification.md)
+- [Verifier Model](verifier-model.md)
+- [Agent-Friendly Design](agent-friendly-design.md)
+- [API to SuperAgent Transition](api-to-superagent.md)
+- [derived: Extraction Pipeline Composite Strategies](../derived/2026-04-23-extraction-pipeline-composite-strategies.md)
 
 ## Sources
 

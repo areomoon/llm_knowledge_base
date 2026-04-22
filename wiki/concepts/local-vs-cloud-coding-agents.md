@@ -68,6 +68,7 @@ Cloud agents satisfy neither. Even prompt-level instructions like *"prefix bash 
 - [Claude Managed Agents](claude-managed-agents.md)
 - [Mobile Dispatch Workflow](mobile-dispatch-workflow.md)
 - [2026-04-20 RTK: local vs cloud agents (query)](../queries/2026-04-20-rtk-local-vs-cloud-agents.md)
+- [Model Ensembling](model-ensembling.md) — provider locality affects multi-vendor ensemble feasibility
 
 ## Sources
 

@@ -86,7 +86,16 @@ This is **Best-of-N sampling with a verifier**, the mechanism behind most reason
 
 ## Backlinks
 
-*(none yet — populated by lint)*
+- [Self-Consistency Implementation](self-consistency-implementation.md)
+- [LLM-as-Judge](llm-as-judge.md)
+- [Constrained Decoding](constrained-decoding.md)
+- [Self-Refine / Critic Loop](self-refine-critic-loop.md)
+- [Logprob Uncertainty](logprob-uncertainty.md)
+- [Active Learning Loop](active-learning-loop.md)
+- [Cost-Aware Cascade Design](cost-aware-cascade-design.md)
+- [Agent Evaluation](agent-evaluation.md)
+- [RLPR (Reference Probability Reward)](rlpr-reference-probability-reward.md)
+- [derived: Extraction Pipeline Composite Strategies](../derived/2026-04-23-extraction-pipeline-composite-strategies.md)
 
 ## Sources
 

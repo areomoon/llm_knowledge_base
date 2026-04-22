@@ -37,6 +37,7 @@ Key properties of agent-friendly interfaces:
 - [Superapp Paradigm](superapp-paradigm.md) — superapps require agent-friendly tool surfaces
 - [API to SuperAgent Transition](api-to-superagent.md) — describes the same shift from the API side
 - [derived: OpenAI Plans Desktop Superapp](../derived/openai-superapp-superagent.md)
+- [Constrained Decoding](constrained-decoding.md) — tool schemas are the agent-facing interface contract
 
 ## Related Concepts
 

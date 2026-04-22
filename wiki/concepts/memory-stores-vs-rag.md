@@ -144,6 +144,7 @@ The Memory Store replaces a hand-coded extraction ruleset with one that the agen
 - [Evolving Playbooks](evolving-playbooks.md) — the delta-update mechanism Memory Stores build on
 - [Context Engineering](context-engineering.md) — Memory Store is a context engineering strategy
 - [Claude Managed Agents](claude-managed-agents.md) — Memory Store as a managed cloud primitive
+- [Retrieval-Augmented Verification](retrieval-augmented-verification.md) — retrieval as verification rather than context
 - [Tiered Memory](tiered-memory.md) — tiered memory is a complementary access pattern
 - [ACE for Materials](ace-for-materials.md) — four-layer materials playbook as domain Memory Store
 - [Agentic Self-Improvement](agentic-self-improvement.md) — Memory Store enables context-based self-improvement

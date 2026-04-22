@@ -66,6 +66,8 @@ AppWorld performance matches the public leaderboard leader (IBM GPT-4.1 agent) w
 - [derived: ACE × Material Science Application](../derived/ace-material-science-application.md)
 - [derived: Gemini 諮詢：Patsnap 職涯決策全紀錄](../derived/gemini-career-decision-patsnap.md)
 - [derived: Hermes Agent Summary](../derived/2026-04-10-hermes-agent-summary.md)
+- [Self-Refine / Critic Loop](self-refine-critic-loop.md) — ACE's Reflector role is a specialised critic loop
+- [Active Learning Loop](active-learning-loop.md) — ACE as a specific active-learning-like architecture for agent playbooks
 
 ## Related Concepts
 

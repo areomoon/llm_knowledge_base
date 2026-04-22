@@ -86,7 +86,15 @@ Additional risks:
 
 ## Backlinks
 
-*(none yet — populated by lint)*
+- [Self-Consistency Implementation](self-consistency-implementation.md)
+- [Verifier Model](verifier-model.md)
+- [Retrieval-Augmented Verification](retrieval-augmented-verification.md)
+- [Self-Refine / Critic Loop](self-refine-critic-loop.md)
+- [Model Ensembling](model-ensembling.md)
+- [Cost-Aware Cascade Design](cost-aware-cascade-design.md)
+- [Agent Evaluation](agent-evaluation.md)
+- [RLPR (Reference Probability Reward)](rlpr-reference-probability-reward.md)
+- [derived: Extraction Pipeline Composite Strategies](../derived/2026-04-23-extraction-pipeline-composite-strategies.md)
 
 ## Sources
 

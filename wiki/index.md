@@ -11,8 +11,8 @@
 
 | Metric | Count |
 |--------|-------|
-| Concept articles | 34 |
-| Derived notes | 20 |
+| Concept articles | 43 |
+| Derived notes | 21 |
 | Query records | 3 |
 | Last compiled | 2026-04-23 |
 
@@ -58,6 +58,15 @@
 | [Memory Stores vs RAG](concepts/memory-stores-vs-rag.md) | Comparison of persistent memory stores and RAG for agent context — when to write vs. retrieve | `memory`, `rag`, `context-engineering`, `agent`, `comparison` |
 | [RLPR (Reference Probability Reward)](concepts/rlpr-reference-probability-reward.md) | Extrapolating RLVR to general domains without verifiers via reference-model probability as reward | `RL`, `RLVR`, `reinforcement-learning`, `verifier-free`, `post-training` |
 | [Cost-Aware Cascade Design](concepts/cost-aware-cascade-design.md) | Cheap-signal-→-threshold-→-escalate pattern generalised; threshold from cost minimisation; bottleneck rotates across product-lifecycle stages (POC→Alpha→Beta→GA→Mature) | `algorithm-design`, `cascade`, `cost-model`, `self-consistency`, `product-lifecycle`, `career`, `algorithm-engineer`, `triage` |
+| [Self-Consistency Implementation](concepts/self-consistency-implementation.md) | Field-level aggregation + normalisation + numeric tolerance-band voting; per-field confidence is the real product, not the vote-winning value | `self-consistency`, `extraction`, `confidence`, `aggregation`, `implementation`, `patsnap`, `algorithm-engineer` |
+| [LLM-as-Judge](concepts/llm-as-judge.md) | Stronger LLM scores/arbitrates weaker LLM's outputs; cheaper than self-consistency but inherits position/verbosity/self-preference biases | `evaluation`, `judge`, `pairwise`, `mt-bench`, `scoring`, `extraction`, `confidence` |
+| [Verifier Model](concepts/verifier-model.md) | Small trained classifier predicting correctness — replaces LLM-as-Judge at scale once labelled data accumulates; OpenAI PRM lineage | `verifier`, `evaluation`, `classifier`, `process-reward-model`, `openai`, `extraction`, `cost-efficiency` |
+| [Constrained Decoding](concepts/constrained-decoding.md) | Force schema-valid output at decode time (JSON Schema, tool use, Outlines); solves format correctness, not fact correctness | `structured-output`, `json-schema`, `tool-use`, `decoding`, `extraction`, `format-correctness` |
+| [Retrieval-Augmented Verification](concepts/retrieval-augmented-verification.md) | Verify each extracted value is grounded in a source span; catches shared-prior hallucinations self-consistency reinforces | `hallucination`, `verification`, `citation`, `traceability`, `patent`, `extraction`, `rag` |
+| [Self-Refine / Critic Loop](concepts/self-refine-critic-loop.md) | Same model generates → critiques → revises; works for reasoning/generation, marginal for atomic extraction | `self-refine`, `critic`, `iterative-improvement`, `reasoning`, `reflexion` |
+| [Model Ensembling](concepts/model-ensembling.md) | Vote across Claude+GPT+Gemini to escape shared-prior errors; high engineering cost reserved for high-value low-volume tasks | `ensembling`, `robustness`, `cross-model`, `high-stakes`, `extraction`, `voting` |
+| [Logprob Uncertainty](concepts/logprob-uncertainty.md) | Per-token logprobs as free confidence signal; OpenAI/self-hosted only — Anthropic Claude doesn't expose logprobs | `uncertainty`, `logprobs`, `calibration`, `confidence`, `extraction`, `openai` |
+| [Active Learning Loop](concepts/active-learning-loop.md) | Low-confidence → human label → retrain/refresh; closes the feedback cycle around any confidence-aware pipeline | `active-learning`, `human-in-the-loop`, `drift`, `annotation`, `fine-tuning`, `snorkel`, `argilla` |
 
 ---
 
@@ -87,6 +96,7 @@
 | 2026-04-17 | [Managed Agents + RLPR: Career Impact](derived/managed-agents-career-impact.md) | synthesis | Claude Managed Agents, RLPR, Material Science Agents |
 | 2026-04-18 | [Bouldering Session Debrief 2026-04-17 (Fri Gym)](derived/2026-04-18-bouldering-session-debrief.md) | session | Climbing Lock-Off Strength, Climbing Compression Pulling, Climbing Training System |
 | 2026-04-22 | [Bouldering Session Debrief 2026-04-21 (Tue, aborted)](derived/2026-04-22-bouldering-session-debrief.md) | session | Climbing Compression Pulling, Climbing Lock-Off Strength, Climbing Training System |
+| 2026-04-23 | [Extraction Pipeline Composite Strategies](derived/2026-04-23-extraction-pipeline-composite-strategies.md) | session | Self-Consistency Implementation, LLM-as-Judge, Verifier Model, Constrained Decoding, Retrieval-Augmented Verification, Self-Refine / Critic Loop, Model Ensembling, Logprob Uncertainty, Active Learning Loop |
 
 ---
 

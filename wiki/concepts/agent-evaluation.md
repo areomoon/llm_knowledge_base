@@ -165,6 +165,11 @@ Andrew Ng 的關鍵數據點：GPT-3.5 加上 agentic loop 在 HumanEval 上達�
 - [derived: Agent Product Case Studies](../derived/2026-04-09-agent-product-case-studies.md)
 - [derived: Warmup Gap Analysis](../derived/2026-04-09-warmup-agent-knowledge-gap-analysis.md)
 - [Cost-Aware Cascade Design](cost-aware-cascade-design.md) — uses the eval set defined here to compute cost-minimising thresholds
+- [Self-Consistency Implementation](self-consistency-implementation.md) — reliability diagrams produced on this eval set
+- [LLM-as-Judge](llm-as-judge.md) — judge rubrics evaluated with this benchmark discipline
+- [Verifier Model](verifier-model.md) — verifier trained/held-out on eval set splits
+- [Retrieval-Augmented Verification](retrieval-augmented-verification.md) — faithfulness metric on this eval set
+- [Active Learning Loop](active-learning-loop.md) — eval feeds the annotation selection heuristic
 
 ## Related Concepts
 

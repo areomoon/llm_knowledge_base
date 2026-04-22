@@ -132,6 +132,7 @@ See also: [Memory Stores vs RAG](memory-stores-vs-rag.md) for how Memory Store c
 - [ACE Framework](ace-framework.md) — Managed Agents is the managed product realization of ACE's theoretical GRC architecture
 - [Agentic Harness](agentic-harness.md) — Managed Agents is a cloud-hosted agentic harness
 - [Evolving Playbooks](evolving-playbooks.md) — Memory Store implements evolving playbooks as a managed cloud primitive
+- [Self-Consistency Implementation](self-consistency-implementation.md) — Anthropic API caveat (Opus 4.7 removes temperature) referenced here
 - [Tiered Memory](tiered-memory.md) — Memory Store multi-file pattern maps to tiered memory architecture
 - [ACE for Materials](ace-for-materials.md) — Managed Agents + Memory Store can host the materials extraction service
 - [Memory Stores vs RAG](memory-stores-vs-rag.md) — comparative analysis of memory approaches

@@ -36,6 +36,7 @@ This transition has three practical consequences:
 - [Superapp Paradigm](superapp-paradigm.md) — superapps are the surface where this transition plays out
 - [Agent-Friendly Design](agent-friendly-design.md) — design principles for the agent-callable interfaces
 - [derived: OpenAI Plans Desktop Superapp](../derived/openai-superapp-superagent.md)
+- [Constrained Decoding](constrained-decoding.md) — tool use is the substrate enabling agent-callable services
 
 ## Related Concepts
 

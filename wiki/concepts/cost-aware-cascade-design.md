@@ -269,7 +269,13 @@ For the [Technical-to-Business Transition](technical-to-business-transition.md) 
 
 ## Backlinks
 
-*(none yet — populated by lint)*
+- [Self-Consistency Implementation](self-consistency-implementation.md)
+- [LLM-as-Judge](llm-as-judge.md)
+- [Verifier Model](verifier-model.md)
+- [Model Ensembling](model-ensembling.md)
+- [Logprob Uncertainty](logprob-uncertainty.md)
+- [Active Learning Loop](active-learning-loop.md)
+- [Extraction Pipeline Composite Strategies](../derived/2026-04-23-extraction-pipeline-composite-strategies.md)
 
 ## Sources
 
