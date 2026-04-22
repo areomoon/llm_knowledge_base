@@ -83,6 +83,7 @@ The 35-year-old Chinese tech worker analysis confirms: relationships are assets 
 - [Singapore Tech Career Strategy](singapore-tech-career-strategy.md)
 - [Scaling Law Limitations](scaling-law-limitations.md) — Yuandong Tian's advice: follow genuine interest, not market signals; application × research intersection
 - [Harness Engineering](harness-engineering.md) — applies beyond technical context to "harnessing AI for business decision-making"
+- [Cost-Aware Cascade Design](cost-aware-cascade-design.md) — technical substance behind the "IC → strategy" framing: stage × bottleneck × unit economics translates directly into deal-memo language
 
 ## Sources
 

@@ -164,6 +164,7 @@ Andrew Ng 的關鍵數據點：GPT-3.5 加上 agentic loop 在 HumanEval 上達�
 - [Material Science Agents](material-science-agents.md) — MADE benchmark 出自此領域
 - [derived: Agent Product Case Studies](../derived/2026-04-09-agent-product-case-studies.md)
 - [derived: Warmup Gap Analysis](../derived/2026-04-09-warmup-agent-knowledge-gap-analysis.md)
+- [Cost-Aware Cascade Design](cost-aware-cascade-design.md) — uses the eval set defined here to compute cost-minimising thresholds
 
 ## Related Concepts
 

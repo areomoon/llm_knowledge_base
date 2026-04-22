@@ -122,6 +122,7 @@ Apply this framework when:
 
 - [Material Science Agents](material-science-agents.md)
 - [ACE for Materials](ace-for-materials.md)
+- [Cost-Aware Cascade Design](cost-aware-cascade-design.md) — niche-depth career resilience framing cites this concept's stage-agnostic framing skill
 
 ## Sources
 

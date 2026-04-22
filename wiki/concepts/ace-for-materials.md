@@ -174,6 +174,7 @@ The playbook accumulates extraction knowledge that cannot be captured by fine-tu
 - [derived: Agentic Service Warmup Plan](../derived/agentic-service-warmup-plan.md)
 - [derived: Career Development Roadmap](../derived/career-development-roadmap.md)
 - [derived: Managed Agents Career Impact](../derived/managed-agents-career-impact.md)
+- [Cost-Aware Cascade Design](cost-aware-cascade-design.md) — low-agreement samples from cascade become ACE's Reflector/Curator feedback signal
 
 ## Related Concepts
 

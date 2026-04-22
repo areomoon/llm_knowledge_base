@@ -129,6 +129,7 @@ Ground truth for extraction tasks is expensive (requires expert annotation). Pra
 - [RLPR (Reference Probability Reward)](rlpr-reference-probability-reward.md) — RL post-training for extraction agents in verifier-free domain
 - [Memory Stores vs RAG](memory-stores-vs-rag.md) — memory architecture comparison for extraction service design
 - [derived: Managed Agents Career Impact](../derived/managed-agents-career-impact.md)
+- [Cost-Aware Cascade Design](cost-aware-cascade-design.md) — self-consistency → expert review as a stage-dependent cascade; uses paper-extraction as the worked example
 
 ## Related Concepts
 

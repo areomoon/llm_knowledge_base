@@ -65,6 +65,7 @@ Only #3 is invisible to the parent. For a task that returns a one-line answer, #
 ## Backlinks
 
 - [Mobile Dispatch Workflow](mobile-dispatch-workflow.md)
+- [Cost-Aware Cascade Design](cost-aware-cascade-design.md) — subagent dispatch is the Claude-Code-specific instance of the general cascade; shares the cost-model reasoning
 
 ## Sources
 

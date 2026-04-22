@@ -11,10 +11,10 @@
 
 | Metric | Count |
 |--------|-------|
-| Concept articles | 33 |
+| Concept articles | 34 |
 | Derived notes | 20 |
 | Query records | 3 |
-| Last compiled | 2026-04-22 |
+| Last compiled | 2026-04-23 |
 
 ---
 
@@ -57,6 +57,7 @@
 | [Climbing Training System](concepts/climbing-training-system.md) | Parent framework for V4-V5 → V6-V7 climbing progression: periodisation, finger strength, injury prevention | `climbing`, `bouldering`, `training`, `finger-strength`, `periodization`, `personal` |
 | [Memory Stores vs RAG](concepts/memory-stores-vs-rag.md) | Comparison of persistent memory stores and RAG for agent context — when to write vs. retrieve | `memory`, `rag`, `context-engineering`, `agent`, `comparison` |
 | [RLPR (Reference Probability Reward)](concepts/rlpr-reference-probability-reward.md) | Extrapolating RLVR to general domains without verifiers via reference-model probability as reward | `RL`, `RLVR`, `reinforcement-learning`, `verifier-free`, `post-training` |
+| [Cost-Aware Cascade Design](concepts/cost-aware-cascade-design.md) | Cheap-signal-→-threshold-→-escalate pattern generalised; threshold from cost minimisation; bottleneck rotates across product-lifecycle stages (POC→Alpha→Beta→GA→Mature) | `algorithm-design`, `cascade`, `cost-model`, `self-consistency`, `product-lifecycle`, `career`, `algorithm-engineer`, `triage` |
 
 ---
 
