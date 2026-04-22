@@ -12,9 +12,9 @@
 | Metric | Count |
 |--------|-------|
 | Concept articles | 33 |
-| Derived notes | 19 |
+| Derived notes | 20 |
 | Query records | 3 |
-| Last compiled | 2026-04-20 |
+| Last compiled | 2026-04-22 |
 
 ---
 
@@ -85,6 +85,7 @@
 | 2026-04-17 | [Boris Cherny's Claude Code Tips](derived/2026-04-17-bcherny-claude-code-tips.md) | article | Claude Code Token Efficiency Playbook, Agentic Harness |
 | 2026-04-17 | [Managed Agents + RLPR: Career Impact](derived/managed-agents-career-impact.md) | synthesis | Claude Managed Agents, RLPR, Material Science Agents |
 | 2026-04-18 | [Bouldering Session Debrief 2026-04-17 (Fri Gym)](derived/2026-04-18-bouldering-session-debrief.md) | session | Climbing Lock-Off Strength, Climbing Compression Pulling, Climbing Training System |
+| 2026-04-22 | [Bouldering Session Debrief 2026-04-21 (Tue, aborted)](derived/2026-04-22-bouldering-session-debrief.md) | session | Climbing Compression Pulling, Climbing Lock-Off Strength, Climbing Training System |
 
 ---
 
@@ -110,13 +111,17 @@
 | [Climbing Lock-Off Strength](concepts/climbing-lock-off-strength.md) | 1 concept article | EpicTV, Lattice Training, Adam Ondra |
 | [Climbing Power Endurance](concepts/climbing-power-endurance.md) | 1 concept article | Lattice Training, Hooper's Beta |
 | [Climbing Compression Pulling](concepts/climbing-compression-pulling.md) | 1 concept article | Lattice Training, Hooper's Beta |
-| [5 週個人訓練計劃 (V4-V5 → V6-V7)](../raw/climbing/climbing-training-plan-summary.md) | training plan | Generated 2026-04-13, full docx at raw/climbing/ |
+| [5 週個人訓練計劃 (V4-V5 → V6-V7 level)](../raw/climbing/climbing-training-plan-summary.md) | training plan | 目標 2026-04-22 修正：breadth-based V6 level（Sat 3 風格 V6）+ V7 attempt-ready |
+| [Weeks 2-5 Execution Plan (breadth-first, 2026-04-22 rev)](../raw/climbing/weeks-2-to-5-execution-plan.md) | execution plan | Flash bucket 重啟（W3）→ V6 flash build（W4）→ V6-level 驗收（W5）；Sat breadth KPI matrix |
 | [Session Diagnosis 2026-04-15](derived/2026-04-15-bouldering-session-diagnosis.md) | session log | Week 1 — 2 × V7 Moonboard attempts |
 | [Training Plan 2026-04-17 (Fri)](../raw/climbing/training-plan-2026-04-17-fri.md) | daily plan | Gym pull + weakness-targeted session |
 | [Session Debrief 2026-04-17 (Fri Gym)](derived/2026-04-18-bouldering-session-debrief.md) | session log | Plan executed; bicep chain = cross-session rate-limiter; fueling flagged |
 | [Weekend Plan 2026-04-18 (Sat Peak + Sun Rest)](../raw/climbing/training-plan-2026-04-18-weekend.md) | weekend plan | Sat V7 project (LAST CALL / LAPUTA) + Sun full rest |
 | [Training Plan 2026-04-20 (Mon Active Recovery)](../raw/climbing/training-plan-2026-04-20-mon.md) | daily plan | Deload day — bicep/tricep DOMS 48hr post Laputa; mobility + 血流 |
 | [Training Plan 2026-04-21 (Tue Volume + 4×4 PE)](../raw/climbing/training-plan-2026-04-21-tue.md) | daily plan | Week 2 Mon 內容順延一天；PE 啟動日，保守 grade 選路，二頭 chain 持續監測 |
+| [Session Debrief 2026-04-21 (Tue, aborted)](derived/2026-04-22-bouldering-session-debrief.md) | session log | V5 單一動作 → 雙側二頭 acute overload；第 3 次 bicep chain 獨立訊號；04-18 dosage 框架修正為 capacity gate |
+| [Training Plan 2026-04-22 (Wed Acute Recovery)](../raw/climbing/training-plan-2026-04-22-wed.md) | daily plan | Acute recovery —— 上肢零 loading；晨起 3 項觸診決定 Thu hangboard 分支；goal 修正為 V6 breadth + V7 attempt-ready |
+| [Training Plan 2026-04-23 (Thu Hangboard Baseline — Branch A)](../raw/climbing/training-plan-2026-04-23-thu.md) | daily plan | 觸診全過啟動分支 A；Emil protocol 保守版；硬上限 +7.5kg；不攀岩 |
 
 <!-- END AUTO-GENERATED -->
 

@@ -10,17 +10,23 @@ tags: [climbing, training-plan, bouldering, finger-strength, hangboard, periodiz
 - 32M / 173cm / 72kg / 攀岩 4 年
 - 巔峰 V6-V7，目前 V4-V5（近期訓練量低）
 - 引體向上 ~20 下（拉力超標）
-- 目標：5 週內穩定 V6 + touch V7
+- 目標（**2026-04-22 修正**）：5/17 前達 **V6 level**（一天內完攀 3 條不同風格
+  V6）+ **V7 attempt-ready**（具 quality attempt 能力，非鎖定單條 send）—— 原
+  「Laputa / LAST CALL send」改為 breadth-based level goal，原因見
+  `weeks-2-to-5-execution-plan.md` §Breadth-first framework 與
+  2026-04-22 debrief。
 
 ## 核心分析
 - **優勢**：拉力強（引體 20 下）、經驗足（4 年）、訓練窗口大（每天 2-3hr）
-- **Bottleneck**：體重偏重（72kg, BMI 24.1, 目標 69-70kg）、指力可能不足、睡眠 6-7hr 偏少
+- **Bottleneck**：體重偏重（72kg, BMI 24.1, 目標 69-70kg）、指力可能不足、睡眠 6-7hr 偏少、**bicep/brachialis chain capacity**（2026-04-21 acute overload 後確認為項目級 rate-limiter）
 - **關鍵洞察**：V5→V7 的 #1 限制因子是指力，不是拉力。每減 1kg ≈ 指力 +1.5%
+- **Level 的 operational definition**（2026-04-22 新增）：flash / 2-go grade 而非 project grade；V6 level = 一天內 3 條不同風格 V6 完攀
 
-## 五週分期
-- Week 1-2：恢復基礎量 + Hangboard baseline 測試
-- Week 3-4：強度建設（Project V5-V6 + Max hang +5-10kg）
-- Week 5：Deload + Peak performance（V7 send 嘗試）
+## 五週分期（2026-04-22 修正）
+- Week 1-2：恢復基礎量 + Hangboard baseline（W2 條件式，見 Wed 4/22 plan 三分支）
+- Week 3：**Flash bucket 重啟**（多風格 V5-V6 flash）+ PE 正式啟動 + Hangboard +5kg
+- Week 4：**V6 flash 能力建立** + V7 機會主義 exposure + Hangboard +10kg
+- Week 5：Deload + **V6-level 驗收日**（Sat 一天內 V6 × 3 風格）+ V7 機會主義
 
 ## 每週結構
 - 週一：岩館 Volume Day（8-12 條路線）
@@ -28,7 +34,7 @@ tags: [climbing, training-plan, bouldering, finger-strength, hangboard, periodiz
 - 週三：完全休息
 - 週四：岩館 Hard climbing + Hangboard
 - 週五：健身房（拉力 + Core）
-- 週六：岩館 Peak Day（Project 全力衝）
+- 週六：岩館 **Breadth Day**（多風格 V5-V6 flash / 2-go；V7 機會主義 attempt，不 project 單條）
 - 週日：輕鬆活動
 
 ## 指力訓練 Protocol

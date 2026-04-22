@@ -3,7 +3,7 @@ title: Climbing Training System
 tags: [climbing, bouldering, training, finger-strength, hangboard, injury-prevention, periodization, personal]
 sources: [raw/climbing/climbing-training-playlist.md, raw/climbing/session-2026-04-15/session-notes.md]
 created: 2026-04-13
-updated: 2026-04-17
+updated: 2026-04-22
 ---
 
 # Climbing Training System
@@ -140,10 +140,17 @@ Deeper-dive atomic articles (added 2026-04-17 after session diagnosis):
 
 基於上述知識體系，針對個人 profile 制定的 5 週衝刺計劃：
 
-- **目標**：V4-V5 → V6-V7（穩定 V6 + touch V7）
-- **核心策略**：指力優先 + 減脂 2-3kg + 睡眠提升至 7.5hr
-- **分期**：恢復（2 週）→ 強度（2 週）→ Peak（1 週）
-- **完整計劃**：[5 週訓練計劃](../../raw/climbing/climbing-training-plan-summary.md)
+- **目標**（2026-04-22 修正）：V4-V5 → V6-V7 level —— operational definition
+  為 **5/17 前達到「一天內完攀 3 條不同風格 V6」+ V7 attempt-ready**（具
+  quality attempt 能力，非鎖定單條 send）。原「Laputa / LAST CALL send」改為
+  breadth-based level goal，原因見 2026-04-22 debrief 與 execution plan
+  §Breadth-first framework。
+- **核心策略**：指力優先 + 減脂 2-3kg + 睡眠提升至 7.5hr + **多風格 flash
+  bucket**（取代單條 project-bias）
+- **分期**：恢復（W1-W2）→ **Flash bucket 重啟 + PE 啟動**（W3）→ **V6 flash
+  能力建立**（W4）→ Deload + V6-level 驗收（W5）
+- **完整計劃**：[5 週訓練計劃摘要](../../raw/climbing/climbing-training-plan-summary.md)、
+  [Weeks 2-5 execution plan](../../raw/climbing/weeks-2-to-5-execution-plan.md)
 
 ### Week 1 session diagnosis (2026-04-15)
 
