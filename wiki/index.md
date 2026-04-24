@@ -133,6 +133,7 @@
 | [Session Debrief 2026-04-21 (Tue, aborted)](derived/2026-04-22-bouldering-session-debrief.md) | session log | V5 單一動作 → 雙側二頭 acute overload；第 3 次 bicep chain 獨立訊號；04-18 dosage 框架修正為 capacity gate |
 | [Training Plan 2026-04-22 (Wed Acute Recovery)](../raw/climbing/training-plan-2026-04-22-wed.md) | daily plan | Acute recovery —— 上肢零 loading；晨起 3 項觸診決定 Thu hangboard 分支；goal 修正為 V6 breadth + V7 attempt-ready |
 | [Training Plan 2026-04-23 (Thu Hangboard Baseline — Branch A)](../raw/climbing/training-plan-2026-04-23-thu.md) | daily plan | 觸診全過啟動分支 A；Emil protocol 保守版；硬上限 +7.5kg；不攀岩 |
+| [Training Plan 2026-04-25 (Sat Breadth Day 1 — V3-V5 多風格 Volume)](../raw/climbing/training-plan-2026-04-25-sat.md) | daily plan | Breadth Day 1；10-15 條 / ≥3 風格；禁 V6+ / compression / Laputa；Fri gym 取消後熱身延長補下肢激活；chain clean window day 5 目標 |
 
 <!-- END AUTO-GENERATED -->
 
