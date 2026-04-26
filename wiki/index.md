@@ -122,8 +122,11 @@
 | [Climbing Lock-Off Strength](concepts/climbing-lock-off-strength.md) | 1 concept article | EpicTV, Lattice Training, Adam Ondra |
 | [Climbing Power Endurance](concepts/climbing-power-endurance.md) | 1 concept article | Lattice Training, Hooper's Beta |
 | [Climbing Compression Pulling](concepts/climbing-compression-pulling.md) | 1 concept article | Lattice Training, Hooper's Beta |
-| [5 週個人訓練計劃 (V4-V5 → V6-V7 level)](../raw/climbing/climbing-training-plan-summary.md) | training plan | 目標 2026-04-22 修正：breadth-based V6 level（Sat 3 風格 V6）+ V7 attempt-ready |
-| [Weeks 2-5 Execution Plan (breadth-first, 2026-04-22 rev)](../raw/climbing/weeks-2-to-5-execution-plan.md) | execution plan | Flash bucket 重啟（W3）→ V6 flash build（W4）→ V6-level 驗收（W5）；Sat breadth KPI matrix |
+| [5 週個人訓練計劃 (V4-V5 → V6-V7 level)](../raw/climbing/climbing-training-plan-summary.md) | training plan | 2026-04-26 重新定義：stable V6-V7 多月工程；5/16 改為 milestone（非驗收）；5/18 入職後進 sustainable cycle |
+| [Weeks 2-5 Execution Plan (W3-W5 archived 2026-04-26)](../raw/climbing/weeks-2-to-5-execution-plan.md) | execution plan | **§W3-W5 已 superseded** by Foundation Salvage Block；Week 2 紀錄仍有效 |
+| **[Aggressive 21-Day Plan (4/26→5/17, Path C)](../raw/climbing/aggressive-21-day-plan-2026-04-26-to-05-17.md)** | **execution plan (主計劃)** | **目標 5/16-17 雙日 stable V6-V7（V6×4+ / V7 quality attempts ≥ 5）；攀岩 + 飲食 + 睡眠 + 補充品全 sync；7 個 abort gates；機率 55-65% full sync** |
+| [Foundation Salvage Block (fallback path)](../raw/climbing/foundation-salvage-block-2026-04-27-to-05-17.md) | fallback plan | aggressive 計劃 abort 時的保守路徑：Phase 0 病期 + Phase 1 V5 重建 + Phase 2 V6×2 milestone（非 stable）|
+| [Post-Job Sustainable Plan (5/18 起)](../raw/climbing/post-job-sustainable-plan.md) | long-term plan | 3x/週模板 + 4 週 micro-cycle × 4 cycles → stable V6-V7（C1 適應 → C2 V6 flash 啟動 → C3 V6 多風格 → C4 V6-V7 stable）|
 | [Session Diagnosis 2026-04-15](derived/2026-04-15-bouldering-session-diagnosis.md) | session log | Week 1 — 2 × V7 Moonboard attempts |
 | [Training Plan 2026-04-17 (Fri)](../raw/climbing/training-plan-2026-04-17-fri.md) | daily plan | Gym pull + weakness-targeted session |
 | [Session Debrief 2026-04-17 (Fri Gym)](derived/2026-04-18-bouldering-session-debrief.md) | session log | Plan executed; bicep chain = cross-session rate-limiter; fueling flagged |
@@ -134,6 +137,9 @@
 | [Training Plan 2026-04-22 (Wed Acute Recovery)](../raw/climbing/training-plan-2026-04-22-wed.md) | daily plan | Acute recovery —— 上肢零 loading；晨起 3 項觸診決定 Thu hangboard 分支；goal 修正為 V6 breadth + V7 attempt-ready |
 | [Training Plan 2026-04-23 (Thu Hangboard Baseline — Branch A)](../raw/climbing/training-plan-2026-04-23-thu.md) | daily plan | 觸診全過啟動分支 A；Emil protocol 保守版；硬上限 +7.5kg；不攀岩 |
 | [Training Plan 2026-04-25 (Sat Breadth Day 1 — V3-V5 多風格 Volume)](../raw/climbing/training-plan-2026-04-25-sat.md) | daily plan | Breadth Day 1；10-15 條 / ≥3 風格；禁 V6+ / compression / Laputa；Fri gym 取消後熱身延長補下肢激活；chain clean window day 5 目標 |
+| [Training Plan 2026-04-26 (Sun 急性疾病覆寫 day 1)](../raw/climbing/training-plan-2026-04-26-sun.md) | daily plan | **疾病覆寫**：晨起確認疑似支氣管炎 → 全休；Week 3 Mon 分支決策凍結；chain clean window 凍結（非 reset）|
+| [Training Plan 2026-04-27 (Mon 病期 day 2 全休)](../raw/climbing/training-plan-2026-04-27-mon.md) | daily plan | 取代原 W3 Branch A；day 2 病程方向判讀；明日三階決策準備 |
+| [Training Plan 2026-04-28 (Tue 三階決策 — Tier A/B/C)](../raw/climbing/training-plan-2026-04-28-tue.md) | daily plan | 取代原 W3 Tue gym；晨起症狀讀 → A 全休 / B 散步 + 伸展 / C 50% 健身（禁上肢、禁攀岩）|
 
 <!-- END AUTO-GENERATED -->
 

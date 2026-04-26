@@ -1,9 +1,20 @@
 ---
-title: "Week 2-5 執行計劃 (2026-04-20 → 2026-05-17)"
+title: "Week 2-5 執行計劃 (2026-04-20 → 2026-05-17) [W3-W5 SUPERSEDED 2026-04-26]"
 date: 2026-04-17
-cycle: 5-week plan, Weeks 2-5 (end-of-Week-1 rewrite)
-target: V6 穩定 + V7 send
-tags: [climbing, training-plan, progressive-overload, nutrition, recovery, peak]
+cycle: 5-week plan, Weeks 2-5 (end-of-Week-1 rewrite) — W3-W5 archived
+target: V6 穩定 + V7 send（原目標；2026-04-26 起重新定義為 stable V6-V7 多月工程）
+tags: [climbing, training-plan, progressive-overload, nutrition, recovery, peak, archive-w3-w5]
+---
+
+> **🚨 SUPERSEDED 通知（2026-04-26）**：本文件 §Week 3 / §Week 4 / §Week 5
+> **已被取代**（04-26 急性疾病 + 5/18 入職 hard deadline 雙觸發）。Week 2 內容
+> 仍為實際執行紀錄，但 W3-W5 結構被以下兩文件取代：
+>
+> - [foundation-salvage-block-2026-04-27-to-05-17.md](foundation-salvage-block-2026-04-27-to-05-17.md) — 4/27 → 5/16 21 天 Salvage（含 Phase 0/1/2 + 5/16 milestone day，KPI 改為 V6×2 不 V6×3）
+> - [post-job-sustainable-plan.md](post-job-sustainable-plan.md) — 5/18 起 3x/週 micro-cycle，目標 stable V6-V7（多月工程）
+>
+> 原 W3-W5 內容保留作 archive，**不再執行**。
+
 ---
 
 # Weeks 2-5 Execution Plan

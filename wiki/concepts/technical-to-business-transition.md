@@ -87,6 +87,6 @@ The 35-year-old Chinese tech worker analysis confirms: relationships are assets 
 
 ## Sources
 
-- [從技術 IC 到商業/創投的漸進式轉型策略](../raw/areomoon_career_llm/Technical_to_Business_Transition_Strategy.md)
+- [從技術 IC 到商業/創投的漸進式轉型策略](../../raw/areomoon_career_llm/Technical_to_Business_Transition_Strategy.md)
 - Yuandong Tian (Meta FAIR) interview — career advice: pursue genuine interest, let paths converge naturally
 - 35歲碼農 article — soft skills and relationships as primary career assets post-35

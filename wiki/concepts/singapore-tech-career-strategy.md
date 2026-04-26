@@ -126,7 +126,7 @@ Apply this framework when:
 
 ## Sources
 
-- [新加坡科技人才職涯策略 (raw)](../raw/articles/singapore-tech-career-strategy.md)
+- [新加坡科技人才職涯策略 (raw)](../../raw/articles/singapore-tech-career-strategy.md)
 - MOM Singapore: Employment Pass, PR, Re-Entry Permit guidelines
 - HDB: CPF Housing Grant, resale eligibility for PR
 - CPF Board: contribution rate schedules, voluntary contribution rules

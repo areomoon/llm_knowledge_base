@@ -19,6 +19,65 @@ The canonical output format is `raw/climbing/training-plan-2026-04-17-fri.md` an
 
 ---
 
+## Pre-flight diagnostic (added 2026-04-26 — answer ALL before planning)
+
+Before generating any plan, explicitly answer the following. **Do not proceed if any answer is unknown** — ask the user. This blocks the most common bias: planning with implicit assumptions that turn out wrong.
+
+### 1. Goal type — single-day verification vs. stable steady-state
+
+| Type | Definition | Implication |
+|------|-----------|-------------|
+| **Single-day milestone** | One performance day demonstrating a peak (e.g. V6×3 different styles in one Sat) | Achievable in 4-6 weeks of focused training for a returning climber; plan as peak/verification cycle |
+| **Stable steady-state** | Operational range maintained across multiple sessions (e.g. V6 flash 6+ stocked, V7 quality attempts repeatable, chain tolerates consecutive training) | Multi-month build; single 5-week cycle is foundation only |
+
+**Failure mode if conflated**: original 04-13 plan promised "V6 level by 5/17" implying single-day, user's actual goal was steady-state — gap surfaced at 2026-04-26 conversation. **Always ask which one.**
+
+### 2. External hard deadlines
+
+- Job start / change date?
+- Travel / unavailable windows?
+- Exam / life event?
+
+If yes → **reverse-engineer cycle from deadline backward**, do not extend. **Failure mode**: original plan didn't ask about 5/18 job start; user's hard deadline was discovered mid-cycle and forced re-plan.
+
+### 3. Climber profile — returning vs. new
+
+- **Returning climber** (peak history at goal grade, currently de-trained): 2-3× faster adaptation than new climber to same grade. Lattice's "V5→V7 typical 3-9 months" applies to **new** climbers.
+- **New climber** (never been at goal grade): use literature timeline.
+
+**Failure mode**: 2026-04-26 evening I quoted "16-24 weeks to stable V6-V7" using new-climber timeline for a returning climber → 4× overestimate.
+
+### 4. Current health status
+
+- Any illness in past 7 days? Any active symptoms?
+- If illness present → **apply Eichner neck-check rule** (above-neck = light OK; below-neck = full rest until 24hr symptom-free) + ACSM return-to-train 50% volume first week.
+
+### 5. Active capacity-gate rate-limiters
+
+Read latest 2-3 debriefs for any muscle group / pattern with **≥ 2 independent failure signals**. If yes:
+- It is a **project-level rate-limiter** (not session-level dosage knob)
+- Plan must respect cross-session clean window before re-loading
+- See [2026-04-22 debrief §6](../../wiki/derived/2026-04-22-bouldering-session-debrief.md) for clean window operational definition
+
+**Failure mode**: 04-15 LAST CALL compression failure was visible signal #1; 04-17 typewriter was #2; should have flagged bicep chain as project-level rate-limiter at #2, not #3 (04-21 acute event).
+
+### 6. Probability framing — never promise determinism
+
+For any plan that targets a specific outcome (verification day, milestone), state probability honestly:
+- "≈ X% IF conditions A, B, C hold"
+- List abort gates explicitly
+- Provide fallback path
+
+**Failure mode**: original 04-13 plan implied 5/17 V6×3 was deterministic. Real probability with a returning climber + peak history + 0 setbacks ≈ 50-60%. Never call a plan "達標" without contingencies.
+
+### 7. Life-sync dimensions — diet + sleep + lifestyle
+
+For any aggressive plan (probability < 70%), explicitly include diet + sleep + supplements + lifestyle constraints. **+15-20 percentage points on probability** comes from full life sync (Walker *Why We Sleep*; Cohen 2009 sleep+immune; Keith Baar collagen). Plans that only program training under-deliver vs. integrated plans.
+
+> See [aggressive-21-day-plan-2026-04-26-to-05-17.md](../../../raw/climbing/aggressive-21-day-plan-2026-04-26-to-05-17.md) as the canonical integrated example.
+
+---
+
 ## Required reads (in this order)
 
 1. **`raw/climbing/climbing-training-plan-summary.md`** — 5-week periodisation, profile (32M/173/72kg, 引體 20 下), Bottlenecks, weekly structure template (Mon Volume / Tue Gym / Wed Rest or Climb / Thu Hangboard / Fri Gym / Sat Peak / Sun Rest).
@@ -137,6 +196,11 @@ Read the most recent debrief and apply:
 | T+1 from hard unilateral day | Peak day: flag "首 attempts 會感覺重, 預期內"; add A8 check to gate primary project choice |
 | Missed hangboard baseline | Inject as Week-2 Thu補測 line in 明日預告 or next-week preamble |
 | Sleep or weight KPI off-target | Add explicit line in 頭部 header (not buried in KPI section) |
+| **Acute illness reported (any below-neck symptom)** | Apply illness override: kill ALL training (incl. active recovery walk/foam roll); replace with bed rest + symptom monitor + return-to-train Tier A/B/C decision matrix; freeze any in-flight readout windows (chain clean window etc.) — do not reset, just pause; reference Eichner neck-check rule as authority |
+| **Acute illness — return-to-train** | First week back ≤ 50% volume (ACSM); reintroduce sport-specific (climbing/hangboard) only after 24hr fully symptom-free; bicep chain etc. clean window counts must rebuild from scratch (病期 deconditioning) |
+| **External hard deadline appears** (job, travel, exam) | Reverse-engineer cycle backward from deadline; do NOT extend; if illness + hard deadline collide, present probability with conditions + abort gates, never promise determinism |
+| **Capacity-gate signal #2 in last 2 weeks** | Upgrade muscle group / pattern from session-level dosage knob to **project-level rate-limiter**; require ≥ 2 consecutive clean sessions before re-loading the provoking grade. **Do not wait for signal #3.** |
+| **User's stated goal is "stable / 穩定 / 持續"** (steady-state, not single-day) | Plan must explicitly distinguish single-day milestone vs steady-state; if cycle window < 8 weeks, single-day milestone is realistic, steady-state needs multi-cycle horizon — say so |
 
 If there is **no debrief since the last plan**, note this explicitly in 頭部 header ("無新 debrief，沿用 standard template") and do not invent adjustments.
 
@@ -175,3 +239,49 @@ Place the new row **below** the existing daily-plan rows, maintain chronological
 - **T+N finger accounting** — always compute days since the last heavy-finger session (Moonboard / hangboard max / project day). Peak day expects T+2 minimum; T+1 is a red flag that should raise finger-load avoidance in the plan.
 - **Don't stack tendon load** — back-to-back hangboard + hard climb is a Week-3+ move, not Week-1. If the user asks for it in Week 1, push back and propose splitting.
 - **Week boundaries**: Week N = 7 consecutive days starting Mon. The 5-week cycle anchor is Mon 2026-04-13 (Week 1 Day 1). Compute week number from that.
+
+---
+
+## Calibration gotchas (observed 2026-04-26 — read first)
+
+Real planning errors made on this user's cycle. Each row = a bias to actively counteract.
+
+### G1. Single-day verification ≠ steady-state stability
+
+- **Bias**: Use "V6 level" or "V7 attempt-ready" without operational definition; user assumes one thing, plan delivers another.
+- **Counter**: §Pre-flight diagnostic Q1 forces explicit goal type. If user says "stable / 穩定", plan must include cross-session repeatability KPI (e.g. Sun ≥ Sat 70% on dual-day verification), not single-day peak only.
+
+### G2. New-climber vs. returning-climber timeline conflation
+
+- **Bias**: Quote Lattice's "V5→V7 typical 3-9 months" for a returning climber → 2-4× overestimate.
+- **Counter**: §Pre-flight Q3 — if returning climber (peak history at goal grade), divide literature timeline by 2-3. Use the user's own prior cycle data when available, not generic literature.
+
+### G3. Rate-limiter detected too late (signal #3 instead of #2)
+
+- **Bias**: Treat each setback as isolated; only formalise "project-level rate-limiter" after 3 independent signals.
+- **Counter**: New Carry-forward row "Capacity-gate signal #2 in last 2 weeks" — escalate at signal #2, not #3. The cost of false positive (1 week of conservative loading) << cost of false negative (acute event aborts session).
+
+### G4. No setback buffer in cycle design
+
+- **Bias**: 5-week plan assumes 0 illness, 0 missed sessions, 0 work disruption.
+- **Counter**: Bake in 10-20% setback buffer at cycle design time. If user requests aggressive plan with no buffer, state explicitly: "this plan succeeds at ~X% with 0 setbacks; each lost week drops it by ~10-15%".
+
+### G5. Plans framed as deterministic ("達標") rather than probabilistic
+
+- **Bias**: "5/17 V6×3" framed as goal to be hit, not probability to be optimised.
+- **Counter**: §Pre-flight Q6 — every aggressive plan states honest %, conditions, abort gates, and fallback path.
+
+### G6. External hard deadlines discovered mid-cycle
+
+- **Bias**: Plan generated 04-13 didn't ask about post-cycle commitments; 5/18 job start surfaced 04-26.
+- **Counter**: §Pre-flight Q2 — always ask. If user adds a hard deadline mid-cycle, immediately re-plan rather than continuing the old structure.
+
+### G7. Training-only programming under-delivers vs. integrated programming
+
+- **Bias**: Plans that program only on-wall + gym, leaving diet/sleep/supplements/lifestyle as "guidelines".
+- **Counter**: For probability < 70% plans, integrate diet + sleep + lifestyle as first-class blocks (see [aggressive-21-day-plan-2026-04-26-to-05-17.md](../../../raw/climbing/aggressive-21-day-plan-2026-04-26-to-05-17.md) as canonical integrated example). Quantify the +15-20 pp probability uplift from full sync.
+
+### G8. Pendulum swings between aggressive and conservative
+
+- **Bias**: After a setback, overcorrect to ultra-conservative; after pushback, overcorrect to ultra-aggressive. Both degrade trust.
+- **Counter**: Anchor estimates in user's empirical adaptation rate (prior cycle data) when available. When unavailable, give a range with named conditions and **resist the urge to revise mid-conversation without new data**. If a number changes, name what new information drove it.

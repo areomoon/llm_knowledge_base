@@ -101,4 +101,4 @@ The extraction agent isn't "doing AI" — it's harnessing AI.
 ## References
 
 - [Harness Engineering lecture (YouTube)](https://www.youtube.com/watch?v=R6fZR_9kmIw) — Hung-yi Lee, NTU, 2026-04-13
-- [raw note](../raw/articles/harness-engineering-hungyi-lee.md)
+- [raw note](../../raw/articles/harness-engineering-hungyi-lee.md)
